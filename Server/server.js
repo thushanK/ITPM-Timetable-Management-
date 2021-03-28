@@ -11,19 +11,22 @@ var port = process.env.PORT || 4000;
 const MongoClient = require("mongodb").MongoClient;
 
 
-
+//routes
+const locationsRoute = locationsroute = require("./app/routes/location.routes")
 
 
 const dbConfig = require("./config/db.config");
 
 
-// app.use(cors());
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(morgan("dev"));
 
 mongoose.set("useCreateIndex", true);
 
+//set routes
+app.use("/api/locations", locationsRoute);
 
 app.use((req, res, next) => {
   const error = new Error("Not found");

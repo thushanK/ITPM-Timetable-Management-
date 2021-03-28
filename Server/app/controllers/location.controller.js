@@ -9,15 +9,23 @@ exports.add = (req, res) => {
         building: req.body.building,
     });
 
+    // {
+    //     "message": ,
+    //     data: data
+    // }
+
     location.save().then(data => {
-        res.status(200).send(data);
-    })
-        .catch(err => {
-            res.status(500).send({
-                message:
-                    err.message || "Some error occurred while creating the Location."
-            });
+        res.status(200).send({
+            message: "Success",
+            data: data
         });
+    })
+    .catch(err => {
+        res.status(500).send({
+            message:
+                err.message || "Some error occurred while creating the Location."
+        });
+    });
 
 };
 
