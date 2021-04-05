@@ -12,7 +12,7 @@ const MongoClient = require("mongodb").MongoClient;
 
 
 //routes
-const locationsRoute = locationsroute = require("./app/routes/location.routes")
+const locationsRoute = locationsroute = require("./app/routes/Building.routes")
 
 
 const dbConfig = require("./config/db.config");
