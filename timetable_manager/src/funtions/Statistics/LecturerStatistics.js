@@ -3,7 +3,7 @@ import React from 'react';
 import Sidebar from '../../components/Sidebar'
 
 
-class AddBuilding extends React.Component  {
+class LectureStatistics extends React.Component  {
 
     
     render(){
@@ -12,7 +12,7 @@ class AddBuilding extends React.Component  {
         <>
         <Sidebar/>
         <main>
-            <h1>Hi AddBuilding</h1>
+            <h1>Hi LectureStatistics</h1>
         </main>
         </>
         );}
@@ -22,4 +22,4 @@ class AddBuilding extends React.Component  {
 
 
 
-export default AddBuilding;
+export default LectureStatistics;
