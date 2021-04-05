@@ -18,6 +18,12 @@ import Managetimeslot from '../funtions/working days and hours/Managetimeslot';
 import Manageworkingdays from '../funtions/working days and hours/Manageworkingdays';
 
 
+import AddSubject from '../funtions/Subjects/AddSubject';
+import ManageSubject from '../funtions/Subjects/ManageSubject';
+import AddLecturer from '../funtions/Lecturer/AddLecturer';
+import ManageLecturer from '../funtions/Lecturer/ManageLecturer';
+
+
 
 let routes = [
 
@@ -116,6 +122,35 @@ let routes = [
         path: "/timeslot/manage",
         name: "MANAGE_TIMESLOT",
         component: Managetimeslot,
+        exact: true,
+    },
+
+
+    {
+        path: "/subject/add",
+        name: "ADD_SUBJECT",
+        component: AddSubject,
+        exact: true,
+    },
+
+    {
+        path: "/subject/manage",
+        name: "MANAGE_SUBJECT",
+        component: ManageSubject,
+        exact: true,
+    },
+
+    {
+        path: "/lecturer/add",
+        name: "ADD_LECTURER",
+        component: AddLecturer,
+        exact: true,
+    },
+
+    {
+        path: "/lecturer/manage",
+        name: "MANAGE_LECTURER",
+        component: ManageLecturer,
         exact: true,
     },
 ];
