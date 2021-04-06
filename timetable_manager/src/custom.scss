@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
 
-$sidebar-bg-color: #2F2E2E;
-$submenu-bg-color: #2F2E2E;
+$sidebar-bg-color: #05386B;
+$submenu-bg-color: #05386B;
 $sidebar-width: 240px;
 $info : #18A0FB;
 $font-family-sans-serif:'Poppins' ;
 @import '~react-pro-sidebar/dist/scss/styles.scss';
 @import '~bootstrap/scss/bootstrap.scss';
+
+.main {
+    float: left;
+    width: 60%; /* The width is 60%, by default */
+  }
