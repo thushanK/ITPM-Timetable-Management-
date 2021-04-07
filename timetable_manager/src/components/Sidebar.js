@@ -71,6 +71,7 @@ const Sidebar = ({activemenu, submenu}) => {
       </SubMenu>
 
       {/* Building member 04 */}
+      <SubMenu  defaultOpen={activemenu === 'LOCATION'} title="Location" icon={<FontAwesomeIcon icon={faAd} />}>
       <SubMenu  defaultOpen={activemenu === 'BUILDING'} title="Building" icon={<FontAwesomeIcon icon={faAd} />}>
         <MenuItem 
             active={submenu === 'ADD_BUILDING'} >Add Building<Link to="/building/add" />
@@ -79,8 +80,6 @@ const Sidebar = ({activemenu, submenu}) => {
           Manage Building<Link to="/building/manage" />
         </MenuItem>
       </SubMenu>
-
-      {/* Room member 04 */}
       <SubMenu  defaultOpen={activemenu === 'ROOM'} title="Room" icon={<FontAwesomeIcon icon={faAd} />}>
         <MenuItem 
             active={submenu === 'ADD_ROOM'} >Add Room<Link to="/room/add" />
@@ -89,6 +88,9 @@ const Sidebar = ({activemenu, submenu}) => {
           Manage Room<Link to="/room/manage" />
         </MenuItem>
       </SubMenu>
+      </SubMenu>
+      {/* Room member 04 */}
+
 
       {/* Statistics member 04 */}
       <SubMenu  defaultOpen={activemenu === 'STATISTICS'} title="Statistics" icon={<FontAwesomeIcon icon={faAd} />}>
