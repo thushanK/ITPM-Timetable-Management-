@@ -6,6 +6,8 @@ import DeleteBuilding from '../funtions/Building/DeleteBuilding';
 import EditBuilding from '../funtions/Building/EditBuilding';
 import AddRoom from '../funtions/Room/AddRoom';
 import ManageRoom from '../funtions/Room/ManageRoom';
+import DeleteRoom from '../funtions/Room/DeleteRoom';
+
 import LecturerStatistics from '../funtions/Statistics/LecturerStatistics';
 import StudentStatistics from '../funtions/Statistics/StudentStatistics';
 import SubjectStatistics from '../funtions/Statistics/SubjectStatistics';
@@ -71,6 +73,12 @@ let routes = [
         component: ManageRoom,
         exact: true,
     },
+    {
+        path: "/locations/rooms/delete/:id",
+        name: "Delete Rooms",
+        component: DeleteRoom,
+        exact: true,
+      },
     {
         path: "/statistics/student",
         name: "STUDENT_STATISTICS",
