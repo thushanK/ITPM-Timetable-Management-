@@ -1,10 +1,13 @@
 import React from 'react';
-import Sidebar from '../../components/Sidebar'
-import {FormInput , FormSelect , MultiFormSelect} from '../../components/Form'
-import STD_CONTROLLER from '../../controllers/Student.Controller';
+import Sidebar from '../../components/Sidebar';
+import {Link} from 'react-router-dom';
 import CONFIG from '../../controllers/Config.controller';
 
-class AddStudent extends React.Component {
+import {FormInput , FormSelect , MultiFormSelect} from '../../components/Form'
+import STD_CONTROLLER from '../../controllers/Student.Controller';
+
+
+class editStudentGrp extends React.Component {
 
     constructor(props) {
         super(props);
@@ -13,59 +16,63 @@ class AddStudent extends React.Component {
             semester: 'NONE',
             group_mo: '',
             subgroup_mo: 'NONE',
-            program:'',
-            // tags : [],
+            program:'NONE',
+            tags:[],
             errors : { 
                 academicYear : false , 
                 semester : false ,
                 group_mo : false ,
                 program : false,
                 subgroup_mo : false , 
-                // tags : false ,
+                tags : false ,
             }
         };
+    }
+
+    async componentDidMount() {
+        console.log("Building ID: ", this.props.match.params.id);
+        
+        const result = await STD_CONTROLLER.getOne(this.props.match.params.id);
+
+        console.log(" results: ", result.data);
+
+        this.setState({
+            academicYear: result.data.academicYear,
+            semester: result.data.semester,
+            program: result.data.program,
+            group_mo: result.data.group_mo ,
+            subgroup_mo: result.data.subgroup_mo ,
+            id: result.data.id,
+        })
     }
 
     formValueChange = (e) => {
         this.setState({[e.target.name] : e.target.value  });
         this.is_filled( e.target.name , e.target.value );
     }
-
-
-    handleMultiselect = (newValue) => {
-        this.setState({ tags: newValue == null ? [] : newValue  });
-        console.log(newValue);
-    };
-
     onFormSubmit = async (e) => {
         e.preventDefault();
-        var ret = this.validate();
-        console.log(ret);
-        if (ret == false){
-            console.log("Before");
-            return "";
-        }
+        this.validate();
 
-        console.log("After");
         var data = {
+    
             academicYear: this.state.academicYear,
             semester: this.state.semester,
             group_mo: this.state.group_mo,
             program: this.state.program,
             subgroup_mo: this.state.subgroup_mo,
             subgroup_ID : this.state.academicYear + ".S"+ this.state.semester + "." + this.state.program + "." + this.state.group_mo + "." + this.state.subgroup_mo,
-            // tags: this.state.tags,
+
         }
+        // console.log(result);
 
-
-        const result = await STD_CONTROLLER.addStudent(data)
-
-        console.log(result);
-        this.props.history.push("/student/manage")
+        const result = await STD_CONTROLLER.updateStudent(data)
 
         if(result == 200){
-            CONFIG.setToast("Successfully Added")
+            CONFIG.setToast("Successfully Updated")
+            //document.getElementById("cancelBtn").click();
             this.props.history.push("/student/manage")
+            //this.clear();
         }
     }
 
@@ -78,7 +85,7 @@ class AddStudent extends React.Component {
             <div className="container-fluid" >
             <div className="row" >
                 <div className="col-12 shadow-sm rounded bg-white mt-1" >
-                    <h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Add Student group<br></br>
+                    <h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Add Student Group<br></br>
                     <span className="text-muted small">You can add new group for Student</span></h6>
                 </div>
                 <div className="col-12 shadow-sm rounded bg-white mt-3 pb-1" >
@@ -132,7 +139,7 @@ class AddStudent extends React.Component {
                             />
                     </div>
                     <div className="col-md-6 mt-1 mb-1" >
-                         <FormInput 
+                    <FormInput 
                                 label={'Add Group No'}
                                 placeholder={'Enter Program'}
                                 error={errors.program}
@@ -141,15 +148,6 @@ class AddStudent extends React.Component {
                                 name="program"
                                 error_meesage={'*Program required'}
                             />
-                        {/* <FormSelect 
-                                label={'Add Program'}
-                                options={WD_OPTIONS3}
-                                error={errors.program}
-                                selected={this.state.program}
-                                onChange={this.formValueChange}
-                                name="program"
-                                error_meesage={'*Program required'}
-                            /> */}
                     </div>
                     {/* <div className="col-md-12 mt-1 mb-1" >
                             <MultiFormSelect 
@@ -161,8 +159,11 @@ class AddStudent extends React.Component {
                                 error_meesage={'*Tags required'}
                             />
                     </div> */}
+               
                     <div className="col-md-12 mt-1 mb-1" >
-                            <button type="submit" className="btn-outline-info mt-2 btn btn-sm px-2 ">Add Student Group</button>
+                    
+                            <button type="submit" className="btn-outline-info mt-2 btn btn-sm px-2 ">Update Student Group</button>
+                   
                     </div>
                 </div>
                 </form>
@@ -174,7 +175,7 @@ class AddStudent extends React.Component {
     );}
 
     validate = () => {
-        let { academicYear, semester, group_mo , subgroup_mo , program   } = this.state;
+        let { academicYear, semester, group_mo , subgroup_mo , program , tags  } = this.state;
         let count = 0;
         let errors = {}
 
@@ -215,7 +216,7 @@ class AddStudent extends React.Component {
         }
 
 
-        if( program.length === 0){
+        if( program === 'NONE'){
             errors.program = true
             count++
         }else{
@@ -225,12 +226,12 @@ class AddStudent extends React.Component {
 
 
        
-        // if( tags.length == 0 ){
-        //     errors.tags = true
-        //     count++
-        // }else{
-        //     errors.tags = false 
-        // }
+        if( tags.length == 0 ){
+            errors.tags = true
+            count++
+        }else{
+            errors.tags = false 
+        }
 
         this.setState({errors})
         return count == 0;
@@ -245,7 +246,7 @@ class AddStudent extends React.Component {
 }
 
 const WD_OPTIONS0 = [{ label : 'Select Academic Year' ,value : 'NONE' } , 
-...['Y1','Y2','Y3','Y4'].map( i => {
+...[1,2,3,4].map( i => {
     return{
         label : 'Year ' + i  ,
          value : i 
@@ -276,19 +277,13 @@ const WD_OPTIONS3 = [{ label : 'Select the Program' ,value : 'NONE' } ,
     }
 })];
 
-// const WD_OPTIONS4 = [ 
-// ...['Labs', 'Tutorials', 'Lectures' ].map( i => {
-//     return{
-//         label :  i  ,
-//          value : i 
-//     }
-// })];
+const WD_OPTIONS4 = [ 
+...['Labs', 'Tutorials', 'Lectures' ].map( i => {
+    return{
+        label :  i  ,
+         value : i 
+    }
+})];
 
 
-// export default AddTimeTable;
-
-
-
-
-
-export default AddStudent;
+export default editStudentGrp;

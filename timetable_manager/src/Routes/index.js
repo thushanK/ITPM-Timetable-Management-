@@ -16,6 +16,8 @@ import AddStudent from '../funtions/Student/AddStudent';
 import ManageStudent from '../funtions/Student/ManageStudent';
 import AddTags from '../funtions/Tag/AddTags';
 import ManageTags from '../funtions/Tag/ManageTags';
+import editStudentGrp from '../funtions/Student/EditStudentGrp';
+import DeleteStGrp from '../funtions/Student/DeleteStudentGrp'
 
 import Addworkingdays from '../funtions/working days and hours/Addworkingdays';
 import Managetimeslot from '../funtions/working days and hours/Managetimeslot';
@@ -180,6 +182,20 @@ let routes = [
         path: "/lecturer/edit/:id",
         name: "Lecturer Edit",
         component: EditLecturer,
+        exact : true,
+      },
+
+      {
+        path: "/student/editTimeTable/:id",
+        name: "editTimeTable",
+        component: editStudentGrp,
+        exact : true,
+      },
+
+      {
+        path: "/student/delete_student_slot/:id",
+        name: "Delete Student Slot",
+        component: DeleteStGrp,
         exact : true,
       },
 ];
