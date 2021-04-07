@@ -1,8 +1,8 @@
 import React from 'react';
 import Sidebar from '../../components/Sidebar'
-// import {FormInput , FormSelect , MultiFormSelect} from '../../components/Form'
-// import moment from 'moment';
-// import { omit } from 'lodash'
+import {FormInput , FormSelect , MultiFormSelect} from '../../components/Form'
+import moment from 'moment';
+import { omit } from 'lodash'
 import { Link, Router } from 'react-router-dom';
 
 import B_CONTROLLER from '../../controllers/Building.Controller';
@@ -76,7 +76,7 @@ class DeleteBuilding extends React.Component {
                     <div className="col-md-12 mt-1 mb-1" >
                     <hr className="my-2"></hr>
                             <button className="btn-danger mt-2 btn btn-sm px-3 py-1" onClick={this.onDelete}>Delete</button>
-                            <Link to="/locations/buildings/list"><button type="submit" id="cancelBtn" className="btn-light mt-2 btn btn-sm px-3 py-1 border mx-2">Cancel</button></Link>
+                            <Link to="/building/manage"><button type="submit" id="cancelBtn" className="btn-light mt-2 btn btn-sm px-3 py-1 border mx-2">Cancel</button></Link>
                     </div>
                 </div>
                 </div>
