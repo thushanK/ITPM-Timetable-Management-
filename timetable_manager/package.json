@@ -19,6 +19,7 @@
     "react-bootstrap": "^1.5.2",
     "react-confirm-alert": "^2.7.0",
     "react-dom": "^17.0.2",
+    "react-filepond": "^7.1.1",
     "react-pro-sidebar": "^0.6.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",

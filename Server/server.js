@@ -13,6 +13,7 @@ const MongoClient = require("mongodb").MongoClient;
 
 //routes
 const buildingRoute = require("./app/routes/building.route");
+const lecturerRoute = require("./app/routes/lecturer.route");
 
 
 const dbConfig = require("./config/db.config");
@@ -27,12 +28,17 @@ mongoose.set("useCreateIndex", true);
 
 //set routes
 app.use("/api/buildings", buildingRoute);
+app.use("/api/lecturer", lecturerRoute);
+
+
 
 app.use((req, res, next) => {
   const error = new Error("Not found");
   error.status = 404;
   next(error);
 });
+
+
 app.use((error, req, res, next) => {
   console.log(error);
 
