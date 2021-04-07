@@ -2,6 +2,8 @@ import Dashboard from '../Dashboard';
 
 import AddBuilding from '../funtions/Building/AddBuilding';
 import ManageBuilding from '../funtions/Building/ManageBuilding';
+import DeleteBuilding from '../funtions/Building/DeleteBuilding';
+import EditBuilding from '../funtions/Building/EditBuilding';
 import AddRoom from '../funtions/Room/AddRoom';
 import ManageRoom from '../funtions/Room/ManageRoom';
 import LecturerStatistics from '../funtions/Statistics/LecturerStatistics';
@@ -40,9 +42,21 @@ let routes = [
         exact: true,
     },
     {
-        path: "/building/manage",
+        path: "/building/manage/",
         name: "MANAGE_BUILDING",
         component: ManageBuilding,
+        exact: true,
+    },
+    {
+        path: "/locations/buildings/edit/:id",
+        name: "EDIT_BUILDING",
+        component: EditBuilding,
+        exact: true,
+    },
+    {
+        path: "/locations/buildings/delete/:id",
+        name: "DELETE_BUILDING",
+        component: DeleteBuilding,
         exact: true,
     },
     {

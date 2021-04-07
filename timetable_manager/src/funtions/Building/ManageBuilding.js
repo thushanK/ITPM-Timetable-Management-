@@ -2,6 +2,8 @@ import React from 'react';
 import Sidebar from '../../components/Sidebar'
 import { Link } from 'react-router-dom';
 
+import moment from 'moment';
+import { omit } from 'lodash';
 import B_CONTROLLER from '../../controllers/Building.Controller';
 
 class ManageBuilding extends React.Component {
@@ -29,8 +31,8 @@ class ManageBuilding extends React.Component {
         <div className="container-fluid" >
         <div className="row" >
             <div className="col-12 shadow-sm rounded bg-white mt-1" >
-                <h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Buildings<br></br>
-                <span className="text-muted small">Dashboard</span></h6>
+                <h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Manage Buildings<br></br>
+                <span className="text-muted small">Manage building details</span></h6>
             </div>
 
             <div className="col-12 shadow-sm rounded bg-white mt-3" >
@@ -39,53 +41,13 @@ class ManageBuilding extends React.Component {
                         <tr>
                         <th className="font-08 text-dark2 ">Building ID</th>
                         <th className="font-08 text-dark2 ">Name</th>
-                        <th className="font-08 text-dark2 ">#No of Floors</th>
+                        <th className="font-08 text-dark2 ">No of Floors</th>
                         <th className="font-08 text-dark2 ">Access Time</th>
                         <th className="font-08 text-dark2 ">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         {buildingsList && buildingsList.map((value , i) => this.renderTable(value , i))}
-                        {/* <tr>
-                            <td>MLB 01</td>
-                            <td>Computing Faculty</td>
-                            <td>10</td>
-                            <td>9</td>
-                            <td>Day Time</td>
-                            <td><Link to="/locations/buildings/edit"><span className="badge badge-info rounded-0 bg-white text-success border border-secondary click font-weight-bold ">Edit</span></Link>
-                            <Link to="/locations/buildings/delete"><span className="badge badge-info rounded-0 bg-white text-danger border border-secondary click font-weight-bold ml-2">Delete</span></Link>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>MLB 01</td>
-                            <td>Computing Faculty</td>
-                            <td>10</td>
-                            <td>9</td>
-                            <td>Day Time</td>
-                            <td><span className="badge badge-info rounded-0 bg-white text-success border border-secondary click font-weight-bold ">Edit</span>
-                            <span className="badge badge-info rounded-0 bg-white text-danger border border-secondary click font-weight-bold ml-2">Delete</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>MLB 01</td>
-                            <td>Computing Faculty</td>
-                            <td>10</td>
-                            <td>9</td>
-                            <td>Day Time</td>
-                            <td><span className="badge badge-info rounded-0 bg-white text-success border border-secondary click font-weight-bold ">Edit</span>
-                            <span className="badge badge-info rounded-0 bg-white text-danger border border-secondary click font-weight-bold ml-2">Delete</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>MLB 01</td>
-                            <td>Computing Faculty</td>
-                            <td>10</td>
-                            <td>9</td>
-                            <td>Day Time</td>
-                            <td><span className="badge badge-info rounded-0 bg-white text-success border border-secondary click font-weight-bold ">Edit</span>
-                            <span className="badge badge-info rounded-0 bg-white text-danger border border-secondary click font-weight-bold ml-2">Delete</span>
-                            </td>
-                        </tr> */}
                     </tbody>
                 </table>
             </div>
