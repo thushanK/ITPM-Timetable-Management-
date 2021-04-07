@@ -15,6 +15,7 @@ const MongoClient = require("mongodb").MongoClient;
 const buildingRoute = require("./app/routes/building.route");
 const lecturerRoute = require("./app/routes/lecturer.route");
 const roomRoute = require("./app/routes/room.route");
+const subjectRoute = require("./app/routes/subject.route");
 
 
 const dbConfig = require("./config/db.config");
@@ -31,6 +32,7 @@ mongoose.set("useCreateIndex", true);
 app.use("/api/buildings", buildingRoute);
 app.use("/api/lecturer", lecturerRoute);
 app.use("/api/rooms", roomRoute);
+app.use("/api/subject", subjectRoute);
 
 
 app.use((req, res, next) => {
