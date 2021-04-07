@@ -24,6 +24,7 @@ import AddSubject from '../funtions/Subjects/AddSubject';
 import ManageSubject from '../funtions/Subjects/ManageSubject';
 import AddLecturer from '../funtions/Lecturer/AddLecturer';
 import ManageLecturer from '../funtions/Lecturer/ManageLecturer';
+import EditLecturer from '../funtions/Lecturer/EditLecturer';
 
 
 
@@ -167,6 +168,12 @@ let routes = [
         component: ManageLecturer,
         exact: true,
     },
+    {
+        path: "/lecturer/edit/:id",
+        name: "Lecturer Edit",
+        component: EditLecturer,
+        exact : true,
+      },
 ];
 
 export default routes;
