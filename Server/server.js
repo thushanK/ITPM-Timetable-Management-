@@ -16,7 +16,7 @@ const buildingRoute = require("./app/routes/building.route");
 const lecturerRoute = require("./app/routes/lecturer.route");
 const roomRoute = require("./app/routes/room.route");
 const StudentRoute = require("./app/routes/student.route");
-
+const TagRoute = require("./app/routes/Tag.route");
 
 const dbConfig = require("./config/db.config");
 
@@ -33,6 +33,7 @@ app.use("/api/buildings", buildingRoute);
 app.use("/api/lecturer", lecturerRoute);
 app.use("/api/rooms", roomRoute);
 app.use("/api/student", StudentRoute);
+app.use("/api/tag", TagRoute);
 
 
 app.use((req, res, next) => {
