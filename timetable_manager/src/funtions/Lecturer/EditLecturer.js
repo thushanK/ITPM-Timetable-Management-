@@ -1,20 +1,19 @@
 import React from 'react';
 import Sidebar from '../../components/Sidebar'
-import { FormInput, FormSelect, MultiFormSelect, FormInputReadOnly } from '../../components/Form';
+import { FormInput, FormSelect, MultiFormSelect, FormInputReadOnly } from '../../components/Form'
 import moment from 'moment';
-// import { omit } from 'lodash';
+import { omit } from 'lodash'
 // import { FilePond, registerPlugin } from 'react-filepond';
+import { withRouter} from 'react-router-dom'
 
 import LEC_CONTROLLER from '../../controllers/Lecturer.Controller'
 import CONFIG from '../../controllers/Config.controller'
-//import ROOM_CONTROLLER from '../controllers/Room.Controller';
-import B_CONTROLLER from '../../controllers/Building.Controller';
-import { withRouter } from "react-router-dom";
+
 
 // import 'filepond/dist/filepond.min.css';
 
 
-class AddLecturer extends React.Component {
+class EditLecturer extends React.Component {
 
     constructor(props) {
         super(props);
@@ -26,8 +25,7 @@ class AddLecturer extends React.Component {
             building: '',
             level: '',
             rank: '',
-            department:'',
-            bList:[],
+            department: '',
 
 
             errors: {
@@ -38,39 +36,33 @@ class AddLecturer extends React.Component {
                 building: false,
                 level: false,
                 rank: false,
-                department:false
+                department: false
 
             }
         };
     }
 
-    formValueChange =  (e) => {
+    formValueChange = (e) => {
         this.setState({ [e.target.name]: e.target.value });
         this.is_filled(e.target.name, e.target.value);
         if(e.target.name == 'employeeID'){
             this.setRank(this.state.level , e.target.value)
         }
 
-      
-    }
- async   componentDidMount () {
 
-    const buildings = await B_CONTROLLER.getAllBuildings();
-    console.log(buildings);
-    this.setState({
-        bList: buildings,
-        building :  buildings.length > 0  ? buildings[0].name : ''
-    })
-   }
+    }
+
     formValueChangeLevel = (e) => {
-       
-        this.setState({ level: e.target.value});
+        // this.setRank({
+        //     rank: ''
+        // })
+        this.setState({ level: e.target.value });
         this.is_filled(e.target.name, e.target.value);
         this.setRank(e.target.value , this.state.employeeID)
-
+        console.log(this.state.rank);
     }
-   
-    clear =() => {
+
+    clear = () => {
         this.setState({
             name: '',
             employeeID: '',
@@ -80,49 +72,75 @@ class AddLecturer extends React.Component {
             level: '',
             rank: '',
 
-            department:''
+            department: ''
         })
     }
 
     onFormSubmit = async (e) => {
         e.preventDefault();
-        if(this.validate()){
-
-       var  data = {
-            name:this.state.name ,
-            empId:this.state.employeeID ,
-            faculty:this.state.faculty ,
-            center:this.state.center ,
-            building:this.state.building ,
-            level:this.state.level ,
-            rank:this.state.rank ,
-            department:this.state.department ,
-            image:"image" ,
-        }
-
         
-       
-        const result = await LEC_CONTROLLER.addLecturer(data)
-       
-        if(result == 201){
-            this.clear()
-            CONFIG.setToast("Added Successfully")
-            this.props.history.push("/lecturer/manage")
-        }else if (result == 403){
-            CONFIG.setErrorToast("Lecturer Already Exsist")
+        if(this.validate() ) {
+        var data = {
+            name: this.state.name,
+            empId: this.state.employeeID,
+            faculty: this.state.faculty,
+            center: this.state.center,
+            building: this.state.building,
+            level: this.state.level,
+            rank: this.state.rank,
+            department: this.state.department,
+            image: "image",
         }
-        else{
-            CONFIG.setErrorToast("Something went wrong")
+
+        this.clear()
+        const result = await LEC_CONTROLLER.edit_lecturer(data)
+        if(result == 200){
+            CONFIG.setToast("Successfully Updated")
+            this.clear()
+            this.props.history.push("/lecturer/manage")
         }
     }
 
     }
+
+
 
     setRank = (rank , emp ) => {
         if(rank != ''){
         this.setState({
             rank : `${rank}.${emp != '' ? emp : '00'}`  })
         }
+    }
+
+
+
+
+    componentDidMount = () => {
+
+        this.loadData()
+    }
+
+    loadData = async (id) => {
+        const result = await LEC_CONTROLLER.get_specific(this.props.match.params.id);
+        console.log(result.data);
+
+        var resultItem = result.data[0]
+
+        this.setState({
+            name: resultItem.name,
+            employeeID: resultItem.empId,
+            faculty: resultItem.faculty,
+            center: resultItem.center,
+            building: resultItem.building,
+            level: resultItem.level,
+            rank: resultItem.rank,
+            cdate: moment(resultItem.createdAt).format('L'),
+            udate: moment(resultItem.updatedAt).format('L'),
+            department: resultItem.department,
+        })
+
+
+
     }
 
     render() {
@@ -133,53 +151,24 @@ class AddLecturer extends React.Component {
                 <main>
                     <div className="container-fluid" >
                         <div className="row" >
-                            {/* <div className="col-12 shadow-sm rounded bg-white mt-1" > */}
-                                <h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Add Lecturer<br></br>
-        <span className="text-muted small">You can add new lecturer</span></h6>
-                            {/* </div> */}
+                            <div className="col-12 shadow-sm rounded bg-white mt-1" >
+                                <h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Edit Lecturer<br></br>
+                                    <span className="text-muted small">You can edit exsisting lecturer</span></h6>
+                            </div>
                             <div className="col-12 shadow-sm rounded bg-white mt-3 pb-1" >
                                 <form onSubmit={(e) => this.onFormSubmit(e)}>
                                     <div className="row mt-1 pb-3" >
-                                        {/* <div className="col-md-6 row "> */}
-                                            {/* <div className="col-md-12 mt-2 mb-1"> */}
-                                            {/* <p className="m-0 p-0">Profile Image</p> */}
-                                                {/* <FilePond
-                    allowMultiple={false}
-                    imageResizeTargetWidth={150}
-                    imageCropAspectRatio="1:1"
-                    acceptedFileTypes={["image/*"]}
-
-                    onpreparefile={(file, output) =>
-                        this.handleImage(output[1].file)
-                    }
-                    onupdatefiles={fileItems => {
-                        // Set currently active file objects to this.state
-                        this.setState({
-                            profilePictureArr: fileItems.map(
-                                fileItem => fileItem.file
-                            )
-                        });
-                    }}
-                ></FilePond> */}
-                                                {/* <hr className="mt-0 pt-0" />
+                                        <div className="col-md-6 row ">
+                                            <div className="col-md-12 mt-2 mb-1">
+                                                <p className="m-0 p-0">Profile Image</p>
+                                                <hr className="mt-0 pt-0" />
                                                 <center>
                                                     <img style={{ height: '150px' }} className="img-fluid rounded-circle mt-2" src="https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-user-vector-avatar-png-image_1541962.jpg" />
-                                                </center> */}
-                                            {/* </div> */}
-                                            {/* <div className="col-md-12 mt-2 mb-1" > */}
-
-                                              
-                                            {/* </div> */}
-
-                                        {/* </div> */}
-                                        {/* <div className="col-md-6 row"> */}
-                                            {/* <div className="col-md-12 mt-2 mb-1"> */}
-                                                {/* <p className="m-0 p-0">Lecturer Details</p> */}
-                                                {/* <hr className="mt-0 pt-0" /> */}
-                                            {/* </div> */}
-                                            
+                                                </center>
+                                            </div>
                                             <div className="col-md-12 mt-2 mb-1" >
-                                            <FormInput
+
+                                                <FormInput
                                                     label={'Name '}
                                                     placeholder={'Enter Name'}
                                                     error={errors.name}
@@ -188,7 +177,7 @@ class AddLecturer extends React.Component {
                                                     onChange={this.formValueChange}
                                                     error_meesage={'*Name required'}
                                                 />
-                                                <FormInput
+                                                <FormInputReadOnly
                                                     label={'Employee ID '}
                                                     placeholder={'Enter Employee ID'}
                                                     error={errors.employeeID}
@@ -196,8 +185,17 @@ class AddLecturer extends React.Component {
                                                     type={'number'}
                                                     name="employeeID"
                                                     onChange={this.formValueChange}
-                                                    error_meesage={'*Employee ID required with 6 digit'}
+                                                    error_meesage={'*Employee ID required'}
                                                 />
+                                            </div>
+
+                                        </div>
+                                        <div className="col-md-6 row">
+                                            <div className="col-md-12 mt-2 mb-1">
+                                                <p className="m-0 p-0">Lecturer Details</p>
+                                                <hr className="mt-0 pt-0" />
+                                            </div>
+                                            <div className="col-md-12 mt-2 mb-1" >
                                                 <FormInput
                                                     label={'Faculty '}
                                                     placeholder={'Enter Faculty'}
@@ -232,24 +230,7 @@ class AddLecturer extends React.Component {
                                             </div>
 
                                             <div className="col-md-12 mt-1 mb-1" >
-
-                                            <FormSelect 
-                                            label={'Building'}
-                                            options={this.state.bList.map(i => {
-                                                return {
-                                                    label: i.name,
-                                                    value: i.name,
-                                                }
-                                            })}
-                                            error={ errors.building}
-                                            selected={this.state.building}
-                                            onChange={this.formValueChange}
-                                            name="building"
-                                            error_meesage={'*Building is required'}
-                                        />
-
-
-                                                { <FormInput
+                                                <FormInput
                                                     label={'Building '}
                                                     placeholder={'Enter Building'}
                                                     error={errors.building}
@@ -257,7 +238,7 @@ class AddLecturer extends React.Component {
                                                     name="building"
                                                     onChange={this.formValueChange}
                                                     error_meesage={'*Building required'}
-                                                /> }
+                                                />
                                             </div>
                                             <div className="col-md-12 mt-1 mb-1" >
                                                 <FormSelect
@@ -271,21 +252,20 @@ class AddLecturer extends React.Component {
                                                 />
                                             </div>
                                             <div className="col-md-12 mt-1 mb-1" >
-                                                <FormInputReadOnly
+                                                <FormInput
                                                     label={'Rank '}
-                                                 
+
                                                     value={this.state.rank}
                                                     name="rank"
                                                     onChange={this.formValueChange}
-                                                 
-                                                    
+
+
                                                 />
                                             </div>
                                             <div className="col-md-12 mt-1 mb-1" >
-                                                <br/>
-                                                <button type="submit" className="btn btn-dark btn-sm">Add Lecturer</button>
+                                                <button type="submit" className="btn-outline-success mt-2 btn btn-sm px-2 float-right">Save Edit</button>
                                             </div>
-                                        {/* </div> */}
+                                        </div>
                                     </div>
                                 </form>
                             </div>
@@ -303,18 +283,18 @@ class AddLecturer extends React.Component {
             center,
             building,
             level,
-            rank,department } = this.state;
+            rank, department } = this.state;
         let count = 0;
         let errors = {}
 
-        if (name == '') {
+        if (name == 'NONE') {
             errors.name = true
             count++
         } else {
             errors.name = false
         }
 
-        if (employeeID.length == 0 || employeeID.length < 6) {
+        if (employeeID.length == 0) {
             errors.employeeID = true
             count++
         } else {
@@ -339,12 +319,12 @@ class AddLecturer extends React.Component {
         } else {
             errors.center = false
         }
-        // if (building.length == 0) {
-        //     errors.building = true
-        //     count++
-        // } else {
-        //     errors.building = false
-        // }
+        if (building.length == 0) {
+            errors.building = true
+            count++
+        } else {
+            errors.building = false
+        }
 
         if (level.length == 0) {
             errors.level = true
@@ -375,13 +355,13 @@ class AddLecturer extends React.Component {
 }
 
 const WD_OPTIONS = [{ label: 'Select Level', value: "NONE" },
-...[ 1, 2, 3, 4, 5, 6, 7].map(i => {
+...[0, 1, 2, 3, 4, 5, 6, 7].map(i => {
     return {
-        label: i ,
+        label: i,
         value: i
     }
 })];
 
 
 
-export default withRouter(AddLecturer);
+export default withRouter(EditLecturer);
