@@ -54,12 +54,12 @@ exports.add = async (req, res) => {
 
 exports.update = async (req, res) => {
     console.log(req.body);
-    // if (req.body.empId == null || req.body.empId == undefined) {
-    //     res.status(400).send({
-    //         message: "Content can not be empty!"
-    //     });
-    //     return;
-    // }
+    if (req.body.empId == null || req.body.empId == undefined) {
+        res.status(400).send({
+            message: "Content can not be empty!"
+        });
+        return;
+    }
 
     const update_result = await Student.findOneAndUpdate({ academicYear: req.body.academicYear },
         {
