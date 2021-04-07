@@ -39,7 +39,7 @@ class ManageBuilding extends React.Component {
                         <tr>
                         <th className="font-08 text-dark2 ">Building ID</th>
                         <th className="font-08 text-dark2 ">Name</th>
-                        <th className="font-08 text-dark2 ">#No of Floors</th>
+                        <th className="font-08 text-dark2 ">No of Floors</th>
                         <th className="font-08 text-dark2 ">Access Time</th>
                         <th className="font-08 text-dark2 ">Actions</th>
                         </tr>
