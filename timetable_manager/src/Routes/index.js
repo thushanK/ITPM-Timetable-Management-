@@ -19,6 +19,10 @@ import ManageTags from '../funtions/Tag/ManageTags';
 import editStudentGrp from '../funtions/Student/EditStudentGrp';
 import DeleteStGrp from '../funtions/Student/DeleteStudentGrp'
 
+import EditTag from '../funtions/Tag/EditTag';
+import DeleteTag from '../funtions/Tag/DeleteTag';
+
+
 import Addworkingdays from '../funtions/working days and hours/Addworkingdays';
 import Managetimeslot from '../funtions/working days and hours/Managetimeslot';
 import Manageworkingdays from '../funtions/working days and hours/Manageworkingdays';
@@ -198,6 +202,21 @@ let routes = [
         component: DeleteStGrp,
         exact : true,
       },
+
+      {
+        path: "/tags/EditTags/:id",
+        name: "EditTags",
+        component: EditTag,
+        exact : true,
+      },
+
+      {
+        path: "/student/DeleteTag/:id",
+        name: "DeleteTag",
+        component: DeleteTag,
+        exact : true,
+      },
+    
 ];
 
 export default routes;
