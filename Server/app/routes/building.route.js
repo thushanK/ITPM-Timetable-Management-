@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const buildingController = require('./../controllers/Building.controller');
+const buildingController = require('../controllers/building.controller');
 
 router.post('/add', buildingController.add);
 

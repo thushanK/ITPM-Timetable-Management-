@@ -12,7 +12,7 @@ const MongoClient = require("mongodb").MongoClient;
 
 
 //routes
-const locationsRoute = locationsroute = require("./app/routes/Building.routes")
+const buildingRoute = require("./app/routes/building.route");
 
 
 const dbConfig = require("./config/db.config");
@@ -26,7 +26,7 @@ app.use(morgan("dev"));
 mongoose.set("useCreateIndex", true);
 
 //set routes
-app.use("/api/locations", locationsRoute);
+app.use("/api/buildings", buildingRoute);
 
 app.use((req, res, next) => {
   const error = new Error("Not found");

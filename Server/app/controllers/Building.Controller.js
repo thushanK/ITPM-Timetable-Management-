@@ -1,4 +1,4 @@
-const Building = require("../models/Building.model");
+const Building = require("./../models/building.model");
 
 exports.add = (req, res) => {
     
