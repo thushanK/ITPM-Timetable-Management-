@@ -7,7 +7,7 @@ import moment from 'moment';
 
 import LEC_CONTROLLER from '../../controllers/Lecturer.Controller'
 import CONFIG from '../../controllers/Config.controller'
-//import ROOM_CONTROLLER from '../controllers/Room.Controller';
+import ROOM_CONTROLLER from '../../controllers/Room.Controller';
 import B_CONTROLLER from '../../controllers/Building.Controller';
 import { withRouter } from "react-router-dom";
 

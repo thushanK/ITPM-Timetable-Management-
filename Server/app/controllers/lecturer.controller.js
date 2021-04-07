@@ -1,11 +1,9 @@
 
-//import Lecturer
 const Lecturer = require('../models/lecturer.model');
-// const Session = require('../models/sessions.model');
- 
+const Session = require('../models/sessions.model');
 
 
-// create user
+
 exports.add_lecturer = async (req, res) => {
     console.log(req.body);
     // Validate request
