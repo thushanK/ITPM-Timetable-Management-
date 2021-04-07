@@ -1,16 +1,8 @@
 
 //import Lecturer
 const Lecturer = require('../models/lecturer.model');
-const Session = require('../models/sessions.model');
-
-
-
-
-
-//======================================================================================================
-//================================== Register Lecturer  =============================================
-//====================================================================================================== 
-
+// const Session = require('../models/sessions.model');
+ 
 
 
 // create user
