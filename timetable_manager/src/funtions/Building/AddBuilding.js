@@ -5,6 +5,11 @@ import {FormInput , FormSelect , MultiFormSelect} from '../../components/Form'
 // import { omit } from 'lodash'
 
 import BUL_CONTROLLER from '../../controllers/Building.Controller';
+import CONFIG from '../../controllers/Config.controller';
+
+// import { ThemeProvider, createGlobalStyle } from 'styled-components';
+
+
 
 
 class AddBuilding extends React.Component {
@@ -64,11 +69,11 @@ class AddBuilding extends React.Component {
     render(){
         const {errors} = this.state;
     return (
+
         <div className="app" >
         <Sidebar activemenu={'BUILDINGS'} submenu={'ADD_BUILDING'} />
         <main>
-            
-            <div className="container" >
+            <div className="container-fluid" >
             <div className="row" >
                 <div className="col-12 shadow-sm rounded bg-white mt-1" >
                     <h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Add Building<br></br>
@@ -90,7 +95,7 @@ class AddBuilding extends React.Component {
                     </div>
                     <div className="col-md-6 mt-1 mb-1" >
                             <FormInput 
-                                label={'#No Floors'}
+                                label={'No Floors'}
                                 placeholder={'Enter number of floors'}
                                 error={ errors.noOfFloors}
                                 name="noOfFloors"
@@ -111,8 +116,8 @@ class AddBuilding extends React.Component {
                             />
                     </div>
                     <div className="col-md-12 mt-1 mb-1" >
-                            <button type="submit" className="btn-outline-primary mt-2 btn btn-sm px-2 mr-4">Save</button>
-                            <button type="reset" className="btn-outline-secondary mt-2 btn btn-sm px-2 " onClick={this.clear}>Reset</button>
+                            <button type="submit" className="btn btn-primary">Submit</button>
+                            {/* <button type="reset" className="btn-outline-secondary mt-2 btn btn-sm px-2 " onClick={this.clear}>Reset</button> */}
                     </div>
                 </div>
                 </form>
@@ -120,7 +125,9 @@ class AddBuilding extends React.Component {
             </div>
             </div>
         </main>
+        
     </div>
+
     );}
 
     validate = () => {
