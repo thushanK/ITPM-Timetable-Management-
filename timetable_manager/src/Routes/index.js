@@ -25,7 +25,7 @@ import DeleteTag from '../funtions/Tag/DeleteTag';
 
 import Addworkingdays from '../funtions/workingDaysAndHours/AddWorkingDays';
 //  import Managetimeslot from '../funtions/wor';
- import Manageworkingdays from '../funtions/workingDaysAndHours/ManageWorkingDays';
+import Manageworkingdays from '../funtions/workingDaysAndHours/ManageWorkingDays';
 import DeleteWork from '../funtions/workingDaysAndHours/DeleteWorkingDays';
 
 
@@ -87,7 +87,7 @@ let routes = [
         name: "Delete Rooms",
         component: DeleteRoom,
         exact: true,
-      },
+    },
     {
         path: "/statistics/student",
         name: "STUDENT_STATISTICS",
@@ -205,37 +205,37 @@ let routes = [
         path: "/lecturer/edit/:id",
         name: "Lecturer Edit",
         component: EditLecturer,
-        exact : true,
-      },
+        exact: true,
+    },
 
-      {
+    {
         path: "/student/editTimeTable/:id",
         name: "editTimeTable",
         component: editStudentGrp,
-        exact : true,
-      },
+        exact: true,
+    },
 
-      {
+    {
         path: "/student/delete_student_slot/:id",
         name: "Delete Student Slot",
         component: DeleteStGrp,
-        exact : true,
-      },
+        exact: true,
+    },
 
-      {
+    {
         path: "/tags/EditTags/:id",
         name: "EditTags",
         component: EditTag,
-        exact : true,
-      },
+        exact: true,
+    },
 
-      {
+    {
         path: "/student/DeleteTag/:id",
         name: "DeleteTag",
         component: DeleteTag,
-        exact : true,
-      },
-    
+        exact: true,
+    },
+
 ];
 
 export default routes;
