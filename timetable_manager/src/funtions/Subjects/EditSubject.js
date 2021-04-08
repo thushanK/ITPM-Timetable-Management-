@@ -8,7 +8,7 @@ import { omit } from 'lodash'
 import { withRouter} from 'react-router-dom'
 // import 'filepond/dist/filepond.min.css';
 
-import SUB_CONTROLLER from '../../controllers/Subject.Controller'
+import SUB_CONTROLLER from '../../controllers/Subject.controller'
 import CONFIG from '../../controllers/Config.controller'
 
 
