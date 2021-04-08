@@ -2,7 +2,7 @@ import React from 'react';
 import Sidebar from '../../components/Sidebar'
 import {Link} from 'react-router-dom'
 import moment from 'moment'
-import {getWorkingDays } from '../../Controllers/WorkingDaysController'
+import {getWorkingDays } from '../../controllers/WorkingDaysController'
 
 class WorkingDays extends React.Component {
 
