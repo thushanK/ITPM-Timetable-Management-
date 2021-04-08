@@ -139,19 +139,19 @@ let routes = [
         exact: true,
     },
 
-    // {
-    //     path: "/workingday/add",
-    //     name: "ADD_WORKING_DAY",
-    //     component: Addworkingdays,
-    //     exact: true,
-    // },
+    {
+        path: "/workingday/add",
+        name: "ADD_WORKING_DAY",
+        component: Addworkingdays,
+        exact: true,
+    },
 
-    // {
-    //     path: "/workingday/manage",
-    //     name: "MANAGE_WORKING_DAY",
-    //     component: Manageworkingdays,
-    //     exact: true,
-    // },
+    {
+        path: "/workingday/manage",
+        name: "MANAGE_WORKING_DAY",
+        component: Manageworkingdays,
+        exact: true,
+    },
 
     // {
     //     path: "/workingday/delete",
