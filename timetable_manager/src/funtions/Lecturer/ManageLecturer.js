@@ -130,63 +130,66 @@ class ManageLecturer extends React.Component {
                                     <div className="col-md-12"><h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Lecturers Managment <br></br>
                                         <span className="text-muted small">Overview</span>
                                     </h6></div>
-                                    {/* <div className="col-md-4"> */}
-                                        {/* <Link to="/lecturer/add">  <button type="submit" className="btn-outline-success  btn btn-sm px-2 float-right mt-3 mb-2">Add Lecturer</button></Link> */}
-                                    {/* </div> */}
+                                    {/* <div className="col-md-4">
+                                        <Link to="/lecturer/add">  <button type="submit" className="btn-outline-success  btn btn-sm px-2 float-right mt-3 mb-2">Add Lecturer</button></Link>
+                                    </div> */}
                                 </div>
                             </div>
                             <form onSubmit={(e) => this.onFormSubmit(e)}>
-                                <div className="col-12 shadow-sm rounded bg-white mt-4 row" style={{ display: 'flex', alignContent: 'center' }} >
+                            <div className="col-12 shadow-sm rounded bg-white mt-3 " style={{ display: 'flex', alignContent: 'center' }} >
 
-                                    <div className="col-md-8  px-2  mt-1 mb-2">
-                                        <FormInput
-                                            label={'Search'}
-                                            placeholder={'Type Anything...'}
-                                            error={errors.search_word}
-                                            value={this.state.search_word}
-                                            name="search_word"
-                                            onChange={this.formValueChange}
-                                            error_meesage={'*Please provide valid search'}
-                                        />
-                                    </div>
-                                    <div className="col-md-4">
-                                        <button type="submit" className="btn-outline-info  btn btn-sm  mb-2 " style={{ marginTop: '29px' }}>Search</button>
-                                        {/* <button type="button" className="btn-outline-warning  btn btn-sm  mb-2  mx-2" onClick={() => this.loadData()} style={{ marginTop: '29px' }}>Reset</button> */}
+                            <div className="row ">
 
-                                    </div>
+                            <div className="col-md-8  px-2  mt-1 mb-2" > 
+                             <FormInput
+                                label={'Search'}
+                                placeholder={'Type Anything...'}
+                                error={errors.search_word}
+                                value={this.state.search_word}
+                                name="search_word"
+                                onChange={this.formValueChange}
+                                error_meesage={'*Please provide valid search'}
+                            />
+                            </div>
+                            <div className="col-md-4">
+                                <button type="submit" style={{ marginTop: '30px' }} className="btn-outline-info  btn btn-sm ">Search</button>
+                                <button type="button" style={{marginTop:'30px'}} className="btn-outline-warning  btn btn-sm  ml-3" onClick={()=> this.loadData()}>Reset</button>
 
-                                    <div className="col-md-12">
-                                        <div className="form-check form-check-inline mt-1 mb-1 pt-1 pb-1">
-                                            <input className="form-check-input" type="radio" name="inlineRadioOptions" onChange={(e) => this.onChnageFilter(e)} id="inlineRadio1" value="name" />
-                                            <label className="form-label mt-1" for="inlineRadio1">Name</label>
-                                        </div>
-                                        <div className="form-check form-check-inline mt-1 mb-1 pt-1 pb-1">
-                                            <input className="form-check-input" type="radio" name="inlineRadioOptions" onChange={(e) => this.onChnageFilter(e)} id="inlineRadio2" value="employeeId" />
-                                            <label className="form-label mt-1" for="inlineRadio2">Employee ID</label>
-                                        </div>
-                                        <div className="form-check form-check-inline mt-1 mb-1 pt-1 pb-1">
-                                            <input className="form-check-input" type="radio" name="inlineRadioOptions" onChange={(e) => this.onChnageFilter(e)} id="inlineRadio3" value="faculty" />
-                                            <label className="form-label mt-1" for="inlineRadio3">Faculty</label>
-                                        </div>
-                                        <div className="form-check form-check-inline mt-1 mb-1 pt-1 pb-1">
-                                            <input className="form-check-input" type="radio" name="inlineRadioOptions" onChange={(e) => this.onChnageFilter(e)} id="inlineRadio4" value="department" />
-                                            <label className="form-label mt-1" for="inlineRadio4">Department</label>
-                                        </div>
-                                        <div className="form-check form-check-inline mt-1 mb-1 pt-1 pb-1">
-                                            <input className="form-check-input" type="radio" name="inlineRadioOptions" onChange={(e) => this.onChnageFilter(e)} id="inlineRadio5" value="center" />
-                                            <label className="form-label mt-1" for="inlineRadio5">Center</label>
-                                        </div>
-                                        <div className="form-check form-check-inline mt-1 mb-1 pt-1 pb-1">
-                                            <input className="form-check-input" type="radio" name="inlineRadioOptions" onChange={(e) => this.onChnageFilter(e)} id="inlineRadio6" value="building" />
-                                            <label className="form-label mt-1" for="inlineRadio6">Building</label>
-                                        </div>
-                                        <div className="form-check form-check-inline mt-1 mb-1 pt-1 pb-1">
-                                            <input className="form-check-input" type="radio" name="inlineRadioOptions" onChange={(e) => this.onChnageFilter(e)} id="inlineRadio7" value="level" />
-                                            <label className="form-label mt-1" for="inlineRadio7">Level</label>
-                                        </div>
-                                    </div>
+                            </div>
+                            <div className="col-md-12">
+                            <div className="form-check form-check-inline mt-1 mb-1 pt-1 pb-1">
+                                    <input className="form-check-input" type="radio" name="inlineRadioOptions" onChange={(e) => this.onChnageFilter(e)} id="inlineRadio1" value="name" />
+                                    <label className="form-label mt-1" for="inlineRadio1">Name</label>
+                            </div>
+                            <div className="form-check form-check-inline mt-1 mb-1 pt-1 pb-1">
+                                    <input className="form-check-input" type="radio" name="inlineRadioOptions" onChange={(e) => this.onChnageFilter(e)} id="inlineRadio2" value="employeeId" />
+                                    <label className="form-label mt-1" for="inlineRadio2">Employee ID</label>
+                            </div>
+                            <div className="form-check form-check-inline mt-1 mb-1 pt-1 pb-1">
+                                    <input className="form-check-input" type="radio" name="inlineRadioOptions" onChange={(e) => this.onChnageFilter(e)} id="inlineRadio3" value="faculty" />
+                                    <label className="form-label mt-1" for="inlineRadio3">Faculty</label>
+                            </div>
+                            <div className="form-check form-check-inline mt-1 mb-1 pt-1 pb-1">
+                                    <input className="form-check-input" type="radio" name="inlineRadioOptions" onChange={(e) => this.onChnageFilter(e)} id="inlineRadio4" value="department" />
+                                    <label className="form-label mt-1" for="inlineRadio4">Department</label> 
+                             </div>
+                            <div className="form-check form-check-inline mt-1 mb-1 pt-1 pb-1">
+                                    <input className="form-check-input" type="radio" name="inlineRadioOptions" onChange={(e) => this.onChnageFilter(e)} id="inlineRadio5" value="center" />
+                                    <label className="form-label mt-1" for="inlineRadio5">Center</label>
+                            </div>
+                            <div className="form-check form-check-inline mt-1 mb-1 pt-1 pb-1">
+                                    <input className="form-check-input" type="radio" name="inlineRadioOptions" onChange={(e) => this.onChnageFilter(e)} id="inlineRadio6" value="building" />
+                                    <label className="form-label mt-1" for="inlineRadio6">Building</label>
+                            </div>
+                            <div className="form-check form-check-inline mt-1 mb-1 pt-1 pb-1">
+                                    <input className="form-check-input" type="radio" name="inlineRadioOptions" onChange={(e) => this.onChnageFilter(e)} id="inlineRadio7" value="level" />
+                                    <label className="form-label mt-1" for="inlineRadio7">Level</label>
+                            </div>
 
-                                </div>
+                           </div>
+                        </div>
+
+                    </div>
                             </form>
                             <div className="col-12 shadow-sm rounded bg-white mt-3" >
 

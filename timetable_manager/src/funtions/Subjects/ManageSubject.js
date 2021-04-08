@@ -85,7 +85,7 @@ class ManageSubject extends React.Component {
         if (result == 200)
         CONFIG.setToast("Successfully Deleted")
              else if (result == 401)
-        CONFIG.showAlert2("First you have to delete sessions related to the subject")
+        //CONFIG.showAlert2("First you have to delete sessions related to the subject")
           await this.loadData()
         }
 
