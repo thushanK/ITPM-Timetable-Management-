@@ -46,7 +46,7 @@ class DeleteWorkingDays extends React.Component {
         .then( result => {
             if(result.status == 200 ){
                 Config.setToast('Working Days Group Deleted Successfully!');
-                this.props.history.push("/workingdays/list")
+                this.props.history.push("/workingday/manage")
             }else{
                 Config.setErrorToast('Something Wrong Happend!');
             }

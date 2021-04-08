@@ -24,9 +24,9 @@ import DeleteTag from '../funtions/Tag/DeleteTag';
 
 
 import Addworkingdays from '../funtions/workingDaysAndHours/AddWorkingDays';
-// //  import Managetimeslot from '../funtions/wor';
+import EditWorkingDays from '../funtions/workingDaysAndHours/EditWorkingDays';
 import Manageworkingdays from '../funtions/workingDaysAndHours/ManageWorkingDays';
-// import DeleteWork from '../funtions/workingDaysAndHours/DeleteWorkingDays';
+import DeleteWork from '../funtions/workingDaysAndHours/DeleteWorkingDays';
 
 
 import AddSubject from '../funtions/Subjects/AddSubject';
@@ -146,6 +146,17 @@ let routes = [
         exact: true,
     },
 
+    
+
+    {
+        path: "/workingday/edit/:id",
+        name: "ADD_WORKING_DAY",
+        component: EditWorkingDays,
+        exact: true,
+      },
+
+
+
     {
         path: "/workingday/manage",
         name: "MANAGE_WORKING_DAY",
@@ -153,18 +164,14 @@ let routes = [
         exact: true,
     },
 
-    // {
-    //     path: "/workingday/delete",
-    //     name: "MANAGE_WORKING_DAY",
-    //     component: DeleteWork,
-    //     exact: true,
-    // },
-    // {
-    //     path: "/timeslot/manage",
-    //     name: "MANAGE_TIMESLOT",
-    //     component: Managetimeslot,
-    //     exact: true,
-    // },
+
+    {
+        path: "/workingday/delete/:id",
+        name: "MANAGE_WORKING_DAY",
+        component: DeleteWork,
+        exact: true,
+      },
+
 
 
     {

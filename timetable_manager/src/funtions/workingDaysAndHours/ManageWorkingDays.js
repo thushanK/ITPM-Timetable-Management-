@@ -115,10 +115,10 @@ class WorkingDays extends React.Component {
                 <td>{row.daycount} Days</td>
                 <td>{row.dayslist.toString() }</td>
                 <td>{moment(row.start_time, 'HH:mm:ss').format('hh:mm A')} : {moment(row.end_time, 'HH:mm:ss').format('hh:mm A')}</td>
-                <td><Link to={`/workingdays/timeslots/${row._id}`}>
-                    <span className="badge badge-info rounded-0 bg-white text-primary border border-info click font-weight-bold ">More Info</span>
+                <td><Link to={`/workingday/edit/${row._id}`}>
+                    <span className="badge badge-info rounded-0 bg-white text-primary border border-info click font-weight-bold ">Edit</span>
                     </Link>
-                <Link to={`/workingdays/delete/${row._id}`}>
+                <Link to={`/workingday/delete/${row._id}`}>
                     <span className="ml-1 badge badge-danger rounded-0 bg-white text-danger border border-danger click font-weight-bold ">Remove</span>
                     </Link>
                 </td>

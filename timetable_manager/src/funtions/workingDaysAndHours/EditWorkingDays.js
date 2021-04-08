@@ -2,9 +2,9 @@ import React from 'react';
 import Sidebar from '../../components/Sidebar'
 import {FormInput , FormSelect , MultiFormSelect} from '../../components/Form'
 import moment from 'moment';
-import Config from '../../controllers/Config.Controller'
-import {insertGroup } from '../Controllers/WorkingDaysController'
-import {getWorkingDaysSingle , updateGroup  } from '../../Controllers/WorkingDaysController'
+import Config from '../../controllers/Config.controller'
+import {insertGroup } from '../../controllers/WorkingDaysController'
+import {getWorkingDaysSingle , updateGroup  } from '../../controllers/WorkingDaysController'
 import { withRouter } from "react-router-dom";
 
 class EditWorkingDays extends React.Component {
@@ -82,6 +82,7 @@ class EditWorkingDays extends React.Component {
             .then( result => {
                 if(result.status == 200 ){
                     Config.setToast('Working Days Group Updated Successfully!');
+                    this.props.history.push("/workingday/manage")
                 }else{
                     Config.setErrorToast('Something Wrong Happend!');
                 }
