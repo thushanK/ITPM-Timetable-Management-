@@ -17,6 +17,7 @@ const lecturerRoute = require("./app/routes/lecturer.route");
 const roomRoute = require("./app/routes/room.route");
 const StudentRoute = require("./app/routes/student.route");
 const TagRoute = require("./app/routes/Tag.route");
+const WorkingDaysRoute = require("./app/routes/workingdays.route");
 
 const dbConfig = require("./config/db.config");
 
@@ -34,6 +35,7 @@ app.use("/api/lecturer", lecturerRoute);
 app.use("/api/rooms", roomRoute);
 app.use("/api/student", StudentRoute);
 app.use("/api/tag", TagRoute);
+app.use("/api/workingdays", WorkingDaysRoute);
 
 
 app.use((req, res, next) => {

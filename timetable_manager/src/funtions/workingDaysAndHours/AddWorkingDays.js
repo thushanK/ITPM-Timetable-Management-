@@ -1,9 +1,9 @@
 import React from 'react';
-import Sidebar from '../Components/Sidebar'
-import {FormInput , FormSelect , MultiFormSelect} from '../Components/Form'
+import Sidebar from '../../components/Sidebar'
+import {FormInput , FormSelect , MultiFormSelect} from '../../components/Form'
 import moment from 'moment';
-import Config from '../Controllers/Config.Controller'
-import {insertGroup } from '../Controllers/WorkingDaysController'
+import Config from '../../controllers/Config.controller'
+import {insertGroup } from '../../controllers/WorkingDaysController'
 import { withRouter } from "react-router-dom";
 
 class AddWorkingDays extends React.Component {
@@ -59,7 +59,7 @@ class AddWorkingDays extends React.Component {
             .then( result => {
                 if(result.status == 200 ){
                     Config.setToast('Working Days Group Added Successfully!');
-                    this.props.history.push("/workingdays/list")
+                    this.props.history.push("/workingday/manage")
                 }else{
                     Config.setErrorToast('Something Wrong Happend!');
                 }
