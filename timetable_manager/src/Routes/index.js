@@ -23,9 +23,9 @@ import EditTag from '../funtions/Tag/EditTag';
 import DeleteTag from '../funtions/Tag/DeleteTag';
 
 
-// import Addworkingdays from '../funtions/workingDaysAndHours/AddWorkingDays';
+import Addworkingdays from '../funtions/workingDaysAndHours/AddWorkingDays';
 // //  import Managetimeslot from '../funtions/wor';
-// import Manageworkingdays from '../funtions/workingDaysAndHours/ManageWorkingDays';
+import Manageworkingdays from '../funtions/workingDaysAndHours/ManageWorkingDays';
 // import DeleteWork from '../funtions/workingDaysAndHours/DeleteWorkingDays';
 
 
