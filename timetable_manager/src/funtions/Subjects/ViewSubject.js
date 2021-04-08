@@ -153,7 +153,7 @@ class SubjectView extends React.Component {
                                         </div>
                                         
 
-                                        <div className="col-md-4 mt-3 mb-1" >
+                                        {/* <div className="col-md-4 mt-3 mb-1" >
                                                 <FormInputReadOnly
                                                     label={'Created At '}
                                                     value={this.state.cdate}
@@ -164,7 +164,7 @@ class SubjectView extends React.Component {
                                                     label={'Updated At '}
                                                     value={this.state.udate}
                                                 />
-                                            </div>
+                                            </div> */}
                                     </div>
                                 </form>
                             </div>

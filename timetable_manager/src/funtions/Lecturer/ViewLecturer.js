@@ -75,13 +75,22 @@ class ViewLecturer extends React.Component {
                                 <form>
                                     <div className="row mt-1 pb-3" >
                                         <div className="col-md-6 row ">
-                                            <div className="col-md-12 mt-2 mb-1">
+                                            {/* <div className="col-md-12 mt-2 mb-1">
                                                 <p className="m-0 p-0">Profile Image</p>
                                                 <hr className="mt-0 pt-0" />
                                                 <center>
                                                     <img style={{ height: '150px' }} className="img-fluid rounded-circle mt-2" src="https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-user-vector-avatar-png-image_1541962.jpg" />
                                                 </center>
+                                            </div> */}
+                                            
+
+                                        </div>
+                                        <div className="col-md-10 row">
+                                            <div className="col-md-12 mt-2 mb-1">
+                                                <p className="m-0 p-0">Lecturer Details</p>
+                                                <hr className="mt-0 pt-0" />
                                             </div>
+
                                             <div className="col-md-12 mt-2 mb-1" >
 
                                                 <FormInputReadOnly
@@ -98,7 +107,7 @@ class ViewLecturer extends React.Component {
 
                                                 />
                                             </div>
-                                            <div className="col-md-12 mt-1 mb-1" >
+                                            {/* <div className="col-md-12 mt-1 mb-1" >
                                                 <FormInputReadOnly
                                                     label={'Created At '}
                                                     value={this.state.cdate}
@@ -109,14 +118,7 @@ class ViewLecturer extends React.Component {
                                                     label={'Updated At '}
                                                     value={this.state.udate}
                                                 />
-                                            </div>
-
-                                        </div>
-                                        <div className="col-md-6 row">
-                                            <div className="col-md-12 mt-2 mb-1">
-                                                <p className="m-0 p-0">Lecturer Details</p>
-                                                <hr className="mt-0 pt-0" />
-                                            </div>
+                                            </div> */}
                                             <div className="col-md-12 mt-2 mb-1" >
                                                 <FormInputReadOnly
                                                     label={'Faculty '}

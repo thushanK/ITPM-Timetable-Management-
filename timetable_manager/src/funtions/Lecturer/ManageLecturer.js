@@ -136,7 +136,7 @@ class ManageLecturer extends React.Component {
                                 </div>
                             </div>
                             <form onSubmit={(e) => this.onFormSubmit(e)}>
-                            <div className="col-md-12 shadow-sm rounded bg-white mt-3 " style={{ display: 'flex', alignContent: 'center' }} >
+                            <div className="col-12 shadow-sm rounded bg-white mt-3 " style={{ display: 'flex', alignContent: 'center' }} >
 
                             <div className="row ">
 
