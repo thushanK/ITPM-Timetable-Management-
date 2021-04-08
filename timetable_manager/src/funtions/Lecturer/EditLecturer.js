@@ -169,7 +169,7 @@ class EditLecturer extends React.Component {
                                             <div className="col-md-12 mt-2 mb-1" >
 
                                                 <FormInput
-                                                    label={'Name '}
+                                                    label={'Name'}
                                                     placeholder={'Enter Name'}
                                                     error={errors.name}
                                                     value={this.state.name}

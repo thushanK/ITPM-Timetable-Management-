@@ -1,11 +1,11 @@
 import React from 'react';
 import Sidebar from '../../components/Sidebar'
-import { FormInput, FormSelect, MultiFormSelect, FormInputReadOnly } from '../../components/Form';
+import { FormInput, FormSelect, MultiFormSelect, FormInputReadOnly } from '../../components/Form'
 import moment from 'moment';
 import { omit } from 'lodash'
 // import { FilePond, registerPlugin } from 'react-filepond';
 
-
+import { withRouter} from 'react-router-dom'
 // import 'filepond/dist/filepond.min.css';
 
 import SUB_CONTROLLER from '../../controllers/Subject.Controller'
@@ -13,7 +13,7 @@ import CONFIG from '../../controllers/Config.controller'
 
 
 
-class AddSubject extends React.Component {
+class EditSubject extends React.Component {
 
     constructor(props) {
         super(props);
@@ -41,7 +41,8 @@ class AddSubject extends React.Component {
             }
         };
     }
-    clear = ()=>{
+
+    clear = () => {
         this.setState({
             year: '',
             semester: '',
@@ -58,28 +59,67 @@ class AddSubject extends React.Component {
         this.setState({ [e.target.name]: e.target.value });
         this.is_filled(e.target.name, e.target.value);
     }
-    onFormSubmit =async (e) => {
+
+    onFormSubmit = async (e) => {
         e.preventDefault();
         if(this.validate() ) {
+
         var data = {
-            year:this.state.year ,
-            semester:this.state.semester ,
-            name:this.state.name ,
-            code:this.state.code ,
-            lec_hour:this.state.lec_hour ,
-            tute_hour:this.state.tute_hour ,
-            lab_hour:this.state.lab_hour ,
-            evalu_hour:this.state.evalu_hour ,
+            year: this.state.year,
+            semester: this.state.semester,
+            name: this.state.name,
+            code: this.state.code,
+            lec_hour: this.state.lec_hour,
+            tute_hour: this.state.tute_hour,
+            lab_hour: this.state.lab_hour,
+            evalu_hour: this.state.evalu_hour,
         }
-        const result = await SUB_CONTROLLER.addSubject(data)
+
+
+        const result = await SUB_CONTROLLER.edit_subject(data)
+
         console.log(result);
-        if(result == 201){
-            CONFIG.setToast("Successfully Added")
-            this.props.history.push("/subject/manage")
+
+        if(result == 200){
+            CONFIG.setToast("Successfully Updated", "Done")
             this.clear()
-        }
+            window.history.back();
+
         }
     }
+
+    }
+    componentWillMount = () => {
+
+        this.loadData()
+    }
+
+    loadData = async (id) => {
+        const result = await SUB_CONTROLLER.get_specific(this.props.match.params.id);
+        console.log(result.data);
+
+        var resultItem = result.data[0]
+        console.log(resultItem);
+        this.setState({
+            year: resultItem.year,
+            semester: resultItem.semester,
+            name: resultItem.name,
+            code: resultItem.code,
+            lec_hour: resultItem.lechours,
+            tute_hour: resultItem.tutehours,
+            lab_hour: resultItem.labhours,
+            evalu_hour: resultItem.evaluationhour,
+
+
+            cdate: moment(resultItem.createdAt).format('L'),
+            udate: moment(resultItem.updatedAt).format('L'),
+        })
+
+
+
+    }
+
+
 
     render() {
         const { errors } = this.state;
@@ -90,24 +130,25 @@ class AddSubject extends React.Component {
                     <div className="container-fluid" >
                         <div className="row" >
                             <div className="col-12 shadow-sm rounded bg-white mt-1" >
-                                <h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Add Subject<br></br>
-                                    <span className="text-muted small">You can add new subject</span></h6>
+                                <h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Edit Subject<br></br>
+                                    <span className="text-muted small">You can edit exsisting subject</span></h6>
                             </div>
                             <div className="col-12 shadow-sm rounded bg-white mt-3 pb-1" >
                                 <form onSubmit={(e) => this.onFormSubmit(e)}>
                                     <div className="row" >
                                         <div className="col-md-6 row ">
 
-                                        <div className="col-md-12 mt-2 mb-1">
-                                            <p className="m-0 p-0">Subject Deatils</p>
-                                            <hr className="mt-0 pt-0" />
-                                        </div>
+                                            <div className="col-md-12 mt-2 mb-1">
+                                                <p className="m-0 p-0">Subject Deatils</p>
+                                                <hr className="mt-0 pt-0" />
+                                            </div>
                                             <div className="col-md-12 mt-2 mb-2   " >
                                                 <FormSelect
                                                     label={'Offered year'}
                                                     options={YEAR}
                                                     error={errors.year}
                                                     selected={this.state.year}
+
                                                     onChange={this.formValueChange}
                                                     name="year"
                                                     error_meesage={'*Offered year required'}
@@ -136,7 +177,7 @@ class AddSubject extends React.Component {
                                                 />
                                             </div>
                                             <div className="col-md-12 mt-2 mb-2 " >
-                                                <FormInput
+                                                <FormInputReadOnly
                                                     label={'Subject code '}
                                                     placeholder={'Enter Subject code'}
                                                     error={errors.code}
@@ -200,8 +241,7 @@ class AddSubject extends React.Component {
                                             </div>
                                         </div>
                                         <div className="col-md-12 mt-1 mb-1" >
-                                            <button type="submit" className="btn-outline-success mt-2 btn btn-sm px-2 float-left">Add Subject</button>
-        
+                                            <button type="submit" className="btn-outline-success mt-2 btn btn-sm px-2 float-left">Save Edit</button>
                                         </div>
                                     </div>
                                 </form>
@@ -298,46 +338,46 @@ class AddSubject extends React.Component {
 const YEAR = [{ label: 'Select Year', value: "NONE" },
 ...[1, 2, 3, 4].map(i => {
     return {
-        label: i,
+        label: `0${i} Year`,
         value: i
     }
 })];
 const SEMESTER = [{ label: 'Select Semester', value: "NONE" },
 ...[1, 2,].map(i => {
     return {
-        label: i,
+        label: `0${i} Semester`,
         value: i
     }
 })];
 const LEC_HOUR = [{ label: 'Number of lecture hours', value: "NONE" },
 ...[0, 1, 2].map(i => {
     return {
-        label: i ,
+        label: `0${i} Hours`,
         value: i
     }
 })];
 const TUTE_HOUR = [{ label: 'Number of tutorial hours', value: "NONE" },
 ...[0, 1, 2].map(i => {
     return {
-        label: i,
+        label: `0${i} Hours`,
         value: i
     }
 })];
 const LAB_HOUR = [{ label: 'Number of lab hours', value: "NONE" },
 ...[0, 1, 2].map(i => {
     return {
-        label: i,
+        label: `0${i} Hours`,
         value: i
     }
 })];
 const EVALUATION_HOUR = [{ label: 'Number of evaluation hours', value: "NONE" },
 ...[0, 1, 2].map(i => {
     return {
-        label: i,
+        label: `0${i} Hours`,
         value: i
     }
 })];
 
 
 
-export default AddSubject;
+export default withRouter(EditSubject);

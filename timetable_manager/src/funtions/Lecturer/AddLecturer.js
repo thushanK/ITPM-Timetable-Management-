@@ -133,10 +133,10 @@ class AddLecturer extends React.Component {
                 <main>
                     <div className="container-fluid" >
                         <div className="row" >
-                            {/* <div className="col-12 shadow-sm rounded bg-white mt-1" > */}
+                            <div className="col-12 shadow-sm rounded bg-white mt-1" >
                                 <h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Add Lecturer<br></br>
         <span className="text-muted small">You can add new lecturer</span></h6>
-                            {/* </div> */}
+                            </div>
                             <div className="col-12 shadow-sm rounded bg-white mt-3 pb-1" >
                                 <form onSubmit={(e) => this.onFormSubmit(e)}>
                                     <div className="row mt-1 pb-3" >
@@ -249,7 +249,7 @@ class AddLecturer extends React.Component {
                                         />
 
 
-                                                { <FormInput
+                                                {/* { <FormInput
                                                     label={'Building '}
                                                     placeholder={'Enter Building'}
                                                     error={errors.building}
@@ -257,7 +257,7 @@ class AddLecturer extends React.Component {
                                                     name="building"
                                                     onChange={this.formValueChange}
                                                     error_meesage={'*Building required'}
-                                                /> }
+                                                /> } */}
                                             </div>
                                             <div className="col-md-12 mt-1 mb-1" >
                                                 <FormSelect
