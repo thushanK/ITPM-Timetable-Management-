@@ -1,7 +1,7 @@
 
 
 const Subject = require('../models/subject.model');
-// const Session = require('../models/sessions.model');
+const Session = require('../models/sessions.model');
 
 
 // create user
@@ -115,10 +115,8 @@ exports.delete_subject   = async (req, res) => {
 }
 
 
+
 exports.get_all = async (req, res) => {
-
-
-
     try {
         const lecturer = await Subject.find();
 
