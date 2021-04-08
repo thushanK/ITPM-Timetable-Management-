@@ -32,9 +32,11 @@ import DeleteWork from '../funtions/workingDaysAndHours/DeleteWorkingDays';
 import AddSubject from '../funtions/Subjects/AddSubject';
 import ManageSubject from '../funtions/Subjects/ManageSubject';
 import EditSubject from '../funtions/Subjects/EditSubject';
+import ViewSubject from '../funtions/Subjects/ViewSubject';
 import AddLecturer from '../funtions/Lecturer/AddLecturer';
 import ManageLecturer from '../funtions/Lecturer/ManageLecturer';
 import EditLecturer from '../funtions/Lecturer/EditLecturer';
+import LecturerView from '../funtions/Lecturer/ViewLecturer';
 
 
 
@@ -196,6 +198,13 @@ let routes = [
     },
 
     {
+        path: "/subject/:id",
+        name: "Subject Overview",
+        component: ViewSubject,
+        exact : true,
+      },
+
+    {
         path: "/lecturer/add",
         name: "ADD_LECTURER",
         component: AddLecturer,
@@ -213,6 +222,14 @@ let routes = [
         name: "Lecturer Edit",
         component: EditLecturer,
         exact: true,
+    },
+
+
+    {
+        path: "/lecturer/:id",
+        name: "Lecturer View",
+        component: LecturerView,
+        exact : true,
     },
 
     {
