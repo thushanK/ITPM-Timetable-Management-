@@ -23,10 +23,10 @@ import EditTag from '../funtions/Tag/EditTag';
 import DeleteTag from '../funtions/Tag/DeleteTag';
 
 
-import Addworkingdays from '../funtions/workingDaysAndHours/AddWorkingDays';
-//  import Managetimeslot from '../funtions/wor';
-import Manageworkingdays from '../funtions/workingDaysAndHours/ManageWorkingDays';
-import DeleteWork from '../funtions/workingDaysAndHours/DeleteWorkingDays';
+// import Addworkingdays from '../funtions/workingDaysAndHours/AddWorkingDays';
+// //  import Managetimeslot from '../funtions/wor';
+// import Manageworkingdays from '../funtions/workingDaysAndHours/ManageWorkingDays';
+// import DeleteWork from '../funtions/workingDaysAndHours/DeleteWorkingDays';
 
 
 import AddSubject from '../funtions/Subjects/AddSubject';
@@ -139,26 +139,26 @@ let routes = [
         exact: true,
     },
 
-    {
-        path: "/workingday/add",
-        name: "ADD_WORKING_DAY",
-        component: Addworkingdays,
-        exact: true,
-    },
+    // {
+    //     path: "/workingday/add",
+    //     name: "ADD_WORKING_DAY",
+    //     component: Addworkingdays,
+    //     exact: true,
+    // },
 
-    {
-        path: "/workingday/manage",
-        name: "MANAGE_WORKING_DAY",
-        component: Manageworkingdays,
-        exact: true,
-    },
+    // {
+    //     path: "/workingday/manage",
+    //     name: "MANAGE_WORKING_DAY",
+    //     component: Manageworkingdays,
+    //     exact: true,
+    // },
 
-    {
-        path: "/workingday/delete",
-        name: "MANAGE_WORKING_DAY",
-        component: DeleteWork,
-        exact: true,
-    },
+    // {
+    //     path: "/workingday/delete",
+    //     name: "MANAGE_WORKING_DAY",
+    //     component: DeleteWork,
+    //     exact: true,
+    // },
     // {
     //     path: "/timeslot/manage",
     //     name: "MANAGE_TIMESLOT",
