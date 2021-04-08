@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash, faUserCircle, faEdit } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 
-import SUB_CONTROLLER from '../../controllers/Subject.controller'
+import SUB_CONTROLLER from '../../controllers/Subject.Controller'
 import CONFIG from '../../controllers/Config.controller'
 import { confirmAlert } from "react-confirm-alert";
 

@@ -8,7 +8,7 @@ import { omit } from 'lodash'
 
 // import 'filepond/dist/filepond.min.css';
 
-import SUB_CONTROLLER from '../../controllers/Subject.controller'
+import SUB_CONTROLLER from '../../controllers/Subject.Controller'
 import CONFIG from '../../controllers/Config.controller'
 
 
