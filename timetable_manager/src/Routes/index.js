@@ -153,12 +153,12 @@ let routes = [
         exact: true,
     },
 
-    // {
-    //     path: "/workingday/delete",
-    //     name: "MANAGE_WORKING_DAY",
-    //     component: DeleteWork,
-    //     exact: true,
-    // },
+    {
+        path: "/workingday/delete",
+        name: "MANAGE_WORKING_DAY",
+        component: DeleteWork,
+        exact: true,
+    },
     // {
     //     path: "/timeslot/manage",
     //     name: "MANAGE_TIMESLOT",
