@@ -22,7 +22,11 @@ const subjectRoute = require("./app/routes/subject.route");
 const statsRoute = require("./app/routes/stats.route");
 const SessionRoute = require("./app/routes/sessions.route");
 const Consecutive = require("./app/routes/consecutive.route");
+
 const suitableRoute = require("./app/routes/Suitable.route");
+
+const timeslot = require("./app/routes/timeslot.route");
+
 
 
 const dbConfig = require("./config/db.config");
@@ -49,6 +53,7 @@ app.use("/api/stats", statsRoute);
 app.use("/api/session", SessionRoute);
 app.use("/api/consession", Consecutive);
 app.use("/api/suitable", suitableRoute);
+app.use("/api/timeslot", timeslot);
 
 
 app.use((req, res, next) => {
