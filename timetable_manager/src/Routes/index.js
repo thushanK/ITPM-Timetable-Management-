@@ -44,6 +44,14 @@ import AllocateLecture from '../funtions/Allocation/AllocateLecture';
 import AllocateSession from '../funtions/Allocation/AllocateGroup';
 
 
+import AddSession from '../funtions/Sessions/AddSession';
+import ManageSession from '../funtions/Sessions/ManageSession';
+import AddConsecutiveSession from '../funtions/Sessions/ConsecutiveSession/AddConsecutiveSession';
+import ManageConsecutiveSession from '../funtions/Sessions/ConsecutiveSession/ManageConsecutiveSession';
+import AddNotOverlapSession from '../funtions/Sessions/NotOverlapSession/AddNotOverlapSession';
+import ManageNotOverlapSession from '../funtions/Sessions/NotOverlapSession/ManageNotOverlapSession';
+import AddParallelSession from '../funtions/Sessions/ParallelSession/AddParallelSession';
+import ManageParallelSession from '../funtions/Sessions/ParallelSession/ManageParallelSession';
 
 let routes = [
 
@@ -53,6 +61,62 @@ let routes = [
         component: Dashboard,
         exact: true,
     },
+    // ***************************
+    {
+        path: "/sessions/add",
+        name: "ADD_SESSIONS",
+        component: AddSession,
+        exact: true,
+    },
+    {
+        path: "/sessions/manage",
+        name: "MANAGE_SESSIONS",
+        component: ManageSession,
+        exact: true,
+    },
+    {
+        path: "/consecutive/add",
+        name: "ADD_CONSECUTIVE",
+        component: AddConsecutiveSession,
+        exact: true,
+    },
+    {
+        path: "/consecutive/manage",
+        name: "MANAGE_CONSECUTIVE",
+        component: ManageConsecutiveSession,
+        exact: true,
+    },
+    {
+        path: "/parallel/add",
+        name: "ADD_PARALLEL",
+        component: AddNotOverlapSession,
+        exact: true,
+    },
+    {
+        path: "/parallel/manage",
+        name: "MANAGE_PARALLEL",
+        component: ManageNotOverlapSession,
+        exact: true,
+    },
+    {
+        path: "/notOverlap/add",
+        name: "ADD_NOT_OVERLAP",
+        component: AddParallelSession,
+        exact: true,
+    },
+    {
+        path: "/notOverlap/manage",
+        name: "MANAGE_NOT_OVERLAP",
+        component: ManageParallelSession,
+        exact: true,
+    },
+
+// ******************************
+
+
+
+
+
     {
         path: "/building/add",
         name: "ADD_BUILDING",

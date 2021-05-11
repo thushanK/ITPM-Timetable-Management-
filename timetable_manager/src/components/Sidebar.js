@@ -121,6 +121,44 @@ const Sidebar = ({activemenu, submenu}) => {
         </MenuItem>
       </SubMenu>
 
+
+      <SubMenu  defaultOpen={activemenu === 'SESSIONS'} title="Sessions" icon={<FontAwesomeIcon icon={faAd} />}>
+        <MenuItem 
+            active={submenu === 'ADD_SESSIONS'} >Add Sessions<Link to="/sessions/add" />
+        </MenuItem>
+        <MenuItem active={submenu === 'MANAGE_SESSIONS'}>
+          Manage Sessions<Link to="/sessions/manage" />
+        </MenuItem>
+        {/* consecutive */}
+        <SubMenu  defaultOpen={activemenu === 'CONSECUTIVE_SESSIONS'} title="Consecutive Sessions" icon={<FontAwesomeIcon icon={faAd} />}>
+        <MenuItem 
+            active={submenu === 'ADD_CONSECUTIVE'} >Add Consecutive<Link to="/consecutive/add" />
+        </MenuItem>
+        <MenuItem active={submenu === 'MANAGE_CONSECUTIVE'}>
+          Manage Consecutive<Link to="/consecutive/manage" />
+        </MenuItem>
+        </SubMenu>
+        {/* Parallel */}
+        <SubMenu  defaultOpen={activemenu === 'PARALLEL_SESSIONS'} title="Parallel Sessions" icon={<FontAwesomeIcon icon={faAd} />}>
+        <MenuItem 
+            active={submenu === 'ADD_PARALLEL'} >Add Parallel<Link to="/parallel/add" />
+        </MenuItem>
+        <MenuItem active={submenu === 'MANAGE_PARALLEL'}>
+          Manage Parallel<Link to="/parallel/manage" />
+        </MenuItem>
+        </SubMenu>
+        {/* Not Overlap Sessions */}
+        <SubMenu  defaultOpen={activemenu === 'NOT_OVERLAP_SESSIONS'} title="Not Overlap" icon={<FontAwesomeIcon icon={faAd} />}>
+        <MenuItem 
+            active={submenu === 'ADD_NOT_OVERLAP'} >Add Not Overlap<Link to="/notOverlap/add" />
+        </MenuItem>
+        <MenuItem active={submenu === 'MANAGE_NOT_OVERLAP'}>
+          Manage Not Overlap<Link to="/notOverlap/manage" />
+        </MenuItem>
+        </SubMenu>
+      
+      </SubMenu>
+
     </Menu>
     </SidebarContent>
   </ProSidebar>
