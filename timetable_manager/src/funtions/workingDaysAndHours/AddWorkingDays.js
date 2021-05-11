@@ -91,50 +91,53 @@ class AddWorkingDays extends React.Component {
             </div> <div className = "col-12 shadow-sm rounded bg-white mt-3 pb-1" > 
             <form onSubmit = { (e) => this.onFormSubmit(e)} >
                  <div className = "row mt-1 pb-3" >
-            <div className = "col-md-6 mt-2 mb-1" >
-            <FormSelect label = { 'Working Days Count' }
-            options = { WD_OPTIONS }
-            error = { errors.days_count }
-            selected = { this.state.days_count }
-            onChange = { this.formValueChange }
-            name = "days_count"
-            error_meesage = { '*Days count required' }/> </div > < div className = "col-md-6 mt-2 mb-1" >
-            <FormInput label = { 'Working Days Group Name' }
-            placeholder = { 'Enter group name' }
-            error = { errors.group_name }
-            value = { this.state.group_name }
-            name = "group_name"
-            onChange = { this.formValueChange }
-            error_meesage = { '*Group name required' }
-            /> </div > < div className = "col-md-12 mt-1 mb-1" >
-            <MultiFormSelect label = { 'Working Days' }
-            error = { errors.days }
-            onChange = { this.handleMultiselect }
-            placeholder = { 'Select working days' }
-            options = { WD_DAYS }
-            error_meesage = { '*Wokring days required' }
-            /> </div >
-            <div className = "col-md-6 mt-1 mb-1" >
-            <FormInput label = { 'Working Day Start Time' }
-            placeholder = { 'Enter start time' }
-            error = { false }
-            name = "start"
-            onChange = { this.timeChange }
-            value = { this.state.start }
-            error_meesage = { '*Start time required' }
-            type = { 'time' }
-            /> </div > < div className = "col-md-6 mt-1 mb-1" >
-            <FormInput label = { 'Working Day End Time' }
-            placeholder = { 'Enter End time' }
-            error = { errors.time }
-            name = "end"
-            onChange = { this.timeChange }
-            value = { this.state.end }
-            error_meesage = { '*End time should be less than start time' }
-            type = { 'time' }
-            /> </div > < div className = "col-md-12 mt-1 mb-1" >
-            <button type = "submit"
-            className = "btn-outline-info mt-2 btn btn-sm px-2 " > Submit Working Days </button> </div >
+                <div className = "col-md-6 mt-2 mb-1" >
+                     <FormSelect label = { 'Working Days Count' }
+                        options = { WD_OPTIONS }
+                        error = { errors.days_count }
+                        selected = { this.state.days_count }
+                        onChange = { this.formValueChange }
+                        name = "days_count"
+                        error_meesage = { '*Days count required' }/> </div > < div className = "col-md-6 mt-2 mb-1" >
+                     <FormInput label = { 'Working Days Group Name' }
+                        placeholder = { 'Enter group name' }
+                        error = { errors.group_name }
+                        value = { this.state.group_name }
+                        name = "group_name"
+                        onChange = { this.formValueChange }
+                        error_meesage = { '*Group name required' }/> </div > 
+                        < div className = "col-md-12 mt-1 mb-1" >
+
+                     <MultiFormSelect label = { 'Working Days' }
+                        error = { errors.days }
+                        onChange = { this.handleMultiselect }
+                        placeholder = { 'Select working days' }
+                        options = { WD_DAYS }
+                        error_meesage = { '*Wokring days required' }/> </div >
+                        <div className = "col-md-6 mt-1 mb-1" >
+
+                    <FormInput label = { 'Working Day Start Time' }
+                        placeholder = { 'Enter start time' }
+                        error = { false }
+                        name = "start"
+                        onChange = { this.timeChange }
+                        value = { this.state.start }
+                        error_meesage = { '*Start time required' }
+                        type = { 'time' }/> </div > 
+                        < div className = "col-md-6 mt-1 mb-1" >
+
+                    <FormInput label = { 'Working Day End Time' }
+                        placeholder = { 'Enter End time' }
+                        error = { errors.time }
+                        name = "end"
+                        onChange = { this.timeChange }
+                        value = { this.state.end }
+                        error_meesage = { 'End time have to be less than start time' }
+                        type = { 'time' }/> </div > 
+                        < div className = "col-md-12 mt-1 mb-1" >
+
+     <button type = "submit"
+     className = "btn-outline-info mt-2 btn btn-sm px-2 " > Submit </button> </div >
             </div>
              </form > 
              </div> 

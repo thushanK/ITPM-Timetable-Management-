@@ -7,6 +7,7 @@ import EditBuilding from '../funtions/Building/EditBuilding';
 import AddRoom from '../funtions/Room/AddRoom';
 import ManageRoom from '../funtions/Room/ManageRoom';
 import DeleteRoom from '../funtions/Room/DeleteRoom';
+import NotAvailable from '../funtions/Room/NotAvailable';
 
 import LecturerStatistics from '../funtions/Statistics/LecturerStatistics';
 import StudentStatistics from '../funtions/Statistics/StudentStatistics';
@@ -37,6 +38,10 @@ import AddLecturer from '../funtions/Lecturer/AddLecturer';
 import ManageLecturer from '../funtions/Lecturer/ManageLecturer';
 import EditLecturer from '../funtions/Lecturer/EditLecturer';
 import LecturerView from '../funtions/Lecturer/ViewLecturer';
+
+import AllocateGroup from '../funtions/Allocation/AllocateGroup';
+import AllocateLecture from '../funtions/Allocation/AllocateLecture';
+import AllocateSession from '../funtions/Allocation/AllocateGroup';
 
 
 
@@ -108,7 +113,33 @@ let routes = [
         component: SubjectStatistics,
         exact: true,
     },
+    {
+        path: "/room/notAvailable",
+        name: "NOT_AVAILABLE_ROOM",
+        component: NotAvailable,
+        exact: true,
+    },
 
+   
+
+    {
+        path: "/allocation/group",
+        name: "ALLOCATE_GROUP",
+        component: AllocateGroup,
+        exact: true,
+    },
+    {
+        path: "/allocation/lecturer",
+        name: "ALLOCATE_LECTURER",
+        component: AllocateLecture,
+        exact: true,
+    },
+    {
+        path: "/allocation/session",
+        name: "ALLOCATE_SESSION",
+        component: AllocateSession,
+        exact: true,
+    },
 
 
    
