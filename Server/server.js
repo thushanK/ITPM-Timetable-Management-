@@ -20,6 +20,7 @@ const TagRoute = require("./app/routes/Tag.route");
 const WorkingDaysRoute = require("./app/routes/workingdays.route");
 const subjectRoute = require("./app/routes/subject.route");
 const statsRoute = require("./app/routes/stats.route");
+const SessionRoute = require("./app/routes/sessions.route");
 
 
 const dbConfig = require("./config/db.config");
@@ -43,6 +44,7 @@ app.use("/api/tag", TagRoute);
 app.use("/api/workingdays", WorkingDaysRoute);
 app.use("/api/subject", subjectRoute);
 app.use("/api/stats", statsRoute);
+app.use("/api/session", SessionRoute);
 
 
 
