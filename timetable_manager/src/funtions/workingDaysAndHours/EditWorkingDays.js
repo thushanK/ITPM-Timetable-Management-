@@ -121,8 +121,8 @@ class EditWorkingDays extends React.Component {
                                 selected={this.state.days_count}
                                 onChange={this.formValueChange}
                                 name="days_count"
-                                error_meesage={'*Days count required'}
-                            />
+                                error_meesage={'*Days count required'}/>
+
                     </div>
                     <div className="col-md-6 mt-2 mb-1" >
                             <FormInput 
@@ -132,8 +132,8 @@ class EditWorkingDays extends React.Component {
                                 value={this.state.group_name}
                                 name="group_name"
                                 onChange={this.formValueChange}
-                                error_meesage={'*Group name required'}
-                            />
+                                error_meesage={'*Group name required'}/>
+
                     </div>
                     <div className="col-md-12 mt-1 mb-1" >
                             { !this.state.loading && 
@@ -144,8 +144,8 @@ class EditWorkingDays extends React.Component {
                                 placeholder={'Select working days'}
                                 defaultValue={this.state.days}
                                 options={WD_DAYS}
-                                error_meesage={'*Wokring days required'}
-                            />}
+                                error_meesage={'*Wokring days required'}/>}
+
                     </div>
                     <div className="col-md-6 mt-1 mb-1" >
                             <FormInput 
@@ -156,8 +156,8 @@ class EditWorkingDays extends React.Component {
                                 onChange={this.timeChange}
                                 value={this.state.start}
                                 error_meesage={'*Start time required'}
-                                type={'time'}
-                            />
+                                type={'time'}/>
+
                     </div>
                     <div className="col-md-6 mt-1 mb-1" >
                             <FormInput 
@@ -168,8 +168,8 @@ class EditWorkingDays extends React.Component {
                                 onChange={this.timeChange}
                                 value={this.state.end}
                                 error_meesage={'*End time should be less than start time'}
-                                type={'time'}
-                            />
+                                type={'time'}/>
+                                
                     </div>
                     <div className="col-md-12 mt-1 mb-1" >
                             <button type="submit" className="btn-outline-info mt-2 btn btn-sm px-2 ">Update Working Days</button>
