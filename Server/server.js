@@ -24,7 +24,7 @@ const SessionRoute = require("./app/routes/sessions.route");
 const Consecutive = require("./app/routes/consecutive.route");
 const ParallelRoute = require("./app/routes/parallel.route");
 const suitableRoute = require("./app/routes/Suitable.route");
-
+const OverlapRoute = require("./app/routes/overlap.route");
 const timeslot = require("./app/routes/timeslot.route");
 
 
@@ -55,7 +55,7 @@ app.use("/api/consession", Consecutive);
 app.use("/api/suitable", suitableRoute);
 app.use("/api/timeslot", timeslot);
 app.use("/api/parallel", ParallelRoute);
-
+app.use("/api/Not_overlap", OverlapRoute);
 app.use((req, res, next) => {
     const error = new Error("Not found");
     error.status = 404;
