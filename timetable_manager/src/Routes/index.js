@@ -16,7 +16,7 @@ import SubjectStatistics from '../funtions/Statistics/SubjectStatistics';
 import AddStudent from '../funtions/Student/AddStudent';
 import ManageStudent from '../funtions/Student/ManageStudent';
 import AddTags from '../funtions/Tag/AddTags';
-import ManageTags from '../funtions/Tag/ManageTags';
+// import ManageTags from '../funtions/Tag/ManageTags';
 import editStudentGrp from '../funtions/Student/EditStudentGrp';
 import DeleteStGrp from '../funtions/Student/DeleteStudentGrp'
 
@@ -229,12 +229,12 @@ let routes = [
         exact: true,
     },
 
-    {
-        path: "/tag/manage",
-        name: "MANAGE_TAG",
-        component: ManageTags,
-        exact: true,
-    },
+    // {
+    //     path: "/tag/manage",
+    //     name: "MANAGE_TAG",
+    //     component: ManageTags,
+    //     exact: true,
+    // },
 
     {
         path: "/workingday/add",

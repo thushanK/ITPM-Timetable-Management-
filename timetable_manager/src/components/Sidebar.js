@@ -31,9 +31,9 @@ const Sidebar = ({activemenu, submenu}) => {
         <MenuItem 
             active={submenu === 'ADD_TAG'} >Add Tag<Link to="/tag/add" />
         </MenuItem>
-        <MenuItem active={submenu === 'MANAGE_TAG'}>
-          Manage Tag<Link to="/tag/manage" />
-        </MenuItem>
+        {/* <MenuItem active={submenu === 'MANAGE_TAG'}>
+          <Link to="/tag/manage" />
+        </MenuItem> */}
       </SubMenu>
 
 
