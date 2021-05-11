@@ -1,7 +1,7 @@
 
 
 const Subject = require('../models/subject.model');
-// const Session = require('../models/sessions.model');
+const Session = require('../models/sessions.model');
 
 
 // create user
@@ -15,7 +15,6 @@ exports.add_subject = async (req, res) => {
         return;
     }
 
-
     let subject = Subject({
         year: req.body.year,
         semester: req.body.semester,
@@ -26,6 +25,7 @@ exports.add_subject = async (req, res) => {
         labhours: req.body.lab_hour,
         evaluationhour: req.body.evalu_hour,
     });
+    
     // Save Tutorial in the database
     try {
         Subject.find({ code: subject.code }, function (err, docs) {
@@ -115,10 +115,8 @@ exports.delete_subject   = async (req, res) => {
 }
 
 
+
 exports.get_all = async (req, res) => {
-
-
-
     try {
         const lecturer = await Subject.find();
 

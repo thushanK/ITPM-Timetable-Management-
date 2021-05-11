@@ -1,13 +1,10 @@
-
-// import Axios 
 import Axios from "axios";
 
-// import config
-import Config from "./Config.Controller";
+import Config from "./Config.controller";
 
 class Stats {
     constructor() {
-        // user related apis
+
         this.api = {
             studentStats: "/api/stats/studentGroups",
             lecStats: "/api/stats/lecStats",

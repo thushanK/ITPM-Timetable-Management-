@@ -127,22 +127,22 @@ class ManageSubject extends React.Component {
                         <div className="row" >
                             <div className="col-12 shadow-sm rounded bg-white mt-1" >
                                 <div className="row">
-                                    <div className="col-md-8"><h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Subjects Managment <br></br>
+                                    <div className="col-md-12"><h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Subjects Managment <br></br>
                                         <span className="text-muted small">Overview</span>
                                     </h6></div>
-                                    <div className="col-md-4">
+                                    {/* <div className="col-md-4">
                                         <Link to="/subject/add"> <button type="submit" className="btn-outline-success  btn btn-sm px-2 float-right mt-3 mb-2">Add Subject</button></Link>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                                 <form onSubmit={(e) => this.onFormSubmit(e)}>
-                            <div className="col-12 shadow-sm rounded bg-white mt-3 " style={{ display: 'flex', alignContent: 'center' }} >
+                            <div className="col-md-12 shadow-sm rounded bg-white mt-3 " style={{ display: 'flex', alignContent: 'center' }} >
 
                                     <div className="row">
 
                                         <div className="col-md-8  px-2  mt-1 mb-2">  <FormInput
                                             label={'Search'}
-                                            placeholder={'Type Anything...'}
+                                            placeholder={'Type here...'}
                                             error={errors.search_word}
                                             value={this.state.search_word}
                                             name="search_word"
@@ -152,7 +152,7 @@ class ManageSubject extends React.Component {
                                         </div>
                                         <div className="col-md-4">
                                             <button type="submit" style={{ marginTop: '30px' }} className="btn-outline-info  btn btn-sm ">Search</button>
-                                            <button type="button" style={{marginTop:'30px'}} className="btn-outline-warning  btn btn-sm  ml-3" onClick={()=> this.loadData()}>Reset</button>
+                                            {/* <button type="button" style={{marginTop:'30px'}} className="btn-outline-warning  btn btn-sm  ml-3" onClick={()=> this.loadData()}>Reset</button> */}
 
                                         </div>
                                         <div className="col-md-12">

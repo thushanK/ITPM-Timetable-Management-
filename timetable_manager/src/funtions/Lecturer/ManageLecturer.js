@@ -153,7 +153,7 @@ class ManageLecturer extends React.Component {
                             </div>
                             <div className="col-md-4">
                                 <button type="submit" style={{ marginTop: '30px' }} className="btn-outline-info  btn btn-sm ">Search</button>
-                                <button type="button" style={{marginTop:'30px'}} className="btn-outline-warning  btn btn-sm  ml-3" onClick={()=> this.loadData()}>Reset</button>
+                                {/* <button type="button" style={{marginTop:'30px'}} className="btn-outline-warning  btn btn-sm  ml-3" onClick={()=> this.loadData()}>Reset</button> */}
 
                             </div>
                             <div className="col-md-12">

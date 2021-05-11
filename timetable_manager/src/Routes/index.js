@@ -7,6 +7,7 @@ import EditBuilding from '../funtions/Building/EditBuilding';
 import AddRoom from '../funtions/Room/AddRoom';
 import ManageRoom from '../funtions/Room/ManageRoom';
 import DeleteRoom from '../funtions/Room/DeleteRoom';
+import NotAvailable from '../funtions/Room/NotAvailable';
 
 import LecturerStatistics from '../funtions/Statistics/LecturerStatistics';
 import StudentStatistics from '../funtions/Statistics/StudentStatistics';
@@ -32,9 +33,15 @@ import DeleteWork from '../funtions/workingDaysAndHours/DeleteWorkingDays';
 import AddSubject from '../funtions/Subjects/AddSubject';
 import ManageSubject from '../funtions/Subjects/ManageSubject';
 import EditSubject from '../funtions/Subjects/EditSubject';
+import ViewSubject from '../funtions/Subjects/ViewSubject';
 import AddLecturer from '../funtions/Lecturer/AddLecturer';
 import ManageLecturer from '../funtions/Lecturer/ManageLecturer';
 import EditLecturer from '../funtions/Lecturer/EditLecturer';
+import LecturerView from '../funtions/Lecturer/ViewLecturer';
+
+import AllocateGroup from '../funtions/Allocation/AllocateGroup';
+import AllocateLecture from '../funtions/Allocation/AllocateLecture';
+import AllocateSession from '../funtions/Allocation/AllocateGroup';
 
 
 
@@ -106,7 +113,33 @@ let routes = [
         component: SubjectStatistics,
         exact: true,
     },
+    {
+        path: "/room/notAvailable",
+        name: "NOT_AVAILABLE_ROOM",
+        component: NotAvailable,
+        exact: true,
+    },
 
+   
+
+    {
+        path: "/allocation/group",
+        name: "ALLOCATE_GROUP",
+        component: AllocateGroup,
+        exact: true,
+    },
+    {
+        path: "/allocation/lecturer",
+        name: "ALLOCATE_LECTURER",
+        component: AllocateLecture,
+        exact: true,
+    },
+    {
+        path: "/allocation/session",
+        name: "ALLOCATE_SESSION",
+        component: AllocateSession,
+        exact: true,
+    },
 
 
    
@@ -196,6 +229,13 @@ let routes = [
     },
 
     {
+        path: "/subject/:id",
+        name: "Subject Overview",
+        component: ViewSubject,
+        exact : true,
+      },
+
+    {
         path: "/lecturer/add",
         name: "ADD_LECTURER",
         component: AddLecturer,
@@ -213,6 +253,14 @@ let routes = [
         name: "Lecturer Edit",
         component: EditLecturer,
         exact: true,
+    },
+
+
+    {
+        path: "/lecturer/:id",
+        name: "Lecturer View",
+        component: LecturerView,
+        exact : true,
     },
 
     {
