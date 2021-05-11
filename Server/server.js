@@ -22,7 +22,7 @@ const subjectRoute = require("./app/routes/subject.route");
 const statsRoute = require("./app/routes/stats.route");
 const SessionRoute = require("./app/routes/sessions.route");
 const Consecutive = require("./app/routes/consecutive.route");
-
+const ParallelRoute = require("./app/routes/parallel.route");
 const suitableRoute = require("./app/routes/Suitable.route");
 
 const timeslot = require("./app/routes/timeslot.route");
@@ -54,7 +54,7 @@ app.use("/api/session", SessionRoute);
 app.use("/api/consession", Consecutive);
 app.use("/api/suitable", suitableRoute);
 app.use("/api/timeslot", timeslot);
-
+app.use("/api/parallel", ParallelRoute);
 
 app.use((req, res, next) => {
     const error = new Error("Not found");
