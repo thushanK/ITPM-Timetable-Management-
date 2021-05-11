@@ -45,15 +45,15 @@ class DeleteWorkingDays extends React.Component {
         deleteGroup(this.state.id)
         .then( result => {
             if(result.status == 200 ){
-                Config.setToast('Working Days Group Deleted Successfully!');
+                Config.setToast('Deleted Successfully!');
                 this.props.history.push("/workingday/manage")
             }else{
-                Config.setErrorToast('Something Wrong Happend!');
+                Config.setErrorToast('Check Again!');
             }
         })
         .catch( error => {
             console.log(error);
-            Config.setErrorToast('Something Wrong Happend!');
+            Config.setErrorToast('Check Again!');
         })
     }
 
@@ -94,8 +94,7 @@ class DeleteWorkingDays extends React.Component {
                                 value={this.state.group_name}
                                 name="group_name"
                                 error={false}
-                                readOnly={true}
-                            />
+                                readOnly={true}/>
                     </div>
                     <div className="col-md-12 mt-1 mb-1" >
                             {!this.state.loading && this.state.days && this.state.days.length > 0 &&
@@ -105,8 +104,7 @@ class DeleteWorkingDays extends React.Component {
                                 defaultValue={this.state.days.map(i => ({label : i  , value : i }) )}
                                 isDisabled={ true }
                                 placeholder={'Select working days'}
-                                options={WD_DAYS}
-                            />}
+                                options={WD_DAYS}/>}
                     </div>
                     <div className="col-md-6 mt-1 mb-1" >
                             <FormInput 
@@ -115,8 +113,7 @@ class DeleteWorkingDays extends React.Component {
                                 name="start"
                                 value={this.state.start}
                                 readOnly={true}
-                                type={'time'}
-                            />
+                                type={'time'}/>
                     </div>
                     <div className="col-md-6 mt-1 mb-1" >
                             <FormInput 
@@ -125,8 +122,7 @@ class DeleteWorkingDays extends React.Component {
                                 name="end"
                                 value={this.state.end}
                                 readOnly={true}
-                                type={'time'}
-                            />
+                                type={'time'}/>
                     </div>
                     <div className="col-md-12 mt-1 mb-1" >
                     <hr className="my-2"></hr>
