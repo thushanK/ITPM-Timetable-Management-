@@ -18,18 +18,18 @@ const Sidebar = ({activemenu, submenu}) => {
 
       {/* Student member 1 */}
       <SubMenu  defaultOpen={activemenu === 'STUDENT'} title="Student" icon={<FontAwesomeIcon icon={faTable} />}>
-        <MenuItem 
-            active={submenu === 'ADD_STUDENT'} >Add Student<Link to="/student/add" />
+        <MenuItem active={submenu === 'ADD_STUDENT'} >
+            Add Student<Link to="/student/add" />
         </MenuItem>
         <MenuItem active={submenu === 'MANAGE_STUDENT'}>
-          Manage Student<Link to="/student/manage" />
+            Manage Student<Link to="/student/manage" />
         </MenuItem>
       </SubMenu>
 
       {/* Tag member 1 */}
       <SubMenu  defaultOpen={activemenu === 'TAG'} title="Tag" icon={<FontAwesomeIcon icon={faAd} />}>
-        <MenuItem 
-            active={submenu === 'ADD_TAG'} >Add Tag<Link to="/tag/add" />
+        <MenuItem active={submenu === 'ADD_TAG'} >
+            Add Tag<Link to="/tag/add" />
         </MenuItem>
         {/* <MenuItem active={submenu === 'MANAGE_TAG'}>
           <Link to="/tag/manage" />
@@ -39,34 +39,34 @@ const Sidebar = ({activemenu, submenu}) => {
 
       {/* Lecturer member 2 */}
       <SubMenu  defaultOpen={activemenu === 'LECTURER'} title="Lecturer" icon={<FontAwesomeIcon icon={faAd} />}>
-        <MenuItem 
-            active={submenu === 'ADD_LECTURER'} >Add Lecture<Link to="/lecturer/add" />
+        <MenuItem active={submenu === 'ADD_LECTURER'} >
+            Add Lecture<Link to="/lecturer/add" />
         </MenuItem>
         <MenuItem active={submenu === 'MANAGE_LECTURER'}>
-          Manage Lecturer<Link to="/lecturer/manage" />
+            Manage Lecturer<Link to="/lecturer/manage" />
         </MenuItem>
       </SubMenu>
 
       {/* Subject member 02 */}
       <SubMenu  defaultOpen={activemenu === 'SUBJECT'} title="Subject" icon={<FontAwesomeIcon icon={faAd} />}>
-        <MenuItem 
-            active={submenu === 'ADD_SUBJECT'} >Add Subject<Link to="/subject/add" />
+        <MenuItem active={submenu === 'ADD_SUBJECT'} >
+            Add Subject<Link to="/subject/add" />
         </MenuItem>
         <MenuItem active={submenu === 'MANAGE_SUBJECT'}>
-          Manage Subject<Link to="/subject/manage" />
+            Manage Subject<Link to="/subject/manage" />
         </MenuItem>
       </SubMenu>
 
       {/* Working day member 03 */}
       <SubMenu  defaultOpen={activemenu === 'WORKING_DAY'} title="Working day" icon={<FontAwesomeIcon icon={faAd} />}>
-        <MenuItem 
-            active={submenu === 'ADD_WORKING_DAY'} >Add Working day<Link to="/workingday/add" />
+        <MenuItem active={submenu === 'ADD_WORKING_DAY'} >
+            Add Working day<Link to="/workingday/add" />
         </MenuItem>
         <MenuItem active={submenu === 'MANAGE_WORKING_DAY'}>
-          Manage Working day<Link to="/workingday/manage" />
+            Manage Working day<Link to="/workingday/manage" />
         </MenuItem>
         <MenuItem active={submenu === 'MANAGE_TIMESLOT'}>
-          Manage Timeslot<Link to="/timeslot/manage" />
+            Manage Timeslot<Link to="/timeslot/manage" />
         </MenuItem>
       </SubMenu>
 
@@ -74,22 +74,22 @@ const Sidebar = ({activemenu, submenu}) => {
       {/* Building member 04 */}
       <SubMenu  defaultOpen={activemenu === 'LOCATION'} title="Location" icon={<FontAwesomeIcon icon={faAd} />}>
       <SubMenu  defaultOpen={activemenu === 'BUILDING'} title="Building" icon={<FontAwesomeIcon icon={faAd} />}>
-        <MenuItem 
-            active={submenu === 'ADD_BUILDING'} >Add Building<Link to="/building/add" />
+        <MenuItem active={submenu === 'ADD_BUILDING'} >
+            Add Building<Link to="/building/add" />
         </MenuItem>
         <MenuItem active={submenu === 'MANAGE_BUILDING'}>
-          Manage Building<Link to="/building/manage" />
+            Manage Building<Link to="/building/manage" />
         </MenuItem>
       </SubMenu>
       <SubMenu  defaultOpen={activemenu === 'ROOM'} title="Room" icon={<FontAwesomeIcon icon={faAd} />}>
-        <MenuItem 
-            active={submenu === 'ADD_ROOM'} >Add Room<Link to="/room/add" />
+        <MenuItem active={submenu === 'ADD_ROOM'} >
+            Add Room<Link to="/room/add" />
         </MenuItem>
         <MenuItem active={submenu === 'MANAGE_ROOM'}>
-          Manage Room<Link to="/room/manage" />
+            Manage Room<Link to="/room/manage" />
         </MenuItem>
         <MenuItem active={submenu === 'NOT_AVAILABLE_ROOM'}>
-        Not Available times<Link to="/room/notAvailable" />
+            Not Available times<Link to="/room/notAvailable" />
         </MenuItem>
       </SubMenu>
       </SubMenu>
@@ -98,44 +98,44 @@ const Sidebar = ({activemenu, submenu}) => {
 
       {/* Statistics member 04 */}
       <SubMenu  defaultOpen={activemenu === 'STATISTICS'} title="Statistics" icon={<FontAwesomeIcon icon={faAd} />}>
-        <MenuItem 
-            active={submenu === 'STUDENT_STATISTICS'} >Student<Link to="/statistics/student" />
+        <MenuItem active={submenu === 'STUDENT_STATISTICS'} >
+            Student<Link to="/statistics/student" />
         </MenuItem>
         <MenuItem active={submenu === 'LECTURER_STATISTICS'}>
-          Lecturer<Link to="/statistics/lecturer" />
+            Lecturer<Link to="/statistics/lecturer" />
         </MenuItem>
         <MenuItem active={submenu === 'SUBJECT_STATISTICS'}>
-          Subject<Link to="/statistics/subject" />
+            Subject<Link to="/statistics/subject" />
         </MenuItem>
       </SubMenu>
 
       <SubMenu  defaultOpen={activemenu === 'ALLOCATIONS'} title="Allocations" icon={<FontAwesomeIcon icon={faAd} />}>
-        <MenuItem 
-            active={submenu === 'ALLOCATE_GROUP'} >Allocate Group<Link to="/allocation/group" />
+        <MenuItem active={submenu === 'ALLOCATE_GROUP'} >
+            Allocate Group<Link to="/allocation/group" />
         </MenuItem>
         <MenuItem active={submenu === 'ALLOCATE_LECTURER'}>
-          Allocate Lecture<Link to="/allocation/lecturer" />
+            Allocate Lecture<Link to="/allocation/lecturer" />
         </MenuItem>
         <MenuItem active={submenu === 'ALLOCATE_SESSION'}>
-          Allocate Session<Link to="/allocation/session" />
+            Allocate Session<Link to="/allocation/session" />
         </MenuItem>
       </SubMenu>
 
 
       <SubMenu  defaultOpen={activemenu === 'SESSIONS'} title="Sessions" icon={<FontAwesomeIcon icon={faAd} />}>
-        <MenuItem 
-            active={submenu === 'ADD_SESSIONS'} >Add Sessions<Link to="/sessions/add" />
+        <MenuItem active={submenu === 'ADD_SESSIONS'} >
+            Add Sessions<Link to="/sessions/add" />
         </MenuItem>
         <MenuItem active={submenu === 'MANAGE_SESSIONS'}>
-          Manage Sessions<Link to="/sessions/manage" />
+            Manage Sessions<Link to="/sessions/manage" />
         </MenuItem>
         {/* consecutive */}
         <SubMenu  defaultOpen={activemenu === 'CONSECUTIVE_SESSIONS'} title="Consecutive Sessions" icon={<FontAwesomeIcon icon={faAd} />}>
-        <MenuItem 
-            active={submenu === 'ADD_CONSECUTIVE'} >Add Consecutive<Link to="/consecutive/add" />
+        <MenuItem active={submenu === 'ADD_CONSECUTIVE'} >
+            Add Consecutive<Link to="/consecutive/add" />
         </MenuItem>
         <MenuItem active={submenu === 'MANAGE_CONSECUTIVE'}>
-          Manage Consecutive<Link to="/consecutive/manage" />
+            Manage Consecutive<Link to="/consecutive/manage" />
         </MenuItem>
         </SubMenu>
         {/* Parallel */}
@@ -144,19 +144,42 @@ const Sidebar = ({activemenu, submenu}) => {
             active={submenu === 'ADD_PARALLEL'} >Add Parallel<Link to="/parallel/add" />
         </MenuItem>
         <MenuItem active={submenu === 'MANAGE_PARALLEL'}>
-          Manage Parallel<Link to="/parallel/manage" />
+            Manage Parallel<Link to="/parallel/manage" />
         </MenuItem>
         </SubMenu>
         {/* Not Overlap Sessions */}
         <SubMenu  defaultOpen={activemenu === 'NOT_OVERLAP_SESSIONS'} title="Not Overlap" icon={<FontAwesomeIcon icon={faAd} />}>
-        <MenuItem 
-            active={submenu === 'ADD_NOT_OVERLAP'} >Add Not Overlap<Link to="/notOverlap/add" />
+        <MenuItem active={submenu === 'ADD_NOT_OVERLAP'} >
+            Add Not Overlap<Link to="/notOverlap/add" />
         </MenuItem>
         <MenuItem active={submenu === 'MANAGE_NOT_OVERLAP'}>
-          Manage Not Overlap<Link to="/notOverlap/manage" />
+            Manage Not Overlap<Link to="/notOverlap/manage" />
         </MenuItem>
         </SubMenu>
       
+      </SubMenu>
+
+
+
+      <SubMenu  defaultOpen={activemenu === 'ADD_SUITABLE'} title="Add Suitable" icon={<FontAwesomeIcon icon={faAd} />}>
+        <MenuItem active={submenu === 'CONSECUTIVE'} >
+            Consecutive Session<Link to="/suitable/consecutive" />
+        </MenuItem>
+        <MenuItem active={submenu === 'ROOMS_FOR_LECTURER'}>
+            Rooms For Lecturer<Link to="/suitable/rooms4lecturer" />
+        </MenuItem>
+        <MenuItem active={submenu === 'ROOM_FOR_SESSION'}>
+            Rooms For Session<Link to="/suitable/rooms4session" />
+        </MenuItem>
+        <MenuItem active={submenu === 'ROOM_FOR_SUB_GROUP'}>
+            Rooms For Sub-Group<Link to="/suitable/rooms4subgroup" />
+        </MenuItem>
+        <MenuItem active={submenu === 'ROOM_FOR_SUBJECT'}>
+            Rooms For Subject<Link to="/suitable/rooms4subject" />
+        </MenuItem>
+        <MenuItem active={submenu === 'ROOM_FOR_TAG'}>
+            Rooms For Tag<Link to="/suitable/rooms4tag" />
+        </MenuItem>
       </SubMenu>
 
     </Menu>

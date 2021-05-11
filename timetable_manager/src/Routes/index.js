@@ -53,6 +53,15 @@ import ManageNotOverlapSession from '../funtions/Sessions/NotOverlapSession/Mana
 import AddParallelSession from '../funtions/Sessions/ParallelSession/AddParallelSession';
 import ManageParallelSession from '../funtions/Sessions/ParallelSession/ManageParallelSession';
 
+import ConsecutiveSession from '../funtions/AddSuitable/ConsecutiveSession';
+import RoomsForLecturer from '../funtions/AddSuitable/RoomsForLecturer';
+import RoomsForSession from '../funtions/AddSuitable/RoomsForSession';
+import RoomsForSubGroup from '../funtions/AddSuitable/RoomsForSubGroup';
+import RoomsForSubject from '../funtions/AddSuitable/RoomsForSubject';
+import RoomsForTag from '../funtions/AddSuitable/RoomsForTag';
+
+
+
 let routes = [
 
     {
@@ -61,7 +70,48 @@ let routes = [
         component: Dashboard,
         exact: true,
     },
-    // ***************************
+
+
+    {
+        path: "/suitable/consecutive",
+        name: "CONSECUTIVE",
+        component: ConsecutiveSession,
+        exact: true,
+    },
+    {
+        path: "/suitable/rooms4lecturer",
+        name: "ROOMS_FOR_LECTURER",
+        component: RoomsForLecturer,
+        exact: true,
+    },
+    {
+        path: "/suitable/rooms4session",
+        name: "ROOM_FOR_SESSION",
+        component: RoomsForSession,
+        exact: true,
+    },
+    {
+        path: "/suitable/rooms4subgroup",
+        name: "ROOM_FOR_SUB_GROUP",
+        component: RoomsForSubGroup,
+        exact: true,
+    },
+    {
+        path: "/suitable/rooms4subject",
+        name: "ROOM_FOR_SUBJECT",
+        component: RoomsForSubject,
+        exact: true,
+    },
+    {
+        path: "/suitable/rooms4tag",
+        name: "ROOM_FOR_TAG",
+        component: RoomsForTag,
+        exact: true,
+    },
+
+
+
+
     {
         path: "/sessions/add",
         name: "ADD_SESSIONS",
@@ -111,7 +161,6 @@ let routes = [
         exact: true,
     },
 
-// ******************************
 
 
 
