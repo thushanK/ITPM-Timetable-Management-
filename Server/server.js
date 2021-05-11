@@ -26,6 +26,9 @@ const ParallelRoute = require("./app/routes/parallel.route");
 const suitableRoute = require("./app/routes/Suitable.route");
 const OverlapRoute = require("./app/routes/overlap.route");
 const timeslot = require("./app/routes/timeslot.route");
+const AllocateGroup = require("./app/routes/AllocateGroup.route");
+const AllocateLec = require("./app/routes/AllocateLec.route");
+const AllocateSession = require("./app/routes/AllocateSession.route");
 
 
 
@@ -54,6 +57,10 @@ app.use("/api/session", SessionRoute);
 app.use("/api/consession", Consecutive);
 app.use("/api/suitable", suitableRoute);
 app.use("/api/timeslot", timeslot);
+app.use("/api/AllocateGroup", AllocateGroup);
+app.use("/api/AllocateLec", AllocateLec);
+app.use("/api/AllocateSession", AllocateSession);
+
 app.use("/api/parallel", ParallelRoute);
 app.use("/api/Not_overlap", OverlapRoute);
 app.use((req, res, next) => {
