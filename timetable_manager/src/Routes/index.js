@@ -16,7 +16,7 @@ import SubjectStatistics from '../funtions/Statistics/SubjectStatistics';
 import AddStudent from '../funtions/Student/AddStudent';
 import ManageStudent from '../funtions/Student/ManageStudent';
 import AddTags from '../funtions/Tag/AddTags';
-import ManageTags from '../funtions/Tag/ManageTags';
+// import ManageTags from '../funtions/Tag/ManageTags';
 import editStudentGrp from '../funtions/Student/EditStudentGrp';
 import DeleteStGrp from '../funtions/Student/DeleteStudentGrp'
 
@@ -44,6 +44,23 @@ import AllocateLecture from '../funtions/Allocation/AllocateLecture';
 import AllocateSession from '../funtions/Allocation/AllocateGroup';
 
 
+import AddSession from '../funtions/Sessions/AddSession';
+import ManageSession from '../funtions/Sessions/ManageSession';
+import AddConsecutiveSession from '../funtions/Sessions/ConsecutiveSession/AddConsecutiveSession';
+import ManageConsecutiveSession from '../funtions/Sessions/ConsecutiveSession/ManageConsecutiveSession';
+import AddNotOverlapSession from '../funtions/Sessions/NotOverlapSession/AddNotOverlapSession';
+import ManageNotOverlapSession from '../funtions/Sessions/NotOverlapSession/ManageNotOverlapSession';
+import AddParallelSession from '../funtions/Sessions/ParallelSession/AddParallelSession';
+import ManageParallelSession from '../funtions/Sessions/ParallelSession/ManageParallelSession';
+
+import ConsecutiveSession from '../funtions/AddSuitable/ConsecutiveSession';
+import RoomsForLecturer from '../funtions/AddSuitable/RoomsForLecturer';
+import RoomsForSession from '../funtions/AddSuitable/RoomsForSession';
+import RoomsForSubGroup from '../funtions/AddSuitable/RoomsForSubGroup';
+import RoomsForSubject from '../funtions/AddSuitable/RoomsForSubject';
+import RoomsForTag from '../funtions/AddSuitable/RoomsForTag';
+
+
 
 let routes = [
 
@@ -53,6 +70,102 @@ let routes = [
         component: Dashboard,
         exact: true,
     },
+
+
+    {
+        path: "/suitable/consecutive",
+        name: "CONSECUTIVE",
+        component: ConsecutiveSession,
+        exact: true,
+    },
+    {
+        path: "/suitable/rooms4lecturer",
+        name: "ROOMS_FOR_LECTURER",
+        component: RoomsForLecturer,
+        exact: true,
+    },
+    {
+        path: "/suitable/rooms4session",
+        name: "ROOM_FOR_SESSION",
+        component: RoomsForSession,
+        exact: true,
+    },
+    {
+        path: "/suitable/rooms4subgroup",
+        name: "ROOM_FOR_SUB_GROUP",
+        component: RoomsForSubGroup,
+        exact: true,
+    },
+    {
+        path: "/suitable/rooms4subject",
+        name: "ROOM_FOR_SUBJECT",
+        component: RoomsForSubject,
+        exact: true,
+    },
+    {
+        path: "/suitable/rooms4tag",
+        name: "ROOM_FOR_TAG",
+        component: RoomsForTag,
+        exact: true,
+    },
+
+
+
+
+    {
+        path: "/sessions/add",
+        name: "ADD_SESSIONS",
+        component: AddSession,
+        exact: true,
+    },
+    {
+        path: "/sessions/manage",
+        name: "MANAGE_SESSIONS",
+        component: ManageSession,
+        exact: true,
+    },
+    {
+        path: "/consecutive/add",
+        name: "ADD_CONSECUTIVE",
+        component: AddConsecutiveSession,
+        exact: true,
+    },
+    {
+        path: "/consecutive/manage",
+        name: "MANAGE_CONSECUTIVE",
+        component: ManageConsecutiveSession,
+        exact: true,
+    },
+    {
+        path: "/parallel/add",
+        name: "ADD_PARALLEL",
+        component: AddNotOverlapSession,
+        exact: true,
+    },
+    {
+        path: "/parallel/manage",
+        name: "MANAGE_PARALLEL",
+        component: ManageNotOverlapSession,
+        exact: true,
+    },
+    {
+        path: "/notOverlap/add",
+        name: "ADD_NOT_OVERLAP",
+        component: AddParallelSession,
+        exact: true,
+    },
+    {
+        path: "/notOverlap/manage",
+        name: "MANAGE_NOT_OVERLAP",
+        component: ManageParallelSession,
+        exact: true,
+    },
+
+
+
+
+
+
     {
         path: "/building/add",
         name: "ADD_BUILDING",
@@ -165,12 +278,12 @@ let routes = [
         exact: true,
     },
 
-    {
-        path: "/tag/manage",
-        name: "MANAGE_TAG",
-        component: ManageTags,
-        exact: true,
-    },
+    // {
+    //     path: "/tag/manage",
+    //     name: "MANAGE_TAG",
+    //     component: ManageTags,
+    //     exact: true,
+    // },
 
     {
         path: "/workingday/add",
