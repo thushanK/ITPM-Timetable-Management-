@@ -6,6 +6,7 @@ const Session = require('../models/sessions.model');
 
 exports.add_lecturer = async (req, res) => {
     console.log(req.body);
+
     // Validate request
     if (req.body.name == null || req.body.name == undefined) {
         res.status(400).send({
@@ -26,6 +27,8 @@ exports.add_lecturer = async (req, res) => {
         rank: req.body.rank,
         image: req.body.image
     });
+
+
     // Save Tutorial in the database
     try {
         Lecturer.find({ empId: new_lecturer.empId, name: new_lecturer.name }, function (err, docs) {
