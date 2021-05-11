@@ -133,7 +133,7 @@ class AddStudent extends React.Component {
                     </div>
                     <div className="col-md-6 mt-1 mb-1" >
                          <FormInput 
-                                label={'Add Group No'}
+                                label={'Enter Program'}
                                 placeholder={'Enter Program'}
                                 error={errors.program}
                                 value={this.state.program}
