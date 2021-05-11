@@ -23,6 +23,9 @@ const statsRoute = require("./app/routes/stats.route");
 const SessionRoute = require("./app/routes/sessions.route");
 const Consecutive = require("./app/routes/consecutive.route");
 const timeslot = require("./app/routes/timeslot.route");
+const AllocateGroup = require("./app/routes/AllocateGroup.route");
+const AllocateLec = require("./app/routes/AllocateLec.route");
+const AllocateSession = require("./app/routes/AllocateSession.route");
 
 
 const dbConfig = require("./config/db.config");
@@ -49,6 +52,9 @@ app.use("/api/stats", statsRoute);
 app.use("/api/session", SessionRoute);
 app.use("/api/consession", Consecutive);
 app.use("/api/timeslot", timeslot);
+app.use("/api/AllocateGroup", AllocateGroup);
+app.use("/api/AllocateLec", AllocateLec);
+app.use("/api/AllocateSession", AllocateSession);
 
 
 app.use((req, res, next) => {
