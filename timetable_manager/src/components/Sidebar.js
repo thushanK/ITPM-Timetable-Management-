@@ -70,6 +70,7 @@ const Sidebar = ({activemenu, submenu}) => {
         </MenuItem>
       </SubMenu>
 
+
       {/* Building member 04 */}
       <SubMenu  defaultOpen={activemenu === 'LOCATION'} title="Location" icon={<FontAwesomeIcon icon={faAd} />}>
       <SubMenu  defaultOpen={activemenu === 'BUILDING'} title="Building" icon={<FontAwesomeIcon icon={faAd} />}>
@@ -87,6 +88,9 @@ const Sidebar = ({activemenu, submenu}) => {
         <MenuItem active={submenu === 'MANAGE_ROOM'}>
           Manage Room<Link to="/room/manage" />
         </MenuItem>
+        <MenuItem active={submenu === 'NOT_AVAILABLE_ROOM'}>
+        Not Available times<Link to="/room/notAvailable" />
+        </MenuItem>
       </SubMenu>
       </SubMenu>
       {/* Room member 04 */}
@@ -102,6 +106,18 @@ const Sidebar = ({activemenu, submenu}) => {
         </MenuItem>
         <MenuItem active={submenu === 'SUBJECT_STATISTICS'}>
           Subject<Link to="/statistics/subject" />
+        </MenuItem>
+      </SubMenu>
+
+      <SubMenu  defaultOpen={activemenu === 'ALLOCATIONS'} title="Allocations" icon={<FontAwesomeIcon icon={faAd} />}>
+        <MenuItem 
+            active={submenu === 'ALLOCATE_GROUP'} >Allocate Group<Link to="/allocation/group" />
+        </MenuItem>
+        <MenuItem active={submenu === 'ALLOCATE_LECTURER'}>
+          Allocate Lecture<Link to="/allocation/lecturer" />
+        </MenuItem>
+        <MenuItem active={submenu === 'ALLOCATE_SESSION'}>
+          Allocate Session<Link to="/allocation/session" />
         </MenuItem>
       </SubMenu>
 
