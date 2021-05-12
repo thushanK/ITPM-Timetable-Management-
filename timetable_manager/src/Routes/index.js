@@ -53,12 +53,12 @@ import ManageNotOverlapSession from '../funtions/Sessions/NotOverlapSession/Mana
 import AddParallelSession from '../funtions/Sessions/ParallelSession/AddParallelSession';
 import ManageParallelSession from '../funtions/Sessions/ParallelSession/ManageParallelSession';
 
-import ConsecutiveSession from '../funtions/AddSuitable/ConsecutiveSession';
-import RoomsForLecturer from '../funtions/AddSuitable/RoomsForLecturer';
-import RoomsForSession from '../funtions/AddSuitable/RoomsForSession';
-import RoomsForSubGroup from '../funtions/AddSuitable/RoomsForSubGroup';
-import RoomsForSubject from '../funtions/AddSuitable/RoomsForSubject';
-import RoomsForTag from '../funtions/AddSuitable/RoomsForTag';
+import ConsecutiveSession from '../funtions/Suitable/ConsecutiveSession';
+import RoomsForLecturer from '../funtions/Suitable/RoomsForLecturer';
+import RoomsForSession from '../funtions/Suitable/RoomsForSession';
+import RoomsForSubGroup from '../funtions/Suitable/RoomsForSubGroup';
+import RoomsForSubject from '../funtions/Suitable/RoomsForSubject';
+import RoomsForTag from '../funtions/Suitable/RoomsForTag';
 
 
 
