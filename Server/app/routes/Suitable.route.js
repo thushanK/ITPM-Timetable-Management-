@@ -10,6 +10,6 @@ router.post('/forSubjects', suitableController.addRoomsForSubject);
 router.get('/getAllSessions', suitableController.getAllSessions);
 router.post('/forSessions', suitableController.addRoomsForSession);
 router.get('/getConsecutive', suitableController.getConsecutive);
-router.post('/forConSessions', suitableController.addRoomsForConSession);
+router.post('/forConSession', suitableController.addRoomsForConSession);
 
 module.exports = router
