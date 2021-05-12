@@ -1,10 +1,10 @@
 import axios from "axios";
 import Config from "./Config.Controller";
 
-export const addNotAvailableLec = (data) => {
+export const addNotAvailableGroup = (data) => {
 
     return new Promise( (resolve,reject) => {
-        return axios.post(`${Config.host}${Config.port}/api/allocateLec/notavailable`, data)
+        return axios.post(`${Config.host}${Config.port}/api/allocateGroup/notavailable`, data)
         .then( result => {
             if(result.status == 200){
                 resolve({...result , status : 200})
@@ -19,14 +19,13 @@ export const addNotAvailableLec = (data) => {
     })
 }
 
-export const getAllLecs = () => {
+export const getAllGroup = () => {
     return new Promise( (resolve,reject) => {
-        return axios.get(`${Config.host}${Config.port}/api/lecturer/all`)
+        return axios.get(`${Config.host}${Config.port}/api/student/get`)
             .then( result => {
                if(result.status == 200){
                     resolve(result.data)
                }else{
-                   
                 resolve([])
                }
             })
