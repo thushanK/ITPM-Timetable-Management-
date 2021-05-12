@@ -22,7 +22,14 @@ const subjectRoute = require("./app/routes/subject.route");
 const statsRoute = require("./app/routes/stats.route");
 const SessionRoute = require("./app/routes/sessions.route");
 const Consecutive = require("./app/routes/consecutive.route");
+const ParallelRoute = require("./app/routes/parallel.route");
+const suitableRoute = require("./app/routes/Suitable.route");
+const OverlapRoute = require("./app/routes/overlap.route");
 const timeslot = require("./app/routes/timeslot.route");
+const AllocateGroup = require("./app/routes/AllocateGroup.route");
+const AllocateLec = require("./app/routes/AllocateLec.route");
+const AllocateSession = require("./app/routes/AllocateSession.route");
+
 
 
 const dbConfig = require("./config/db.config");
@@ -48,9 +55,14 @@ app.use("/api/subject", subjectRoute);
 app.use("/api/stats", statsRoute);
 app.use("/api/session", SessionRoute);
 app.use("/api/consession", Consecutive);
+app.use("/api/suitable", suitableRoute);
 app.use("/api/timeslot", timeslot);
+app.use("/api/AllocateGroup", AllocateGroup);
+app.use("/api/AllocateLec", AllocateLec);
+app.use("/api/AllocateSession", AllocateSession);
 
-
+app.use("/api/parallel", ParallelRoute);
+app.use("/api/Not_overlap", OverlapRoute);
 app.use((req, res, next) => {
     const error = new Error("Not found");
     error.status = 404;
