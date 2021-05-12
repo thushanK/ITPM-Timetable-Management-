@@ -35,3 +35,20 @@ export const getAllTags = () => {
             })
     })
 }
+
+export const getAllLectures  = () => {
+    return new Promise( (resolve,reject) => {
+        return axios.get(`${Config.host}${Config.port}/api/lecturer/all`)
+            .then( result => {
+               if(result.status == 200){
+                    resolve(result.data)
+               }else{
+                   
+                resolve([])
+               }
+            })
+            .catch( err => {
+                reject(err)
+            })
+    })
+}
