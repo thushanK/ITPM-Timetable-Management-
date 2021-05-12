@@ -10,7 +10,7 @@ import { withRouter } from "react-router-dom";
 import 'filepond/dist/filepond.min.css';
 
 import SUB_CONTROLLER from '../../controllers/Subject.Controller'
-import CONFIG from '../../controllers/Config.Controller'
+import CONFIG from '../../controllers/Config.controller'
 import SESSION from '../../controllers/Session.Controller'
 
 
