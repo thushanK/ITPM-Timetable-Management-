@@ -1,10 +1,10 @@
 
-
-const Parallel = require('../models/parallel.model');
+//import Parallel
+const Overlap = require('../models/overlap.model');
 const Sessions = require('../models/sessions.model');
 
 
-
+// create parallel sessions
 exports.add = async (req, res) => {
     
     if (req.body.session_01 == undefined || req.body.session_02 == undefined) {
@@ -12,13 +12,13 @@ exports.add = async (req, res) => {
     }
 
     const option = { session_01 : req.body.session_01 , session_02 :  req.body.session_02}
-    const check_session = await Parallel.find(option);
+    const check_session = await Overlap.find(option);
 
     if(check_session.length > 0 ){
         return res.status(200).send({ message: "Already have a parallel session !" }); 
     }
 
-    let new_parallel = Parallel({
+    let new_parallel = Overlap({
         session_01 : req.body.session_01,
         session_02: req.body.session_02, 
     });
@@ -26,9 +26,9 @@ exports.add = async (req, res) => {
     const saved = await new_parallel.save();
     if(saved === new_parallel) {
         try{
-        const success = await Sessions.update({
-            _id: { "$in": [req.body.session_01 , req.body.session_02] }
-            },{parallel: true},{multi: true});
+        // const success = await Sessions.update({
+        //     _id: { "$in": [req.body.session_01 , req.body.session_02] }
+        //     },{parallel: true},{multi: true});
 
         return res.status(200).send({ message: "Successfully Added !" }); 
 
@@ -44,7 +44,6 @@ exports.add = async (req, res) => {
 };
 
 
-
 exports.delete = async (req, res) => {
     
     if (req.params.id == null || req.params.id == undefined) {
@@ -54,13 +53,9 @@ exports.delete = async (req, res) => {
     }
 
     try{
-        const deleted = await Parallel.findOneAndDelete({ _id: req.params.id });
+        const deleted = await Overlap.findOneAndDelete({ _id: req.params.id });
         if(deleted != null && deleted != undefined && deleted._id != undefined ){
             
-            const success = await Sessions.update({
-                _id: { "$in": [deleted.session_01 , deleted.session_02] }
-                },{parallel: false},{multi: true});
-    
             return res.status(200).send({ message: 'Deleted Successfully' }); 
         }
         return res.status(200).json({message : 'Deleted Successfully'});  
@@ -70,24 +65,12 @@ exports.delete = async (req, res) => {
             message: "Delete Failed !"
         });
     }
-   
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 exports.get = async (req, res) => {
 
-    const parallel = await Parallel.find({});
+    const parallel = await Overlap.find({});
     
     Sessions.aggregate([
         {
