@@ -53,6 +53,7 @@ import ManageNotOverlapSession from '../funtions/Sessions/NotOverlapSession/Mana
 import AddParallelSession from '../funtions/Sessions/ParallelSession/AddParallelSession';
 import ManageParallelSession from '../funtions/Sessions/ParallelSession/ManageParallelSession';
 import DeleteConSessions from '../funtions/Sessions/ConsecutiveSession/DeleteConSessions';
+import DeleteParallel from '../funtions/Sessions/ParallelSession/DeleteParallel';
 
 import ConsecutiveSession from '../funtions/Suitable/ConsecutiveSession';
 import RoomsForLecturer from '../funtions/Suitable/RoomsForLecturer';
@@ -137,26 +138,26 @@ let routes = [
         component: ManageConsecutiveSession,
         exact: true,
     },
+    // {
+    //     path: "/parallel/add",
+    //     name: "ADD_PARALLEL",
+    //     component: AddNotOverlapSession,
+    //     exact: true,
+    // },
+    // {
+    //     path: "/parallel/manage",
+    //     name: "MANAGE_PARALLEL",
+    //     component: ManageNotOverlapSession,
+    //     exact: true,
+    // },
     {
         path: "/parallel/add",
-        name: "ADD_PARALLEL",
-        component: AddNotOverlapSession,
-        exact: true,
-    },
-    {
-        path: "/parallel/manage",
-        name: "MANAGE_PARALLEL",
-        component: ManageNotOverlapSession,
-        exact: true,
-    },
-    {
-        path: "/notOverlap/add",
         name: "ADD_NOT_OVERLAP",
         component: AddParallelSession,
         exact: true,
     },
     {
-        path: "/notOverlap/manage",
+        path: "/parallel/manage",
         name: "MANAGE_NOT_OVERLAP",
         component: ManageParallelSession,
         exact: true,
@@ -409,6 +410,12 @@ let routes = [
         path: "/Sessions/ConsecutiveSession/DeleteConSessions/:id",
         name: "Delete consecutive Sessions",
         component: DeleteConSessions,
+        exact : true,
+      },
+      {
+        path: "Sessions/ParallelSession/DeleteParallel",
+        name: "deleteParallel",
+        component: DeleteParallel,
         exact : true,
       },
 
