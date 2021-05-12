@@ -1,10 +1,10 @@
 import React from 'react';
-import Sidebar from '../../Components/Sidebar'
-import {FormInput , FormSelect , MultiFormSelect} from '../../Components/Form'
+import Sidebar from '../../components/Sidebar'
+import {FormInput , FormSelect , MultiFormSelect} from '../../components/Form'
 import moment from 'moment';
 import { omit } from 'lodash'
-import Config from '../../Controllers/Config.controller'
-import {getTimeslotSingle , deleteTimeslot } from '../../Controllers/TimeslotsController'
+import Config from '../../controllers/Config.controller'
+import {getTimeslotSingle , deleteTimeslot } from '../../controllers/TimeslotsController'
 import { withRouter } from "react-router-dom";
 
 class DeleteTimeslot extends React.Component {

@@ -1,11 +1,11 @@
 import React from 'react';
-import Sidebar from '../../Components/Sidebar'
-import {FormInput , FormSelect , MultiFormSelect} from '../../Components/Form'
+import Sidebar from '../../components/Sidebar'
+import {FormInput , FormSelect , MultiFormSelect} from '../../components/Form'
 import moment from 'moment';
-import Config from '../../Controllers/Config.controller'
+import Config from '../../controllers/Config.controller'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
-import { getTimeslotSingle , updateTimeslot } from '../../Controllers/TimeslotsController'
+import { getTimeslotSingle , updateTimeslot } from '../../controllers/TimeslotsController'
 
 class EditTimeslot extends React.Component {
 
