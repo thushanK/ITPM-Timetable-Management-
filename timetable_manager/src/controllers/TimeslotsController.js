@@ -1,5 +1,5 @@
 import axios from "axios";
-import Config from "./Config.Controller";
+import Config from "./Config.controller";
 
 export const insertTimeslot = (data) => {
     return new Promise( (resolve,reject) => {

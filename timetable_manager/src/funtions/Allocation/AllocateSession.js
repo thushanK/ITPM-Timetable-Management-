@@ -1,10 +1,10 @@
 import React from 'react';
 import Sidebar from '../../components/Sidebar'
 import {FormInput , FormSelect , MultiFormSelect} from '../../components/Form'
-import Session_CONTROLLER from '../../controllers/session.controller';
+import Session_CONTROLLER from '../../controllers/Session.Controller';
 import Config from '../../controllers/Config.controller';
 import moment from 'moment';
-import allocatSess_CONTROLLER from '../../controllers/allocateSession.controller';
+// import allocatSess_CONTROLLER from '../../controllers/allocateSession.controller';
 import {addNotAvailableLec, getAllLecs} from '../../controllers/allocateSession.controller';
 
 

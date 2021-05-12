@@ -28,6 +28,10 @@ import Addworkingdays from '../funtions/workingDaysAndHours/AddWorkingDays';
 import EditWorkingDays from '../funtions/workingDaysAndHours/EditWorkingDays';
 import Manageworkingdays from '../funtions/workingDaysAndHours/ManageWorkingDays';
 import DeleteWork from '../funtions/workingDaysAndHours/DeleteWorkingDays';
+import TimeslotsList from '../funtions/workingDaysAndHours/TimeslotsList';
+import EditTimeslot from '../funtions/workingDaysAndHours/EditTimeslot';
+import DeleteTimeslot from '../funtions/workingDaysAndHours/DeleteTimeslot';
+import AddTimeslot from '../funtions/workingDaysAndHours/AddTimeslot';
 
 
 import AddSubject from '../funtions/Subjects/AddSubject';
@@ -42,7 +46,7 @@ import LecturerView from '../funtions/Lecturer/ViewLecturer';
 import AllocateGroup from '../funtions/Allocation/AllocateGroup';
 import AllocateLecture from '../funtions/Allocation/AllocateLecture';
 import AllocateSession from '../funtions/Allocation/AllocateSession';
-
+import AllocateSubGroup from '../funtions/Allocation/AllocateSubGroup';
 
 import AddSession from '../funtions/Sessions/AddSession';
 import ManageSession from '../funtions/Sessions/ManageSession';
@@ -403,6 +407,58 @@ let routes = [
         component: DeleteTag,
         exact: true,
     },
+    //timeslots
+
+    {
+        path: "/timeslot/manage/add/:id",
+        name: "Add Timeslot",
+        component: AddTimeslot,
+        exact: true,
+      },
+      {
+        path: "/workingdays/timeslot/edit/:id",
+        name: "Add Timeslot",
+        component: EditTimeslot,
+        exact: true,
+      },
+      {
+        path: "/workingdays/timeslot/delete/:id",
+        name: "Delete Timeslot",
+        component: DeleteTimeslot,
+        exact: true,
+      },
+      {
+        path: "/workingdays/timeslot/:id",
+        name: "TimeSlot",
+        component: TimeslotsList,
+        exact: true,
+      },
+
+      //allocate
+  {
+    path: "/allocate/AllocateLecture",
+    name: "AllocateLecture",
+    component: AllocateLecture,
+    exact: true,
+  },
+  {
+    path: "/allocate/AllocateSession",
+    name: "AllocateSession",
+    component: AllocateSession,
+    exact: true,
+  },
+  {
+    path: "/allocate/AllocateGroup",
+    name: "AllocateGroup",
+    component: AllocateGroup,
+    exact: true,
+  },
+  {
+    path: "/allocate/AllocateSubGroup",
+    name: "AllocateSubGroup",
+    component: AllocateSubGroup,
+    exact: true,
+  },
 
 ];
 

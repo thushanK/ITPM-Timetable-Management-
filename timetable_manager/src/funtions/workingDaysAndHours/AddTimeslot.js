@@ -1,12 +1,12 @@
 import React from 'react';
-import Sidebar from '../../Components/Sidebar'
-import {FormInput , FormSelect , MultiFormSelect} from '../../Components/Form'
+import Sidebar from '../../components/Sidebar'
+import {FormInput , FormSelect , MultiFormSelect} from '../../components/Form'
 import moment from 'moment';
-import Config from '../../Controllers/Config.controller'
+import Config from '../../controllers/Config.controller'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
-import {getWorkingDaysSingle } from '../../Controllers/WorkingDaysController'
-import { insertTimeslot } from '../../Controllers/TimeslotsController'
+import {getWorkingDaysSingle } from '../../controllers/WorkingDaysController'
+import { insertTimeslot } from '../../controllers/TimeslotsController'
 
 class AddTimeslot extends React.Component {
 
