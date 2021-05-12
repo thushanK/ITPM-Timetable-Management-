@@ -1,6 +1,6 @@
 import React from 'react';
-import Sidebar from '../../Components/Sidebar'
-import { FormInput, FormSelect, MultiFormSelect, FormInputReadOnly } from '../../Components/Form'
+import Sidebar from '../../components/Sidebar'
+import { FormInput, FormSelect, MultiFormSelect, FormInputReadOnly } from '../../components/Form'
 import moment from 'moment';
 import { omit } from 'lodash'
 import { FilePond, registerPlugin } from 'react-filepond';
@@ -9,7 +9,7 @@ import { withRouter } from "react-router-dom";
 
 import 'filepond/dist/filepond.min.css';
 
-import SUB_CONTROLLER from '../Controllers/Subject.Controller'
+import SUB_CONTROLLER from '../../controllers/Subject.Controller'
 import CONFIG from '../../controllers/Config.Controller'
 import SESSION from '../../controllers/Session.Controller'
 
