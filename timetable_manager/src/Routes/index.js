@@ -411,7 +411,14 @@ let routes = [
     //timeslots
 
     {
-        path: "/timeslot/manage/add/:id",
+        path: "/workingdays/timeslot",
+        name: "Add Timeslot",
+        component: AddTimeslot,
+        exact: true,
+      },
+
+    {
+        path: "/workingdays/timeslot/add/:id",
         name: "Add Timeslot",
         component: AddTimeslot,
         exact: true,

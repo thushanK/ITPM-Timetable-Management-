@@ -87,7 +87,7 @@ class AddTimeslot extends React.Component {
         const timeslots = this.generateSlots();
     return (
         <div className="app" >
-        <Sidebar activemenu={'WORKING_DAYS'}   submenu={'TIMESLOTS'} />
+        <Sidebar activemenu={'WORKING_DAYS'}   submenu={'MANAGE_TIMESLOT'} />
         <main>
             <div className="container-fluid" >
             <div className="row" >
