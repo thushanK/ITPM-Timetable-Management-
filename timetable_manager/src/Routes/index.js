@@ -41,7 +41,7 @@ import LecturerView from '../funtions/Lecturer/ViewLecturer';
 
 import AllocateGroup from '../funtions/Allocation/AllocateGroup';
 import AllocateLecture from '../funtions/Allocation/AllocateLecture';
-import AllocateSession from '../funtions/Allocation/AllocateGroup';
+import AllocateSession from '../funtions/Allocation/AllocateSession';
 
 
 import AddSession from '../funtions/Sessions/AddSession';
@@ -52,6 +52,7 @@ import AddNotOverlapSession from '../funtions/Sessions/NotOverlapSession/AddNotO
 import ManageNotOverlapSession from '../funtions/Sessions/NotOverlapSession/ManageNotOverlapSession';
 import AddParallelSession from '../funtions/Sessions/ParallelSession/AddParallelSession';
 import ManageParallelSession from '../funtions/Sessions/ParallelSession/ManageParallelSession';
+import DeleteConSessions from '../funtions/Sessions/ConsecutiveSession/DeleteConSessions';
 
 import ConsecutiveSession from '../funtions/Suitable/ConsecutiveSession';
 import RoomsForLecturer from '../funtions/Suitable/RoomsForLecturer';
@@ -403,6 +404,13 @@ let routes = [
         component: DeleteTag,
         exact: true,
     },
+
+    {
+        path: "/Sessions/ConsecutiveSession/DeleteConSessions/:id",
+        name: "Delete consecutive Sessions",
+        component: DeleteConSessions,
+        exact : true,
+      },
 
 ];
 

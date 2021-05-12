@@ -225,8 +225,7 @@ exports.delete_sessions = async (req, res) => {
         });
     }
 
-    
-    console.log(session_count_in_session);
+
     
     
         var result = await Sessions.findOneAndDelete({ _id: req.body.id })
