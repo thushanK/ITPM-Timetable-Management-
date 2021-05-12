@@ -52,6 +52,7 @@ import AddNotOverlapSession from '../funtions/Sessions/NotOverlapSession/AddNotO
 import ManageNotOverlapSession from '../funtions/Sessions/NotOverlapSession/ManageNotOverlapSession';
 import AddParallelSession from '../funtions/Sessions/ParallelSession/AddParallelSession';
 import ManageParallelSession from '../funtions/Sessions/ParallelSession/ManageParallelSession';
+import DeleteConSessions from '../funtions/Sessions/ConsecutiveSession/DeleteConSessions';
 
 import ConsecutiveSession from '../funtions/AddSuitable/ConsecutiveSession';
 import RoomsForLecturer from '../funtions/AddSuitable/RoomsForLecturer';
@@ -403,6 +404,13 @@ let routes = [
         component: DeleteTag,
         exact: true,
     },
+
+    {
+        path: "/Sessions/ConsecutiveSession/DeleteConSessions/:id",
+        name: "Delete consecutive Sessions",
+        component: DeleteConSessions,
+        exact : true,
+      },
 
 ];
 
