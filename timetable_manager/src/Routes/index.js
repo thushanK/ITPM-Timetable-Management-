@@ -56,13 +56,14 @@ import AddNotOverlapSession from '../funtions/Sessions/NotOverlapSession/AddNotO
 import ManageNotOverlapSession from '../funtions/Sessions/NotOverlapSession/ManageNotOverlapSession';
 import AddParallelSession from '../funtions/Sessions/ParallelSession/AddParallelSession';
 import ManageParallelSession from '../funtions/Sessions/ParallelSession/ManageParallelSession';
+import DeleteConSessions from '../funtions/Sessions/ConsecutiveSession/DeleteConSessions';
 
-import ConsecutiveSession from '../funtions/AddSuitable/ConsecutiveSession';
-import RoomsForLecturer from '../funtions/AddSuitable/RoomsForLecturer';
-import RoomsForSession from '../funtions/AddSuitable/RoomsForSession';
-import RoomsForSubGroup from '../funtions/AddSuitable/RoomsForSubGroup';
-import RoomsForSubject from '../funtions/AddSuitable/RoomsForSubject';
-import RoomsForTag from '../funtions/AddSuitable/RoomsForTag';
+import ConsecutiveSession from '../funtions/Suitable/ConsecutiveSession';
+import RoomsForLecturer from '../funtions/Suitable/RoomsForLecturer';
+import RoomsForSession from '../funtions/Suitable/RoomsForSession';
+import RoomsForSubGroup from '../funtions/Suitable/RoomsForSubGroup';
+import RoomsForSubject from '../funtions/Suitable/RoomsForSubject';
+import RoomsForTag from '../funtions/Suitable/RoomsForTag';
 
 
 
@@ -459,6 +460,13 @@ let routes = [
     component: AllocateSubGroup,
     exact: true,
   },
+
+    {
+        path: "/Sessions/ConsecutiveSession/DeleteConSessions/:id",
+        name: "Delete consecutive Sessions",
+        component: DeleteConSessions,
+        exact : true,
+      },
 
 ];
 
