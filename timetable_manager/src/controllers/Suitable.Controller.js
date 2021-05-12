@@ -86,3 +86,20 @@ export const getAllSubjects = () => {
             })
     })
 }
+
+export const getAllSessions = () => {
+    return new Promise( (resolve,reject) => {
+        return axios.get(`${Config.host}${Config.port}/api/suitable/getAllSessions`)
+            .then( result => {
+               if(result.status == 200){
+                    resolve(result.data)
+               }else{
+                   
+                resolve([])
+               }
+            })
+            .catch( err => {
+                reject(err)
+            })
+    })
+}
