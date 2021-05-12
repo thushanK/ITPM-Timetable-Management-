@@ -41,7 +41,7 @@ import LecturerView from '../funtions/Lecturer/ViewLecturer';
 
 import AllocateGroup from '../funtions/Allocation/AllocateGroup';
 import AllocateLecture from '../funtions/Allocation/AllocateLecture';
-import AllocateSession from '../funtions/Allocation/AllocateGroup';
+import AllocateSession from '../funtions/Allocation/AllocateSession';
 
 
 import AddSession from '../funtions/Sessions/AddSession';
