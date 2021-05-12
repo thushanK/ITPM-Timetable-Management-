@@ -28,7 +28,6 @@ class AllocateSubGroup extends React.Component {
 
     async componentDidMount() {
         const res = await STD_CONTROLLER.getAllStudent();
-       secutive 
         this.setState({ parallelList :  res.data });
         console.log(this.state.parallelList);
     }

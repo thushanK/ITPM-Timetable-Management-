@@ -1,10 +1,10 @@
 import React from 'react';
-import Sidebar from '../../Components/Sidebar'
+import Sidebar from '../../components/Sidebar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTable } from '@fortawesome/free-solid-svg-icons';
 import {Link} from 'react-router-dom'
-import {getWorkingDays } from '../../Controllers/WorkingDaysController'
-import {getTimeslots } from '../../Controllers/TimeslotsController'
+import {getWorkingDays } from '../../controllers/WorkingDaysController'
+import {getTimeslots } from '../../controllers/TimeslotsController'
 import moment from 'moment'
 
 class TimeslotsList extends React.Component {
