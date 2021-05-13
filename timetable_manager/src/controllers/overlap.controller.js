@@ -3,7 +3,7 @@
 import Axios from "axios";
 
 
-import Config from "./Config.Controller";
+import Config from "./Config.controller";
 
 class NotOverlap {
     constructor() {
