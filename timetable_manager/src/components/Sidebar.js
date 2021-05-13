@@ -65,7 +65,7 @@ const Sidebar = ({activemenu, submenu}) => {
         <MenuItem active={submenu === 'MANAGE_WORKING_DAY'}>
             Manage Working day<Link to="/workingday/manage" />
         </MenuItem>
-        <MenuItem active={submenu === 'MANAGE_TIMESLOT'}>
+        <MenuItem active={submenu === 'TIMESLOTS'}>
             Manage Timeslot<Link to="/workingdays/timeslot" />
         </MenuItem>
       </SubMenu>
