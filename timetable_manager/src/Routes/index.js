@@ -47,6 +47,7 @@ import AllocateGroup from '../funtions/Allocation/AllocateGroup';
 import AllocateLecture from '../funtions/Allocation/AllocateLecture';
 import AllocateSession from '../funtions/Allocation/AllocateSession';
 import AllocateSubGroup from '../funtions/Allocation/AllocateSubGroup';
+import RoomsNotAvailable from "../funtions/Room/NotAvailable";
 
 import AddSession from '../funtions/Sessions/AddSession';
 import ManageSession from '../funtions/Sessions/ManageSession';
@@ -442,7 +443,12 @@ let routes = [
         component: TimeslotsList,
         exact: true,
       },
-
+      {
+        path: "/locations/rooms/notavailable",
+        name: "Rooms not available",
+        component: RoomsNotAvailable,
+        exact: true,
+      },
       //allocate
   {
     path: "/allocate/AllocateLecture",
