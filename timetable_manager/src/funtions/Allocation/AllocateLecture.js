@@ -151,10 +151,10 @@ class AllocateLec extends React.Component {
                     </div>
                    
                     <div className="col-md-6 mt-1 mb-1" >
-                            <FormInput 
+                    <FormInput 
                                 label={'Select the Start Time'}
                                 placeholder={'Enter start time'}
-                                error={errors.start_time}
+                                error={errors.time}
                                 name="start_time"
                                 onChange={this.timeChange}
                                 value={this.state.start_time}
@@ -163,10 +163,10 @@ class AllocateLec extends React.Component {
                             />
                     </div>
                     <div className="col-md-6 mt-1 mb-1" >
-                            <FormInput 
+                    <FormInput 
                                 label={'Select the End Time'}
                                 placeholder={'Enter End time'}
-                                error={errors.end_time}
+                                error={errors.time}
                                 name="end_time"
                                 onChange={this.timeChange}
                                 value={this.state.end_time}
