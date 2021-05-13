@@ -166,7 +166,7 @@ class TimeslotsList extends React.Component {
                     <div className="shadow-sm rounded bg-white  pb-3 px-3" >
                         <h6 className="text-header pt-3 mb-0 font-weight-bold line-hight-1">Add Timeslots<br></br>
                         <span className="text-muted small">You can add new timeslots</span></h6>
-                        <Link to={`/workingdays/timeslots/add/${active._id}`} >
+                        <Link to={`/workingdays/timeslot/add/${active._id}`} >
                         <span  className="badge badge-info px-2 py-1 mt-1 bg-white border border-info text-info click ">Add Timeslots</span>
                         </Link>
                     </div>
@@ -176,7 +176,7 @@ class TimeslotsList extends React.Component {
                     <div className="shadow-sm rounded bg-white  pb-3 px-3" >
                         <h6 className="text-header pt-3 mb-0 font-weight-bold line-hight-1">Edit Working Days Group<br></br>
                         <span className="text-muted small">You can edit {active.name} group</span></h6>
-                        <Link to={`/workingdays/edit/${active._id}`} >
+                        <Link to={`/workingdays/timeslot/edit/${active._id}`} >
                         <span  className="badge badge-info px-2 py-1 mt-1 bg-white border border-info text-info click ">Edit Group</span>
                         </Link>
                     </div>
