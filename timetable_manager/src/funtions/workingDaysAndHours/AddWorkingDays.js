@@ -65,15 +65,15 @@ class AddWorkingDays extends React.Component {
                 })
                 .then(result => {
                     if (result.status == 200) {
-                        Config.setToast('Working Days Group Added Successfully!');
+                        Config.setToast('Added Successfully!');
                         this.props.history.push("/workingday/manage")
                     } else {
-                        Config.setErrorToast('Something Wrong Happend!');
+                        Config.setErrorToast('Error Occured!');
                     }
                 })
                 .catch(error => {
                     console.log(error);
-                    Config.setErrorToast('Something Wrong Happend!');
+                    Config.setErrorToast('Error Occured!');
                 })
         }
     }
@@ -87,7 +87,7 @@ class AddWorkingDays extends React.Component {
             <div className = "row" >
             <div className = "col-12 shadow-sm rounded bg-white mt-1" >
             <h6 className = "text-header py-3 mb-0 font-weight-bold line-hight-1" > Add New Working Days < br >
-            </br> <span className = "text-muted small" > You can add new working days groups </span > </h6 > 
+            </br> <span className = "text-muted small" >Add new groups </span > </h6 > 
             </div> <div className = "col-12 shadow-sm rounded bg-white mt-3 pb-1" > 
             <form onSubmit = { (e) => this.onFormSubmit(e)} >
                  <div className = "row mt-1 pb-3" >

@@ -36,15 +36,15 @@ class DeleteTimeslot extends React.Component {
         deleteTimeslot(this.state.id)
         .then( result => {
             if(result.status == 200 ){
-                Config.setToast('Timeslot Deleted Successfully!');
+                Config.setToast('Deleted Successfully!');
                 this.props.history.push(`/workingdays/timeslots/${this.state.timeslot.group_id}`)
             }else{
-                Config.setErrorToast('Something Wrong Happend!');
+                Config.setErrorToast('Error Occured!');
             }
         })
         .catch( error => {
             console.log(error);
-            Config.setErrorToast('Something Wrong Happend!');
+            Config.setErrorToast('Error Occured!');
         })
     }
 
@@ -59,7 +59,7 @@ class DeleteTimeslot extends React.Component {
             <div className="row" >
                 <div className="col-12 shadow-sm rounded bg-white mt-1" >
                     <h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Delete Timeslot<br></br>
-    <span className="text-muted small">Timeslots delete confirmation</span></h6>
+    <span className="text-muted small">Delete confirmation</span></h6>
                 </div>
                 <div className="col-12 shadow-sm rounded bg-white mt-3 pb-1" >
     

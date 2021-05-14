@@ -81,12 +81,12 @@ class AllocateSession extends React.Component {
                 Config.setToast('Added Successfully!');
                 this.load_data()
             }else{
-                Config.setErrorToast('Something Wrong Happend!');
+                Config.setErrorToast('Error Occured!');
             }
         })
         .catch( error => {
             console.log(error);
-            Config.setErrorToast('Something Wrong Happend!');
+            Config.setErrorToast('Error Occured!');
         })
     }
 
@@ -111,7 +111,7 @@ class AllocateSession extends React.Component {
             <div className="row" >
                 <div className="col-12 shadow-sm rounded bg-white mt-1" >
                     <h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Allocate Session<br></br>
-                    <span className="text-muted small">You can allocate Session</span></h6>
+                    <span className="text-muted small">Allocate Session</span></h6>
                 </div>
                 <div className="col-12 shadow-sm rounded bg-white mt-3 pb-1" >
                 <form onSubmit={(e) => this.onFormSubmit(e)}>
@@ -239,12 +239,12 @@ deleteTagItem = props => {
              Config.setToast('Deleted Successfully!');
              this.load_data()
          }else{
-             Config.setErrorToast('Something Wrong Happend!');
+             Config.setErrorToast('Error Occured!');
          }
      })
      .catch( error => {
          console.log(error);
-         Config.setErrorToast('Something Wrong Happend!');
+         Config.setErrorToast('Error Occured!');
      })
  }
 

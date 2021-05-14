@@ -62,20 +62,20 @@ class AddTimeslot extends React.Component {
         .then( result => {
             console.log(JSON.stringify(result));
             if(result.status == 200 ){
-                Config.setToast('Timeslot Added Successfully!');
+                Config.setToast('Added Successfully!');
                 this.setState({conflict: false});
                 this.props.history.push(`/workingdays/timeslots/${this.props.match.params.id}`)
             }else if(result.status == 201){
                 Config.setErrorToast('Conflict Founded !');
                 this.setState({conflict: true});
             }else{
-                Config.setErrorToast('Something Wrong Happend!');
+                Config.setErrorToast('Error Occured!');
                 this.setState({conflict: false});
             }
         })
         .catch( error => {
             console.log(error);
-            Config.setErrorToast('Something Wrong Happend!');
+            Config.setErrorToast('Error Occured!');
         })
     }
 
@@ -93,7 +93,7 @@ class AddTimeslot extends React.Component {
             <div className="row" >
                 <div className="col-12 shadow-sm rounded bg-white mt-1" >
                     <h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Add New Timeslot<br></br>
-                    <span className="text-muted small">You can add new timeslots by filling below form</span></h6>
+                    <span className="text-muted small">Add new timeslots by filling below form</span></h6>
                 </div>
                 <div className="col-12 shadow-sm rounded bg-white mt-3 pb-1" >
                 <form onSubmit={(e) => this.onFormSubmit(e)}>
@@ -135,7 +135,7 @@ class AddTimeslot extends React.Component {
                     </div>
                     <div className="col-md-12 mb-1" >
                     <hr className="mt-2 mb-1"></hr>
-                            <button type="submit" className="btn-outline-info mt-2 btn btn-sm px-2 ">Submit Timeslot</button>
+                            <button type="submit" className="btn-outline-info mt-2 btn btn-sm px-2 ">Submit</button>
                     </div>
                 </div>
                 </form>
@@ -143,7 +143,7 @@ class AddTimeslot extends React.Component {
                 {  this.state.conflict && 
                  <div className="col-12 shadow-sm rounded bg-white mt-2 pt-2 pb-3" >
                     <h6 className="text-header text-warning pt-2 pb-2 mb-0 font-weight-bold line-hight-1">
-                        <FontAwesomeIcon icon={faExclamationTriangle}  className="mr-2"/>Conflict Found !
+                        <FontAwesomeIcon icon={faExclamationTriangle}  className="mr-2"/>Same Data! Try again
                     </h6>
                     <h6 className="text-header mb-0  line-hight-1">
                     <span className="text-muted small font-weight-bold">Selected Timeslot already in the system.<br/> Please select different timeslot.</span></h6>

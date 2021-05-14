@@ -64,14 +64,14 @@ class EditTimeslot extends React.Component {
         })
         .then( result => {
             if(result.status == 200 ){
-                Config.setToast('Timeslot Updated Successfully!');
+                Config.setToast('Updated Successfully!');
             }else{
-                Config.setErrorToast('Something Wrong Happend!');
+                Config.setErrorToast('Error Occured!');
             }
         })
         .catch( error => {
             console.log(error);
-            Config.setErrorToast('Something Wrong Happend!');
+            Config.setErrorToast('Error Occured!');
         })
         
     }
@@ -137,7 +137,7 @@ class EditTimeslot extends React.Component {
                     </div>
                     <div className="col-md-12 mb-1" >
                     <hr className="mt-2 mb-1"></hr>
-                            <button type="submit" className="btn-outline-info mt-2 btn btn-sm px-2 ">Update Timeslot</button>
+                            <button type="submit" className="btn-outline-info mt-2 btn btn-sm px-2 ">Update</button>
                     </div>
                 </div>
                 </form>
@@ -146,7 +146,7 @@ class EditTimeslot extends React.Component {
                 {  this.state.conflict && 
                  <div className="col-12 shadow-sm rounded bg-white mt-2 pt-2 pb-3" >
                     <h6 className="text-header text-warning pt-2 pb-2 mb-0 font-weight-bold line-hight-1">
-                        <FontAwesomeIcon icon={faExclamationTriangle}  className="mr-2"/>Conflict Found !
+                        <FontAwesomeIcon icon={faExclamationTriangle}  className="mr-2"/>Same data! Try Again
                     </h6>
                     <h6 className="text-header mb-0  line-hight-1">
                     <span className="text-muted small font-weight-bold">Selected Timeslot already in the system.<br/> Please select different timeslot.</span></h6>
@@ -162,7 +162,7 @@ class EditTimeslot extends React.Component {
         <div className="col-12 shadow-sm rounded py-2 bg-white mt-2" >
             <div className="d-flex justify-content-center mt-1" >
                 <div className="spinner-border spinner-border-sm" role="status">
-                </div><h6 className="px-2 font-08">Loading Details..</h6>
+                </div><h6 className="px-2 font-08">Loading..</h6>
             </div>
         </div>
           

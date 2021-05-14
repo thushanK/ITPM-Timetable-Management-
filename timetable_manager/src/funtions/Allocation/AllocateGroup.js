@@ -36,7 +36,7 @@ class AllocateGroup extends React.Component {
        
         getAllGroup().then( results => {
             this.setState({lectList: results.data});
-             console.log("dooooooooooooooooooooo",results);
+             console.log("yeeee",results);
         }
         ).catch( err=> {
             console.log(err);
@@ -96,12 +96,12 @@ class AllocateGroup extends React.Component {
                 this.load_data();
              
             }else{
-                Config.setErrorToast('Something Wrong Happend!');
+                Config.setErrorToast('Error Occured!');
             }
         })
         .catch( error => {
             console.log(error);
-            Config.setErrorToast('Something Wrong Happend!');
+            Config.setErrorToast('Error Occured!');
         })
        
     }
@@ -116,7 +116,7 @@ class AllocateGroup extends React.Component {
             <div className="row" >
                 <div className="col-12 shadow-sm rounded bg-white mt-1" >
                     <h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Allocate Group<br></br>
-                    <span className="text-muted small">You can allocate Group</span></h6>
+                    <span className="text-muted small">Allocate Group</span></h6>
                 </div>
                 <div className="col-12 shadow-sm rounded bg-white mt-3 pb-1" >
                 <form onSubmit={(e) => this.onFormSubmit(e)}>
@@ -254,12 +254,12 @@ deleteTagItem = props => {
              Config.setToast('Deleted Successfully!');
              this.load_data();
          }else{
-             Config.setErrorToast('Something Wrong Happend!');
+             Config.setErrorToast('Error Occured!');
          }
      })
      .catch( error => {
          console.log(error);
-         Config.setErrorToast('Something Wrong Happend!');
+         Config.setErrorToast('Error Occured!');
      })
  }
  
