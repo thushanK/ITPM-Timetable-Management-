@@ -143,18 +143,18 @@ let routes = [
         component: ManageConsecutiveSession,
         exact: true,
     },
-    // {
-    //     path: "/parallel/add",
-    //     name: "ADD_PARALLEL",
-    //     component: AddNotOverlapSession,
-    //     exact: true,
-    // },
-    // {
-    //     path: "/parallel/manage",
-    //     name: "MANAGE_PARALLEL",
-    //     component: ManageNotOverlapSession,
-    //     exact: true,
-    // },
+    {
+        path: "/notOverlap/add",
+        name: "ADD_PARALLEL",
+        component: AddNotOverlapSession,
+        exact: true,
+    },
+    {
+        path: "/notOverlap/manage",
+        name: "MANAGE_PARALLEL",
+        component: ManageNotOverlapSession,
+        exact: true,
+    },
     {
         path: "/parallel/add",
         name: "ADD_NOT_OVERLAP",

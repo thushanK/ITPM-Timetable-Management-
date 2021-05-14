@@ -8,7 +8,9 @@ class Dashboard extends React.Component {
         return (
             <div className="app" >
                  <Sidebar activemenu={'DASHBOARD'} />
+                 {/* <Sidebar activemenu={'SSESSIONS'} /> */}
             </div>
+            
 
     );}   
 }
