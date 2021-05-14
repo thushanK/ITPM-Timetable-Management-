@@ -46,7 +46,7 @@ class OverLap extends React.Component {
                       </div>
                       <div class="col-4">
                           <center>
-                          <Link to="/student/adddOverlap" >
+                          <Link to="/notOverlap/add" >
                           <span  className="badge badge-info px-5 py-1 mt-4 bg-white border border-info text-info click ">Add Not Overlap Sessions</span>
                           </Link>
                           </center>

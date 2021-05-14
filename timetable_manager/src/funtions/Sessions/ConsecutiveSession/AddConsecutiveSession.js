@@ -33,25 +33,7 @@ class addconsecutiveSessions extends React.Component {
         this.setState({[e.target.name] : e.target.value  });
     }
 
-    // onFormSubmit = async (e) => {
-    //     e.preventDefault();
-     
-    //     var data = {
-    //         session_01 : this.state.session_01,
-    //         ConSession: this.state.ConSession,
-    //     }
-
-    //     const result = await ConSessionsCon.addConSessions(data)
-
-    //     console.log(result);
-
-    //     if(result == 200){
-    //         CONFIG.setToast("Successfully Added")
-    //         this.props.history.push("/student/consecutiveSessions")
-
-    //     }
-    // }
-
+  
     onFormSubmit = async (e) => {
         e.preventDefault();
         const { session_01 , session_02} = this.state;
@@ -60,7 +42,7 @@ class addconsecutiveSessions extends React.Component {
             const result = await ConSessionsCon.addConSessions({session_01 , session_02});
             if(result.status == 200 ){
                 CONFIG.setToast(result.message);
-                this.props.history.push("/student/consecutiveSessions")
+                this.props.history.push("/sessions/manage")
             }else{
                 CONFIG.setErrorToast(result.message);
             }
@@ -116,7 +98,7 @@ class addconsecutiveSessions extends React.Component {
                 </div>
                 </form>
                 </div>
-                 {/* ------------------------------ error message-------------------------- */}
+                 {}
                  {  this.state.error && 
                  <div className="col-12 shadow-sm rounded bg-white mt-2 pt-2 pb-3" >
                     <h6 className="text-header text-warning pt-2 pb-2 mb-0 font-weight-bold line-hight-1">
