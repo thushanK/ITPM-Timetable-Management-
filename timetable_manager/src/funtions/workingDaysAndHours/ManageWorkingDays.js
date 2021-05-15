@@ -31,7 +31,7 @@ class WorkingDays extends React.Component {
         <td className="text-center" colSpan={6}>
         <div className="d-flex justify-content-center mt-1" >
             <div className="spinner-border spinner-border-sm" role="status">
-            </div><h6 className="px-2 font-08">Loading</h6>
+            </div><h6 className="px-2 font-08">Loading....</h6>
         </div>
         </td>
     </tr>
@@ -41,7 +41,7 @@ class WorkingDays extends React.Component {
     <tr>
         <td className="text-center" colSpan={6}>
         <div className="d-flex justify-content-center mt-1" >
-            <h6 className="px-2 font-08">No Any Results !</h6>
+            <h6 className="px-2 font-08">No Any Results Found !</h6>
         </div>
         </td>
     </tr>

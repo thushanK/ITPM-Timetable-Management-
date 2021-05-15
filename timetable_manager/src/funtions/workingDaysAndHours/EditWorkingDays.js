@@ -81,15 +81,15 @@ class EditWorkingDays extends React.Component {
             })
             .then( result => {
                 if(result.status == 200 ){
-                    Config.setToast('Working Days Group Updated Successfully!');
+                    Config.setToast('Updated Successfully!');
                     this.props.history.push("/workingday/manage")
                 }else{
-                    Config.setErrorToast('Something Wrong Happend!');
+                    Config.setErrorToast('Error Occured!');
                 }
             })
             .catch( error => {
                 console.log(error);
-                Config.setErrorToast('Something Wrong Happend!');
+                Config.setErrorToast('Error Occured!');
             })
         }
     }
@@ -104,7 +104,7 @@ class EditWorkingDays extends React.Component {
             <div className="row" >
                 <div className="col-12 shadow-sm rounded bg-white mt-1" >
                     <h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Edit Working Days<br></br>
-                    <span className="text-muted small">You can edit working days groups</span></h6>
+                    <span className="text-muted small">Edit working days groups</span></h6>
                 </div>
 
                 { loading && <this.Loading/> } 
@@ -172,7 +172,7 @@ class EditWorkingDays extends React.Component {
                                 
                     </div>
                     <div className="col-md-12 mt-1 mb-1" >
-                            <button type="submit" className="btn-outline-info mt-2 btn btn-sm px-2 ">Update Working Days</button>
+                            <button type="submit" className="btn-outline-info mt-2 btn btn-sm px-2 ">Update</button>
                     </div>
                 </div>
                 </form> 
@@ -187,7 +187,7 @@ class EditWorkingDays extends React.Component {
         <div className="col-12 shadow-sm rounded py-2 bg-white mt-2" >
             <div className="d-flex justify-content-center mt-1" >
                 <div className="spinner-border spinner-border-sm" role="status">
-                </div><h6 className="px-2 font-08">Loading Details..</h6>
+                </div><h6 className="px-2 font-08">Loading...</h6>
             </div>
         </div>
           

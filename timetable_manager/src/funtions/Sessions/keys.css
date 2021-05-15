@@ -1,0 +1,95 @@
+/* @keyframes cdp-in {
+    from {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .cdp {
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0;
+    z-index: 6;
+    margin: 50px 0;
+    
+    animation: cdp-in 500ms ease both;
+    animation-timeout: 200ms;
+  
+  }
+  
+  */
+
+  
+
+
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 767px) {
+  
+    .pagination{
+      width:100%;
+      border-radius:0px;
+    }
+   
+   .pagination > li > a, .pagination > li > span{
+     width:50%;
+     display:block;
+     text-align:center;
+     border-radius:0px;
+     margin-left:0px;
+     border-width: 1px 0 0 1px;
+ 
+   }
+   
+   .pagination.even > li:nth-child(even) > a, .pagination > li:nth-child(even) > span{
+     border-right:solid 1px #DDDDDD;
+   }
+ 
+   .pagination.even > li:first-child > a, .pagination > li:first-child > span{
+     border-radius:4px 0px 0px 0px;
+   }
+   
+   .pagination.even > li:nth-child(2) > a, .pagination > li:first-child > span{
+     border-radius:0px 4px 0px 0px;
+   }
+   
+   .pagination.even > li:last-child > a, .pagination > li:last-child > span{
+     border-bottom:solid 1px #DDDDDD;
+     border-radius:0px 0px 4px 0px;
+   }
+   
+   .pagination.even > li:nth-last-child(2) > a, .pagination > li:nth-last-child(2) > span{
+     border-bottom:solid 1px #DDDDDD;
+     border-radius:0px 0px 0px 4px;
+   }
+   
+ 
+   
+   .pagination.odd > li:nth-child(odd) > a, .pagination > li:nth-child(odd) > span{
+     border-right:solid 1px #DDDDDD;
+   }
+ 
+   .pagination.odd > li:first-child > a, .pagination > li:first-child > span{
+     border-radius:4px 4px 0px 0px;
+     border-bottom:0px;
+     width:100%;
+   }
+ 
+   .pagination.odd > li:last-child > a, .pagination > li:last-child > span{
+     border-bottom:solid 1px #DDDDDD;
+     border-radius:0px 0px 4px 0px;
+   }
+   
+   .pagination.odd > li:nth-last-child(2) > a, .pagination > li:nth-last-child(2) > span{
+     border-bottom:solid 1px #DDDDDD;
+     border-radius:0px 0px 0px 4px;
+   }
+   
+ 
+   
+ }

@@ -43,7 +43,7 @@ class AllocateLec extends React.Component {
        
         getAllLecs().then( results => {
             this.setState({lectList: results.data});
-            console.log("data enawoooooo",results.data);
+            console.log("enawoooooo",results.data);
         }
         ).catch( err=> {
             console.log(err);
@@ -81,6 +81,7 @@ class AllocateLec extends React.Component {
        
         const lecID = this.state.lectList.find(i => i.name == this.state.lecture )
 
+        
         const snv =  [...lecID.snv , 
             {  day : this.state.date , 
                s_time : moment(this.state.start_time , 'HH;mm').format('HH:mm:ss') ,
@@ -99,12 +100,12 @@ class AllocateLec extends React.Component {
                 this.load_data()
                 
             }else{
-                Config.setErrorToast('Something Wrong Happend!');
+                Config.setErrorToast('Error Occured!');
             }
         })
         .catch( error => {
             console.log(error);
-            Config.setErrorToast('Something Wrong Happend!');
+            Config.setErrorToast('Error Occured!');
         })
     
     }
@@ -248,12 +249,12 @@ deleteTagItem = props => {
              Config.setToast('Deleted Successfully!');
              this.load_data()
          }else{
-             Config.setErrorToast('Something Wrong Happend!');
+             Config.setErrorToast('Error Occured!');
          }
      })
      .catch( error => {
          console.log(error);
-         Config.setErrorToast('Something Wrong Happend!');
+         Config.setErrorToast('Error Occured!');
      })
  }
  

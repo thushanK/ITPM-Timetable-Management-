@@ -45,15 +45,15 @@ class DeleteWorkingDays extends React.Component {
         deleteGroup(this.state.id)
         .then( result => {
             if(result.status == 200 ){
-                Config.setToast('Deleted Successfully!');
+                Config.setToast(' Successfully Deleted !');
                 this.props.history.push("/workingday/manage")
             }else{
-                Config.setErrorToast('Check Again!');
+                Config.setErrorToast('Error Occured!');
             }
         })
         .catch( error => {
             console.log(error);
-            Config.setErrorToast('Check Again!');
+            Config.setErrorToast('Error Occured!');
         })
     }
 
@@ -68,14 +68,14 @@ class DeleteWorkingDays extends React.Component {
             <div className="row" >
                 <div className="col-12 shadow-sm rounded bg-white mt-1" >
                     <h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Delete Working Days Group<br></br>
-                    <span className="text-muted small">working day group delete confirmation</span></h6>
+                    <span className="text-muted small">Delete confirmation</span></h6>
                 </div>
                 <div className="col-12 shadow-sm rounded bg-white mt-3 pb-1" >
     
                 <div className="row mt-1 pb-3" >
                     <div className="col-md-12 mt-2" >
                     <h6 style={{fontSize : '0.9rem'}}
-                        className="text-header text-danger mb-0 font-weight-bold line-hight-1">Are you sure you want to delete this working days list ?<br></br>
+                        className="text-header text-danger mb-0 font-weight-bold line-hight-1">Delete this working days list ?<br></br>
                     <span className="text-muted small">This process can't be undone, All the relevant details will be permanently deleted !</span></h6>
                     <hr className="my-2"></hr>
                     </div>
