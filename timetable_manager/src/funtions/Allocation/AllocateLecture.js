@@ -117,7 +117,7 @@ class AllocateLec extends React.Component {
        
     return (
         <div className="app" >
-        <Sidebar activemenu={'ALLOCATE'}   submenu={'ALLOCATE_LECTURE'} />
+        <Sidebar activemenu={'ALLOCATIONS'}   submenu={'ALLOCATE_LECTURER'} />
         <main>
             <div className="container-fluid" >
             <div className="row" >
