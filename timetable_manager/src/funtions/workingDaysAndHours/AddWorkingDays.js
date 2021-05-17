@@ -88,7 +88,7 @@ class AddWorkingDays extends React.Component {
             <div className = "col-12 shadow-sm rounded bg-white mt-1" >
             <h6 className = "text-header py-3 mb-0 font-weight-bold line-hight-1" > Add New Working Days < br >
             </br> <span className = "text-muted small" >Add new groups </span > </h6 > 
-            </div> <div className = "col-12 shadow-sm rounded bg-white mt-3 pb-1" > 
+             <div className = "col-12 shadow-sm rounded bg-white mt-3 pb-1" > 
             <form onSubmit = { (e) => this.onFormSubmit(e)} >
                  <div className = "row mt-1 pb-3" >
                 <div className = "col-md-6 mt-2 mb-1" >
@@ -137,9 +137,10 @@ class AddWorkingDays extends React.Component {
                         < div className = "col-md-12 mt-1 mb-1" >
 
      <button type = "submit"
-     className = "btn-outline-info mt-2 btn btn-sm px-2 " > Submit </button> </div >
+     className = "btn-outline-info mt-2 btn btn-sm px-2 " ><button class="w3-button w3-aqua">Submit</button>  </button> </div >
             </div>
-             </form > 
+             </form >
+             </div>
              </div> 
               </div > 
                </div> 

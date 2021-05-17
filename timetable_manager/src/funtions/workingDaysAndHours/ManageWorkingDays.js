@@ -65,7 +65,7 @@ class WorkingDays extends React.Component {
                 <div className="col-12 shadow-sm rounded bg-white mt-1" >
                     <h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Working Days Groups<br></br>
                     <span className="text-muted small">Details about groups</span></h6>
-                </div>
+               
                
                 <div className="col-12 shadow-sm rounded bg-white mt-2" >
                     <input type='text'
@@ -95,6 +95,7 @@ class WorkingDays extends React.Component {
                 </div>
             </div>
             </div>
+            </div>
         </main>
     </div>
     );
@@ -116,10 +117,10 @@ class WorkingDays extends React.Component {
                 <td>{row.dayslist.toString() }</td>
                 <td>{moment(row.start_time, 'HH:mm:ss').format('hh:mm A')} : {moment(row.end_time, 'HH:mm:ss').format('hh:mm A')}</td>
                 <td><Link to={`/workingday/edit/${row._id}`}>
-                    <span className="badge badge-info rounded-0 bg-white text-primary border border-info click font-weight-bold ">Edit</span>
+                    <span className="badge badge-info rounded-0 bg-white text-primary border border-info click font-weight-bold "><button class="w3-button w3-aqua">Edit</button></span>
                     </Link>
                 <Link to={`/workingday/delete/${row._id}`}>
-                    <span className="ml-1 badge badge-danger rounded-0 bg-white text-danger border border-danger click font-weight-bold ">Remove</span>
+                    <span className="ml-1 badge badge-danger rounded-0 bg-white text-danger border border-danger click font-weight-bold "><button class="w3-button w3-aqua">Remove</button></span>
                     </Link>
                 </td>
             </tr>

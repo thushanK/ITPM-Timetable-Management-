@@ -93,7 +93,7 @@ class TimeslotsList extends React.Component {
                     <h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Working Days Group {active != null && ` - ${active.name}`}<br></br>
                     <span className="text-muted small">Details about list</span>
                     </h6>
-                </div>
+               
 
                 { loading && <this.Loading/> } 
                                 
@@ -161,13 +161,14 @@ class TimeslotsList extends React.Component {
                         </tbody>
                     </table>
                 </div>
+                
 
                 <div className="col-6 mt-2  pl-0" >
                     <div className="shadow-sm rounded bg-white  pb-3 px-3" >
                         <h6 className="text-header pt-3 mb-0 font-weight-bold line-hight-1">Add Timeslots<br></br>
                         <span className="text-muted small">Add new timeslots</span></h6>
                         <Link to={`/workingdays/timeslot/add/${active._id}`} >
-                        <span  className="badge badge-info px-2 py-1 mt-1 bg-white border border-info text-info click ">Add Timeslots</span>
+                        <span  className="badge badge-info px-2 py-1 mt-1 bg-white border border-info text-info click "><button class="w3-button w3-aqua">Add Timeslots</button></span>
                         </Link>
                     </div>
                 </div> 
@@ -177,12 +178,13 @@ class TimeslotsList extends React.Component {
                         <h6 className="text-header pt-3 mb-0 font-weight-bold line-hight-1">Edit Working Days Group<br></br>
                         <span className="text-muted small">You can edit {active.name} group</span></h6>
                         <Link to={`/workingdays/timeslot/edit/${active._id}`} >
-                        <span  className="badge badge-info px-2 py-1 mt-1 bg-white border border-info text-info click ">Edit</span>
+                        <span  className="badge badge-info px-2 py-1 mt-1 bg-white border border-info text-info click "><button class="w3-button w3-aqua">Edit</button></span>
                         </Link>
                     </div>
                 </div> 
                 </>
                 }
+            </div>
             </div>
             </div>
         </main>
@@ -214,10 +216,10 @@ class TimeslotsList extends React.Component {
                 <td>{row.type == '1' ? '01 Hour' : '30 Minutes'}</td>
                 <td>
                     <Link to={`/workingdays/timeslots/edit/${row._id}`} >
-                    <span className="badge badge-info rounded-0 bg-white text-info border border-info click font-weight-bold mx-2">Edit</span>
+                    <span className="badge badge-info rounded-0 bg-white text-info border border-info click font-weight-bold mx-2"><button class="w3-button w3-aqua">Edit</button> </span>
                     </Link>
                     <Link to={`/workingdays/timeslots/delete/${row._id}`} >
-                    <span className="badge badge-info rounded-0 bg-white text-danger border border-danger click font-weight-bold ">Delete</span>
+                    <span className="badge badge-info rounded-0 bg-white text-danger border border-danger click font-weight-bold "><button class="w3-button w3-aqua">Delete</button> </span>
                     </Link>
                 </td>  
             </tr>
