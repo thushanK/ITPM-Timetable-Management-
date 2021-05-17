@@ -85,7 +85,6 @@ class ManageSubject extends React.Component {
         if (result == 200)
         CONFIG.setToast("Successfully Deleted")
              else if (result == 401)
-        //CONFIG.showAlert2("First you have to delete sessions related to the subject")
           await this.loadData()
         }
 
@@ -106,7 +105,6 @@ class ManageSubject extends React.Component {
                 },
                 {
                     label: 'No',
-                    //   onClick: () => cancel()
                 }
             ]
         });
@@ -121,7 +119,7 @@ class ManageSubject extends React.Component {
         const { errors } = this.state;
         return (
             <div className="app" >
-                <Sidebar activemenu={'SUBJECT'} submenu={'OVERVIEW_SUBJECT'} />
+                <Sidebar activemenu={'SUBJECT'} submenu={'MANAGE_SUBJECT'} />
                 <main>
                     <div className="container-fluid" >
                         <div className="row" >
@@ -130,9 +128,7 @@ class ManageSubject extends React.Component {
                                     <div className="col-md-12"><h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Subjects Managment <br></br>
                                         <span className="text-muted small">Overview</span>
                                     </h6></div>
-                                    {/* <div className="col-md-4">
-                                        <Link to="/subject/add"> <button type="submit" className="btn-outline-success  btn btn-sm px-2 float-right mt-3 mb-2">Add Subject</button></Link>
-                                    </div> */}
+                                    
                                 </div>
                             </div>
                                 <form onSubmit={(e) => this.onFormSubmit(e)}>

@@ -73,7 +73,7 @@ class AddStudent extends React.Component {
         const {errors} = this.state;
     return (
         <div className="app" >
-        <Sidebar activemenu={'STUDENT'}   submenu={'STUDENT_TB_LIST'} />
+        <Sidebar activemenu={'STUDENT'}   submenu={'ADD_STUDENT'} />
         <main>
             <div className="container-fluid" >
             <div className="row" >

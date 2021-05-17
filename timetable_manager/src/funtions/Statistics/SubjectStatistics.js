@@ -52,7 +52,7 @@ class SubStat extends React.Component {
   render(){
   return (
     <div className="app" >
-    <Sidebar activemenu={'STATISTICS'} submenu={'SUB_STAT'} />
+    <Sidebar activemenu={'STATISTICS'} submenu={'SUBJECT_STATISTICS'} />
     <main>
         <div className="container-fluid" >
         <div className="row" >

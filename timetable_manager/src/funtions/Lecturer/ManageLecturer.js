@@ -121,7 +121,7 @@ class ManageLecturer extends React.Component {
         const { errors } = this.state;
         return (
             <div className="app" >
-                <Sidebar activemenu={'LECTURER'} submenu={'OVERVIEW_LECTURER'} />
+                <Sidebar activemenu={'LECTURER'} submenu={'MANAGE_LECTURER'} />
                 <main>
                     <div className="container-fluid" >
                         <div className="row" >

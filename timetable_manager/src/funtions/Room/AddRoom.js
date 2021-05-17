@@ -85,42 +85,17 @@ class AddBuilding extends React.Component {
                 <div className="col-12 shadow-sm rounded bg-white mt-1" >
                     <h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Add Room<br></br>
                     <span className="text-muted small">Add a new Room to the system</span></h6>
-                </div>
-                <div className="col-12 shadow-sm rounded bg-white mt-3 pb-1" >
-                <form onSubmit={(e) => this.onFormSubmit(e)}>
+
+                    <form onSubmit={(e) => this.onFormSubmit(e)}>
                 <div className="row mt-1 pb-3" >
                     <div className="col-md-6 mt-1 mb-1" >
-                            <FormInput 
-                                label={'Name'}
-                                placeholder={'Enter building name'}
-                                error={ errors.name}
-                                name="name"
-                                value={this.state.name}
-                                onChange={this.formValueChange}
-                                error_meesage={'*Name is required'}
-                            />
+                            <FormInput label={'Name'} placeholder={'Enter building name'} error={ errors.name} name="name"  value={this.state.name} onChange={this.formValueChange} error_meesage={'*Name is required'}/>
                     </div>
                     <div className="col-md-6 mt-1 mb-1" >
-                            <FormInput 
-                                label={'Capacity'}
-                                placeholder={'Enter the capacity'}
-                                error={ errors.capacity}
-                                name="capacity"
-                                value={this.state.capacity}
-                                onChange={this.formValueChange}
-                                error_meesage={'*capacity is required'}
-                            />
+                            <FormInput  label={'Capacity'} placeholder={'Enter the capacity'} error={ errors.capacity} name="capacity" value={this.state.capacity} onChange={this.formValueChange} error_meesage={'*capacity is required'}/>
                     </div>
                     <div className="col-md-6 mt-1 mb-1" >
-                        <FormSelect 
-                                label={'Type'}
-                                options={T_OPTIONS}
-                                error={ errors.type}
-                                selected={this.state.type}
-                                onChange={this.formValueChange}
-                                name="type"
-                                error_meesage={'*Type is required'}
-                            />
+                        <FormSelect label={'Type'} options={T_OPTIONS} error={ errors.type} selected={this.state.type} onChange={this.formValueChange} name="type" error_meesage={'*Type is required'} />
                     </div>
                     <div className="col-md-6 mt-1 mb-1" >
                         <FormSelect 
@@ -145,6 +120,7 @@ class AddBuilding extends React.Component {
                 </div>
                 </form>
                 </div>
+              
             </div>
             </div>
         </main>

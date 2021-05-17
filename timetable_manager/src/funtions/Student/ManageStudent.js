@@ -25,7 +25,7 @@ class ManageStudent extends React.Component {
 
   return (
     <div className="app" >
-    <Sidebar activemenu={'STUDENT'}   submenu={'STUDENT_TB_LIST'} />
+    <Sidebar activemenu={'STUDENT'}   submenu={'MANAGE_STUDENT'} />
     <main>
         <div className="container-fluid" >
         <div className="row" >

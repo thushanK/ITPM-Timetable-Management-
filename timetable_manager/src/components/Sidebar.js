@@ -27,14 +27,21 @@ const Sidebar = ({activemenu, submenu}) => {
       </SubMenu>
 
       {/* Tag member 1 */}
-      <SubMenu  defaultOpen={activemenu === 'TAG'} title="Tag" icon={<FontAwesomeIcon icon={faAd} />}>
+
+      <MenuItem 
+        active={activemenu === 'TAGS'} 
+        icon={<FontAwesomeIcon icon={faAd} />}>
+          Add Tag<Link to="/tag/add" />
+      </MenuItem>
+
+      {/* <SubMenu  defaultOpen={activemenu === 'TAG'} title="Tag" icon={<FontAwesomeIcon icon={faAd} />}>
         <MenuItem active={submenu === 'ADD_TAG'} >
             Add Tag<Link to="/tag/add" />
-        </MenuItem>
+        </MenuItem> */}
         {/* <MenuItem active={submenu === 'MANAGE_TAG'}>
           <Link to="/tag/manage" />
         </MenuItem> */}
-      </SubMenu>
+      {/* </SubMenu> */}
 
 
       {/* Lecturer member 2 */}

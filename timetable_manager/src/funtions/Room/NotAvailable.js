@@ -98,7 +98,7 @@ class RoomsNotAvailable extends React.Component {
     const {rooms , snv, errors} = this.state;
   return (
     <div className="app" >
-        <Sidebar activemenu={'ROOM'} submenu={'NOT_AVAILABLE_ROOM'} />
+        <Sidebar activemenu={'LOCATION'} submenu={'NOT_AVAILABLE_ROOM'} />
         <main>
             <div className="container-fluid" >
                 <div className="row" >

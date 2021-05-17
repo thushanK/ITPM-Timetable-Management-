@@ -78,7 +78,7 @@ class AddTags extends React.Component {
         const {tagsList} = this.state;
     return (
         <div className="app" >
-        <Sidebar activemenu={'TAGS'}   submenu={'ADD_TAGS'} />
+            <Sidebar activemenu={'TAGS'} />
         <main>
             <div className="container-fluid" >
             <div className="row" >

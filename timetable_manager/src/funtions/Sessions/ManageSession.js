@@ -71,7 +71,6 @@ class SessionsOverview extends React.Component {
     }
     componentWillMount = async () => {
         await this.loadData()
-        //   await   this.set_page()
 
     }
     loadData = async () => {
@@ -110,7 +109,7 @@ class SessionsOverview extends React.Component {
                 },
                 {
                     label: 'No',
-                    //   onClick: () => cancel()
+                    
                 }
             ]
         });
@@ -120,23 +119,6 @@ class SessionsOverview extends React.Component {
         await this.loadData()
 
     }
-    // one_session_view = (i) => {
-    //     console.log(i);
-    //     var data_set = this.state.sessions;
-    //     const filteredHomes = data_set.filter(x => x._id == i)[0];
-    //     console.log(filteredHomes);
-    //     this.setState({
-    //         single_session: {
-    //             group: filteredHomes.group.subgroup_ID,
-    //             duration: filteredHomes.duration,
-    //             subject: filteredHomes.subject.code,
-    //             subject_name: filteredHomes.subject.name,
-    //             lecturer: filteredHomes.lecturer.name,
-    //             no_of_student: filteredHomes.no_of_students,
-    //             tags: filteredHomes.tag.name,
-    //         },
-    //     })
-    // }
 
     delete_session_function = async (data) => {
         const result = await SESSION_CONTROLLER.delete_session(data)
@@ -160,7 +142,6 @@ class SessionsOverview extends React.Component {
                 },
                 {
                     label: 'No',
-                    //   onClick: () => cancel()
                 }
             ]
         });
@@ -175,7 +156,7 @@ class SessionsOverview extends React.Component {
         const { errors, } = this.state;
         return (
             <div className="app" >
-                <Sidebar activemenu={'SESSIONS'} submenu={'OVERVIEW_SESSIONS'} />
+                <Sidebar activemenu={'SESSIONS'} submenu={'MANAGE_SESSIONS'} />
                 <main>
                     <div className="container-fluid" >
                         <div className="row" >

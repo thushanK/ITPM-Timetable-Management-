@@ -92,9 +92,7 @@ class AddSubject extends React.Component {
                             <div className="col-12 shadow-sm rounded bg-white mt-1" >
                                 <h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Add Subject<br></br>
                                     <span className="text-muted small">You can add new subject</span></h6>
-                            </div>
-                            <div className="col-12 shadow-sm rounded bg-white mt-3 pb-1" >
-                                <form onSubmit={(e) => this.onFormSubmit(e)}>
+                                    <form onSubmit={(e) => this.onFormSubmit(e)}>
                                     <div className="row" >
                                         <div className="col-md-6 row ">
 
@@ -205,7 +203,9 @@ class AddSubject extends React.Component {
                                         </div>
                                     </div>
                                 </form>
+
                             </div>
+                    
                         </div>
                     </div>
                 </main>

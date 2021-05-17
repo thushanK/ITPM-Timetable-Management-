@@ -54,7 +54,7 @@ class StudentStatistics extends React.Component  {
     render(){
     return (
       <div className="app" >
-      <Sidebar activemenu={'STATISTICS'} submenu={'STUDENT_STAT'} />
+      <Sidebar activemenu={'STATISTICS'} submenu={'STUDENT_STATISTICS'} />
       <main>
           <div className="container-fluid" >
           <div className="row" >
