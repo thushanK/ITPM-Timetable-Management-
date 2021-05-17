@@ -182,6 +182,11 @@ const Sidebar = ({activemenu, submenu}) => {
         </MenuItem>
       </SubMenu>
 
+    <MenuItem 
+        active={activemenu === 'TimeTable'} 
+        icon={<FontAwesomeIcon icon={faAd} />}>
+          Time Table<Link to="/timetable" />
+      </MenuItem>
     </Menu>
     </SidebarContent>
   </ProSidebar>

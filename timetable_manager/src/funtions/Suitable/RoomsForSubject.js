@@ -5,9 +5,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWindowClose } from '@fortawesome/free-solid-svg-icons'
 import Config from '../../controllers/Config.controller'
-
 import {getAllSubjects , getAllRooms, addRoomsToSubject} from '../../controllers/Suitable.Controller'
-
 
 class RoomsForSubject extends React.Component {
 
@@ -70,8 +68,7 @@ class RoomsForSubject extends React.Component {
       console.log("object id: ", this.state.selected_lec);
       let groups = this.state.groups.find( item => item.name == this.state.selected_lec )
       console.log("from array: ", groups._id);
-      //let groupId = groups._id;
-  
+
       const data = {
           id: groups._id,
           rooms: this.state.selected_rooms
@@ -115,7 +112,7 @@ class RoomsForSubject extends React.Component {
       const {errors , selected_rooms , loading , groups} = this.state;
     return (
       <div className="app" >
-          <Sidebar activemenu={'suitables'} submenu={'ROOMS_FOR_A_SUB'} />
+          <Sidebar activemenu={'ADD_SUITABLE'} submenu={'ROOM_FOR_SUBJECT'} />
           <main>
               <div className="container-fluid" >
                   <div className="row" >
@@ -123,32 +120,14 @@ class RoomsForSubject extends React.Component {
                           <h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Rooms for a Subject<br></br>
                           <span className="text-muted small">User can add a suitable room or rooms for a Subject
                           </span></h6>
-                      </div>
-  
-                      <div className="col-12 shadow-sm rounded bg-white mt-3 pb-1" >
-                      <form onSubmit={(e) => this.onFormSubmit(e)}>
+                          {/* Rooms for a Subject form */}
+                          <form onSubmit={(e) => this.onFormSubmit(e)}>
                           <div className="row mt-1 pb-3" >
                               <div className="col-md-6 mt-2 mb-1" >
-                                  <FormSelect 
-                                      label={'Subject'}
-                                      options={this.renderGroups()}
-                                      error={ errors.groups}
-                                      selected={this.state.selected_lec}
-                                      onChange={this.formValueChange}
-                                      name="groups"
-                                      error_meesage={'*lecturer is required'}
-                                  />
+                                  <FormSelect label={'Subject'} options={this.renderGroups()} error={ errors.groups} selected={this.state.selected_lec} onChange={this.formValueChange} name="groups" error_meesage={'*lecturer is required'} />
                               </div>
                               <div className="col-md-6 mt-2 mb-1" >
-                                  <FormSelect
-                                      label={"Rooms"}
-                                      error={errors.rooms}
-                                      options={this.renderRooms()}
-                                      name="rooms"
-                                      value={this.state.dropdown}
-                                      onChange={this.dropdownOnChange}
-                                      error_meesage="*rooms are required"
-                                  />
+                                  <FormSelect label={"Rooms"} error={errors.rooms} options={this.renderRooms()} name="rooms" value={this.state.dropdown} onChange={this.dropdownOnChange} error_meesage="*rooms are required"/>
                               </div>
                               <div className="col-md-12 mt-1 mb-1" >
                                   <div className="d-flex-custom border border-secondary2 rounded-sm mt-2 p-2" >
@@ -168,10 +147,8 @@ class RoomsForSubject extends React.Component {
                               </div>
                           </div>
                       </form>
-                      </div>
-  
-                       <div className="col-12 shadow-sm rounded bg-white mt-3" >
-                          <table class="table borderless customtable mt-2">
+                      {/* Rooms for a Subject table */}
+                      <table class="table borderless customtable mt-2">
                           <thead>
                               <tr>
                               <th className="font-08 text-dark2 ">ID</th>
@@ -200,7 +177,7 @@ class RoomsForSubject extends React.Component {
                               ))}                      
                           </tbody>
                       </table>
-                      </div>        
+                      </div>
                   </div>
               </div>
           </main>
@@ -241,10 +218,6 @@ class RoomsForSubject extends React.Component {
   }
   
   }
-  
-  // const TagItem = (props) => (
-      
-  // )
   
   const NotFound = () => (
       <div className="bg-card border border-secondary2 py-1 px-3 rounded m-1" >
