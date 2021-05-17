@@ -105,7 +105,7 @@ class AllocateSession extends React.Component {
         const {errors} = this.state;
     return (
         <div className="app" >
-        <Sidebar activemenu={'ALLOCATE'}   submenu={'ALLOCATE_SESSION'} />
+        <Sidebar activemenu={'ALLOCATIONS'}   submenu={'ALLOCATE_SESSION'} />
         <main>
             <div className="container-fluid" >
             <div className="row" >

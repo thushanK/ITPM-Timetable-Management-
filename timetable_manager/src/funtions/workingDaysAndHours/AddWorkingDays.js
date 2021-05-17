@@ -81,8 +81,7 @@ class AddWorkingDays extends React.Component {
     render() {
         const { errors } = this.state;
         return ( < div className = "app" >
-            <Sidebar activemenu = { 'WORKING_DAYS' }
-            submenu = { 'ADD_WORKING_DAYS' }/>  < main >
+            <Sidebar activemenu = {'WORKING_DAY' } submenu = { 'ADD_WORKING_DAY' }/>  < main >
             <div className = "container-fluid" >
             <div className = "row" >
             <div className = "col-12 shadow-sm rounded bg-white mt-1" >

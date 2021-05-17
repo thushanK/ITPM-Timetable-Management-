@@ -58,7 +58,7 @@ class WorkingDays extends React.Component {
 
     return (
         <div className="app" >
-        <Sidebar activemenu={'WORKING_DAYS'}   submenu={'DAYS_LIST'} />
+        <Sidebar activemenu={'WORKING_DAY'}   submenu={'MANAGE_WORKING_DAY'} />
         <main>
             <div className="container-fluid" >
             <div className="row" >

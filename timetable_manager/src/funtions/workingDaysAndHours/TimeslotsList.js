@@ -85,7 +85,7 @@ class TimeslotsList extends React.Component {
         const {loading , groups ,  active} = this.state;
     return (
         <div className="app" >
-        <Sidebar activemenu={'WORKING_DAYS'}   submenu={'TIMESLOTS'} />
+        <Sidebar activemenu={'WORKING_DAY'}   submenu={'TIMESLOTS'} />
         <main>
             <div className="container-fluid" >
             <div className="row" >

@@ -110,7 +110,7 @@ class AllocateGroup extends React.Component {
         const {errors, lectList} = this.state;
     return (
         <div className="app" >
-        <Sidebar activemenu={'ALLOCATE'}   submenu={'ALLOCATE_GROUP'} />
+        <Sidebar activemenu={'ALLOCATIONS'}   submenu={'ALLOCATE_GROUP'} />
         <main>
             <div className="container-fluid" >
             <div className="row" >
