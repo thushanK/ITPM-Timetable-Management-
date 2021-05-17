@@ -55,7 +55,7 @@ class addNotOverLap extends React.Component {
 
     return (
         <div className="app" >
-        <Sidebar activemenu={'STUDENT'}   submenu={'OVERLAP'} />
+        <Sidebar activemenu={'NOT_OVERLAP_SESSIONS'}   submenu={'ADD_NOT_OVERLAP'} />
         <main>
             <div className="container-fluid" >
             <div className="row" >

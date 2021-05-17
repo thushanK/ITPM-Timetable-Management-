@@ -36,7 +36,7 @@ class consecutiveSessions extends React.Component {
 
         return (
           <div className="app" >
-          <Sidebar activemenu={'STUDENT'}   submenu={'CONSECUTIVE_SESSION'} />
+          <Sidebar activemenu={'CONSECUTIVE_SESSIONS'}   submenu={'MANAGE_CONSECUTIVE'} />
           <main>
               <div className="container-fluid" >
               <div className="row" >

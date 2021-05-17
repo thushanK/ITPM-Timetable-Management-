@@ -36,7 +36,7 @@ class ParellalSession extends React.Component {
 
         return (
           <div className="app" >
-          <Sidebar activemenu={'STUDENT'}   submenu={'PARALLEL_SESSION'} />
+          <Sidebar activemenu={'PARALLEL_SESSIONS'}   submenu={'MANAGE_PARALLEL'} />
           <main>
               <div className="container-fluid" >
               <div className="row" >

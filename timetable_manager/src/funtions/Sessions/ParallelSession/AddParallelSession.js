@@ -55,7 +55,7 @@ class addparallel extends React.Component {
 
     return (
         <div className="app" >
-        <Sidebar activemenu={'STUDENT'}   submenu={'PARALLEL_SESSION'} />
+        <Sidebar activemenu={'PARALLEL_SESSIONS'}   submenu={'ADD_PARALLEL'} />
         <main>
             <div className="container-fluid" >
             <div className="row" >
