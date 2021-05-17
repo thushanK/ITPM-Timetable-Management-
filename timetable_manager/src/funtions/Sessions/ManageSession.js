@@ -9,7 +9,7 @@ import SESSION_CONTROLLER from '../../controllers/Session.Controller'
 import CONFIG from '../../controllers/Config.controller'
 import { confirmAlert } from "react-confirm-alert";
 import { Modal, Button } from 'react-bootstrap';
-import '././keys.css'
+// import '././keys.css'
 class SessionsOverview extends React.Component {
     constructor(props) {
         super(props);
@@ -120,23 +120,23 @@ class SessionsOverview extends React.Component {
         await this.loadData()
 
     }
-    one_session_view = (i) => {
-        console.log(i);
-        var data_set = this.state.sessions;
-        const filteredHomes = data_set.filter(x => x._id == i)[0];
-        console.log(filteredHomes);
-        this.setState({
-            single_session: {
-                group: filteredHomes.group.subgroup_ID,
-                duration: filteredHomes.duration,
-                subject: filteredHomes.subject.code,
-                subject_name: filteredHomes.subject.name,
-                lecturer: filteredHomes.lecturer.name,
-                no_of_student: filteredHomes.no_of_students,
-                tags: filteredHomes.tag.name,
-            },
-        })
-    }
+    // one_session_view = (i) => {
+    //     console.log(i);
+    //     var data_set = this.state.sessions;
+    //     const filteredHomes = data_set.filter(x => x._id == i)[0];
+    //     console.log(filteredHomes);
+    //     this.setState({
+    //         single_session: {
+    //             group: filteredHomes.group.subgroup_ID,
+    //             duration: filteredHomes.duration,
+    //             subject: filteredHomes.subject.code,
+    //             subject_name: filteredHomes.subject.name,
+    //             lecturer: filteredHomes.lecturer.name,
+    //             no_of_student: filteredHomes.no_of_students,
+    //             tags: filteredHomes.tag.name,
+    //         },
+    //     })
+    // }
 
     delete_session_function = async (data) => {
         const result = await SESSION_CONTROLLER.delete_session(data)
@@ -261,7 +261,7 @@ class SessionsOverview extends React.Component {
                                                 <td>
                                                     {/* <span onClick={() => this.delete_subject(data.code)} className="badge badge-info rounded-0 bg-white text-danger border border-secondary border-danger click font-weight-bold ">Delete</span> */}
                                                     <span onClick={() => this.delete_lecturefunc(data._id)} className="badge badge-info rounded-0 bg-white text-danger border border-danger border-info click font-weight-bold ml-2">Delete</span>
-                                                    <span onClick={() => this.handleShow(data._id)} className="badge badge-info rounded-0 bg-white text-info border border-info border-info click font-weight-bold ml-2">View</span>
+                                                    {/* <span onClick={() => this.handleShow(data._id)} className="badge badge-info rounded-0 bg-white text-info border border-info border-info click font-weight-bold ml-2">View</span> */}
                                                 </td>
                                             </tr>)
                                         })}
@@ -273,7 +273,7 @@ class SessionsOverview extends React.Component {
                                 </ul> */}
                             </div>
                         </div>
-                        <Modal show={this.state.model_show} onHide={this.handleClose}>
+                        {/* <Modal show={this.state.model_show} onHide={this.handleClose}>
                             <Modal.Header closeButton>
                                 <Modal.Title>Session Details</Modal.Title>
                             </Modal.Header>
@@ -287,7 +287,7 @@ class SessionsOverview extends React.Component {
                             <Modal.Footer>
                                 <Button variant="secondary" onClick={this.handleClose}> Close    </Button>
                             </Modal.Footer>
-                        </Modal>
+                        </Modal> */}
                     </div>
                 </main>
             </div>

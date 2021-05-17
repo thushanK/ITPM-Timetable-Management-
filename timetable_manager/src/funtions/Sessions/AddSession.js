@@ -69,7 +69,7 @@ class AddSessions extends React.Component {
         if(result == 201){
             CONFIG.setToast("Successfully Added")
             
-            // this.props.history.push("/sessions/overview")
+             this.props.history.push("/sessions/manage")
         }
         else{
             CONFIG.setErrorToast("Something went wrong")
@@ -152,8 +152,41 @@ class AddSessions extends React.Component {
                                                 />
                                             </div>
 
+
+                                            <div className="col-md-12 mt-2 mb-1">
+                                                {/* <p className="m-0 p-0">Other Details</p>
+                                                <hr className="mt-0 pt-0 mb-4 pb-1" /> */}
+                                                <FormInput 
+                                                    label={'Number of students '}
+                                                    placeholder={'Enter Number of students'}
+                                                    error={errors.no_of_students}
+                                                    value={this.state.no_of_students}
+                                                    name="no_of_students"
+                                                    onChange={this.formValueChange}
+                                                    error_meesage={'*Number of students required'}
+                                                />
+                                                
+                                                <FormSelect
+                                                    label={'Duration for the session'}
+                                                    placeholder={'Duration for the session'}
+                                                    error={errors.duration}
+                                                    options={HOUR}
+                                                    value={this.state.duration}
+                                                    name="duration"
+                                                    onChange={this.formValueChange}
+                                                    error_meesage={'*Duration for the session  required'}
+                                                />
+
+                                              
+                                            </div>
+
+
+
+
                                         </div>
-                                        <div className="col-md-4 row">
+
+
+                                        {/* <div className="col-md-4 row">
                                             <div className="col-md-12 mt-2 mb-1">
                                                 <p className="m-0 p-0">Other Details</p>
                                                 <hr className="mt-0 pt-0 mb-4 pb-1" />
@@ -180,15 +213,15 @@ class AddSessions extends React.Component {
 
                                               
                                             </div>
-                                            <div className="col-md-12 mt-2 " >
+                                        <div className="col-md-12 mt-2 " >
                                             
-                                            </div>
+                                    </div>
                                             
                                            
 
                                            
                                             
-                                        </div>
+                                        </div> */}
                                         <div className="col-md-12 mt-1 mb-1" >
                                             <button type="submit" className="btn-outline-success mt-2 btn btn-sm px-2 float-left">Add Sessions</button>
                                         </div>
