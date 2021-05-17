@@ -67,7 +67,7 @@ import RoomsForSubGroup from '../funtions/Suitable/RoomsForSubGroup';
 import RoomsForSubject from '../funtions/Suitable/RoomsForSubject';
 import RoomsForTag from '../funtions/Suitable/RoomsForTag';
 
-
+import TimeTable from '../funtions/GenerateTimeTable/TimeTable';
 
 let routes = [
 
@@ -115,7 +115,12 @@ let routes = [
         component: RoomsForTag,
         exact: true,
     },
-
+    {
+        path: "/timetable",
+        name: "TimeTable",
+        component: TimeTable,
+        exact: true,
+    },
 
 
 
