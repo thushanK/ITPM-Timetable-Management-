@@ -112,7 +112,7 @@ class AllocateSession extends React.Component {
                 <div className="col-12 shadow-sm rounded bg-white mt-1" >
                     <h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Allocate Session<br></br>
                     <span className="text-muted small">Allocate Session</span></h6>
-                </div>
+             
                 <div className="col-12 shadow-sm rounded bg-white mt-3 pb-1" >
                 <form onSubmit={(e) => this.onFormSubmit(e)}>
                 <div className="row mt-1 pb-3" >
@@ -165,7 +165,7 @@ class AllocateSession extends React.Component {
                     </div>
                   
                     <div className="col-md-12 mt-1 mb-1" >
-                            <button type="submit" className="btn-outline-info mt-2 btn btn-sm px-2 ">Add Allocate Session</button>
+                            <button type="submit" className="btn-outline-info mt-2 btn btn-sm px-2 "><button class="w3-button w3-aqua">Add Allocate Seesion</button> </button>
                     </div>
                 </div>
                 </form>
@@ -188,6 +188,7 @@ class AllocateSession extends React.Component {
                         
                     </tbody>
                 </table>
+            </div>
             </div>
             </div>
             </div>

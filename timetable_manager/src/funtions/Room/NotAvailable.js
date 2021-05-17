@@ -106,7 +106,7 @@ class RoomsNotAvailable extends React.Component {
                         <h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Not Available times for Rooms<br></br>
                         <span className="text-muted small">User can add times where room is not available
                         </span></h6>
-                    </div>
+                   
 
                     <div className="col-12 shadow-sm rounded bg-white mt-3 pb-1" >
                         <form onSubmit={(e) => this.onFormSubmit(e)}>
@@ -154,7 +154,7 @@ class RoomsNotAvailable extends React.Component {
                                     />
                                 </div>
                                 <div className="col-md-12 mt-1 mb-1" >
-                                    <button type="submit" className="btn-outline-info mt-2 btn btn-sm px-2 ">Submit</button>
+                                    <button type="submit" className="btn-outline-info mt-2 btn btn-sm px-2 "><button class="w3-button w3-aqua">Submit</button> </button>
                                 </div>
                             </div>
                         </form>    
@@ -178,6 +178,7 @@ class RoomsNotAvailable extends React.Component {
                     </div>
                     }
                 </div>
+            </div>
             </div>
         </main>
     </div>
