@@ -48,7 +48,7 @@ class ParellalSession extends React.Component {
                       </div>
                       <div className="col-4">
                           <center>
-                          <Link to="/student/addparallel" >
+                          <Link to="/parallel/add" >
                           <span  className="badge badge-info px-5 py-1 mt-4 bg-white border border-info text-info click ">Add Parallel Sessions</span>
                           </Link>
                           </center>

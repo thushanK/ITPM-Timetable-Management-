@@ -48,7 +48,7 @@ class consecutiveSessions extends React.Component {
                       </div>
                       <div class="col-4">
                           <center>
-                          <Link to="/student/addconsecutiveSessions" >
+                          <Link to="/consecutive/add" >
                           <span  className="badge badge-info px-5 py-1 mt-4 bg-white border border-info text-info click ">Add Consecutive Sessions</span>
                           </Link>
                           </center>
