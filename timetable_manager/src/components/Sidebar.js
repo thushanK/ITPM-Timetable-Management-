@@ -73,15 +73,15 @@ const Sidebar = ({activemenu, submenu}) => {
 
       {/* Building member 04 */}
       <SubMenu  defaultOpen={activemenu === 'LOCATION'} title="Location" icon={<FontAwesomeIcon icon={faAd} />}>
-      <SubMenu  defaultOpen={activemenu === 'BUILDING'} title="Building" icon={<FontAwesomeIcon icon={faAd} />}>
+      {/* <SubMenu  defaultOpen={activemenu === 'BUILDING'} title="Building" icon={<FontAwesomeIcon icon={faAd} />}> */}
         <MenuItem active={submenu === 'ADD_BUILDING'} >
             Add Building<Link to="/building/add" />
         </MenuItem>
         <MenuItem active={submenu === 'MANAGE_BUILDING'}>
             Manage Building<Link to="/building/manage" />
         </MenuItem>
-      </SubMenu>
-      <SubMenu  defaultOpen={activemenu === 'ROOM'} title="Room" icon={<FontAwesomeIcon icon={faAd} />}>
+      {/* </SubMenu> */}
+      {/* <SubMenu  defaultOpen={activemenu === 'ROOM'} title="Room" icon={<FontAwesomeIcon icon={faAd} />}> */}
         <MenuItem active={submenu === 'ADD_ROOM'} >
             Add Room<Link to="/room/add" />
         </MenuItem>
@@ -91,7 +91,7 @@ const Sidebar = ({activemenu, submenu}) => {
         <MenuItem active={submenu === 'NOT_AVAILABLE_ROOM'}>
             Not Available times<Link to="/room/notAvailable" />
         </MenuItem>
-      </SubMenu>
+      {/* </SubMenu> */}
       </SubMenu>
       {/* Room member 04 */}
 

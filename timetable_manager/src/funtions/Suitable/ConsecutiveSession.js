@@ -115,7 +115,7 @@ class ConsecutiveSession extends React.Component {
       const {errors , selected_rooms , loading , groups} = this.state;
     return (
       <div className="app" >
-          <Sidebar activemenu={'suitables'} submenu={'ROOMS_FOR_A_CONSESS'} />
+          <Sidebar activemenu={'ADD_SUITABLE'} submenu={'CONSECUTIVE'} />
           <main>
               <div className="container-fluid" >
                   <div className="row" >

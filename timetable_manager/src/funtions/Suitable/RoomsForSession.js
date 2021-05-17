@@ -114,7 +114,7 @@ class RoomsForSession extends React.Component {
       const {errors , selected_rooms , loading , groups} = this.state;
     return (
       <div className="app" >
-          <Sidebar activemenu={'suitables'} submenu={'ROOMS_FOR_A_SESS'} />
+          <Sidebar activemenu={'ADD_SUITABLE'} submenu={'ROOM_FOR_SESSION'} />
           <main>
               <div className="container-fluid" >
                   <div className="row" >
@@ -122,10 +122,8 @@ class RoomsForSession extends React.Component {
                           <h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Rooms for a Session<br></br>
                           <span className="text-muted small">User can add a suitable room or rooms for a Session
                           </span></h6>
-                      </div>
-  
-                      <div className="col-12 shadow-sm rounded bg-white mt-3 pb-1" >
-                      <form onSubmit={(e) => this.onFormSubmit(e)}>
+
+                          <form onSubmit={(e) => this.onFormSubmit(e)}>
                           <div className="row mt-1 pb-3" >
                               <div className="col-md-6 mt-2 mb-1" >
                                   <FormSelect 
@@ -167,10 +165,8 @@ class RoomsForSession extends React.Component {
                               </div>
                           </div>
                       </form>
-                      </div>
-  
-                       <div className="col-12 shadow-sm rounded bg-white mt-3" >
-                          <table class="table borderless customtable mt-2">
+
+                      <table class="table borderless customtable mt-2">
                           <thead>
                               <tr>
                               <th className="font-08 text-dark2 ">ID</th>
@@ -199,7 +195,7 @@ class RoomsForSession extends React.Component {
                               ))}                      
                           </tbody>
                       </table>
-                      </div>        
+                      </div>  
                   </div>
               </div>
           </main>

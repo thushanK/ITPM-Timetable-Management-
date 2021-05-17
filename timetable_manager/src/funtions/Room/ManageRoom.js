@@ -25,7 +25,7 @@ class ManageRoom extends React.Component {
       const {roomsList} = this.state;
   return (
     <div className="app" >
-    <Sidebar activemenu={'ROOMS'} submenu={'ROOMS_LIST'} />
+    <Sidebar activemenu={'LOCATION'} submenu={'MANAGE_ROOM'} />
     <main>
         <div className="container-fluid" >
         <div className="row" >

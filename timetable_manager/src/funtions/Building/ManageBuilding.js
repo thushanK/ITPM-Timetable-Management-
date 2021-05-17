@@ -23,7 +23,7 @@ class ManageBuilding extends React.Component {
       const {buildingsList} = this.state;
   return (
     <div className="app" >
-    <Sidebar activemenu={'BUILDINGS'} submenu={'BUILDINGS_LIST'} />
+    <Sidebar activemenu={'LOCATION'} submenu={'MANAGE_BUILDING'} />
     <main>
         <div className="container-fluid" >
         <div className="row" >

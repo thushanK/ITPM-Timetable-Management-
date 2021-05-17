@@ -78,7 +78,7 @@ class AddBuilding extends React.Component {
         const {errors} = this.state;
     return (
         <div className="app" >
-        <Sidebar activemenu={'ROOMS'} submenu={'ADD_ROOM'} />
+        <Sidebar activemenu={'LOCATION'} submenu={'ADD_ROOM'} />
         <main>
             <div className="container-fluid" >
             <div className="row" >
