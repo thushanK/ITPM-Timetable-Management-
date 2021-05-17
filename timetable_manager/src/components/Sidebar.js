@@ -13,7 +13,7 @@ const Sidebar = ({activemenu, submenu}) => {
       <MenuItem 
         active={activemenu === 'DASHBOARD'} 
         icon={<FontAwesomeIcon icon={faTachometerAlt} />}>
-          Dashboard<Link to="/dashboard" />
+          Dashboard<Link to="/" />
       </MenuItem>
 
       {/* Student member 1 */}

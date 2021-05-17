@@ -71,53 +71,25 @@ class AddBuilding extends React.Component {
     return (
 
         <div className="app" >
-        <Sidebar activemenu={'BUILDINGS'} submenu={'ADD_BUILDING'} />
+        <Sidebar activemenu={'LOCATION'} submenu={'ADD_BUILDING'} />
         <main>
             <div className="container-fluid" >
             <div className="row" >
                 <div className="col-12 shadow-sm rounded bg-white mt-1" >
-                    <h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Add Building<br></br>
-                    <span className="text-muted small">Add a new building to the system</span></h6>
-                </div>
-                <div className="col-12 shadow-sm rounded bg-white mt-3 pb-1" >
-                <form onSubmit={(e) => this.onFormSubmit(e)}>
-                <div className="row mt-1 pb-3" >
+                    <h4 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Add Building<br></br></h4>                    
+                    <form onSubmit={(e) => this.onFormSubmit(e)}>
+                <div className="row mt-1 pb-4" >
                     <div className="col-md-6 mt-1 mb-1" >
-                            <FormInput 
-                                label={'Name'}
-                                placeholder={'Enter building name'}
-                                error={ errors.name}
-                                name="name"
-                                value={this.state.name}
-                                onChange={this.formValueChange}
-                                error_meesage={'*Name is required'}
-                            />
+                            <FormInput label={'Name'} placeholder={'Enter building name'} error={ errors.name} name="name" value={this.state.name} onChange={this.formValueChange} error_meesage={'*Name is required'}/>
                     </div>
                     <div className="col-md-6 mt-1 mb-1" >
-                            <FormInput 
-                                label={'No Floors'}
-                                placeholder={'Enter number of floors'}
-                                error={ errors.noOfFloors}
-                                name="noOfFloors"
-                                value={this.state.noOfFloors}
-                                onChange={this.formValueChange}
-                                error_meesage={'*Number of floors is required'}
-                            />
+                            <FormInput label={'No Floors'} placeholder={'Enter number of floors'} error={ errors.noOfFloors} name="noOfFloors" value={this.state.noOfFloors} onChange={this.formValueChange} error_meesage={'*Number of floors is required'}/>
                     </div>
                     <div className="col-md-6 mt-1 mb-1" >
-                        <FormSelect 
-                                label={'Access Time'}
-                                options={AT_OPTIONS}
-                                error={ errors.accessTime}
-                                selected={this.state.accessTime}
-                                onChange={this.formValueChange}
-                                name="accessTime"
-                                error_meesage={'*Access Time is required'}
-                            />
+                        <FormSelect label={'Access Time'} options={AT_OPTIONS} error={ errors.accessTime} selected={this.state.accessTime} onChange={this.formValueChange} name="accessTime" error_meesage={'*Access Time is required'}/>
                     </div>
                     <div className="col-md-12 mt-1 mb-1" >
-                            <button type="submit" className="btn btn-primary">Submit</button>
-                            {/* <button type="reset" className="btn-outline-secondary mt-2 btn btn-sm px-2 " onClick={this.clear}>Reset</button> */}
+                        <button type="submit" className="btn btn-primary">Submit</button>
                     </div>
                 </div>
                 </form>

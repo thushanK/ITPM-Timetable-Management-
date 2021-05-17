@@ -1,9 +1,6 @@
 import React from 'react';
 import Sidebar from '../../components/Sidebar'
 import { Link } from 'react-router-dom';
-
-import moment from 'moment';
-import { omit } from 'lodash';
 import B_CONTROLLER from '../../controllers/Building.Controller';
 
 class ManageBuilding extends React.Component {
@@ -33,9 +30,6 @@ class ManageBuilding extends React.Component {
             <div className="col-12 shadow-sm rounded bg-white mt-1" >
                 <h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Manage Buildings<br></br>
                 <span className="text-muted small">Manage building details</span></h6>
-            </div>
-
-            <div className="col-12 shadow-sm rounded bg-white mt-3" >
                 <table class="table borderless customtable">
                     <thead>
                         <tr>
@@ -46,9 +40,7 @@ class ManageBuilding extends React.Component {
                         <th className="font-08 text-dark2 ">Actions</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        {buildingsList && buildingsList.map((value , i) => this.renderTable(value , i))}
-                    </tbody>
+                    <tbody>{buildingsList && buildingsList.map((value , i) => this.renderTable(value , i))}</tbody>
                 </table>
             </div>
         </div>
