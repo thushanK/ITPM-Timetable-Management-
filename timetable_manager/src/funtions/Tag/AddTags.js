@@ -85,7 +85,7 @@ class AddTags extends React.Component {
                 <div className="col-12 shadow-sm rounded bg-white mt-1" >
                     <h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Add Tags<br></br>
                     <span className="text-muted small">You can add tags to Student timetable slot</span></h6>
-                </div>
+                
                 <div className="col-12 shadow-sm rounded bg-white mt-3 pb-1" >
                 <form onSubmit={(e) => this.onFormSubmit(e)}>
                 <div className="row mt-1 pb-3" >
@@ -108,7 +108,7 @@ class AddTags extends React.Component {
                     </div>
                 </div>
                 </form>
-                </div>
+               </div>
                 <div className="col-12 shadow-sm rounded bg-white mt-3" >
                 <table class="table borderless customtable">
                     <thead>
@@ -125,7 +125,7 @@ class AddTags extends React.Component {
                 </table>
             </div>
             </div>
-            </div>
+            </div> </div>
         </main>
     </div>
     );}
