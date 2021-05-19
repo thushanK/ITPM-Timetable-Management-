@@ -2,8 +2,8 @@ import { confirmAlert } from "react-confirm-alert";
 import { toast } from 'react-toastify';
 class Config {
     constructor () {
-                this.host = "http://127.0.0.1";
-                this.port = ":4000"
+                this.host = "https://timetable-prod.herokuapp.com";
+                this.port = ""
             }
 
     async showAlert(_msg, _title) {

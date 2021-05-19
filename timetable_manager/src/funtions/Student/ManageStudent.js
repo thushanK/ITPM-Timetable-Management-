@@ -32,24 +32,6 @@ class ManageStudent extends React.Component {
             <div className="col-12 shadow-sm rounded bg-white mt-1" >
                 <h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Student Group<br></br>
                 <span className="text-muted small">Dashboard</span></h6>
-            </div>
-            <div className="col-12 shadow-sm rounded bg-white mt-3" >
-            <div class="row">
-                <div class="col-8">
-                    <h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Add new Academic year, Group, Subgroup, Program<br></br>
-                    <span className="text-muted small">you can add Student group slot</span></h6>
-                </div>
-                <div class="col-4">
-                    <center>
-                    <Link to="/student/add_timetable" >
-                    <span  className="badge badge-info px-5 py-1 mt-4 bg-white border border-info text-info click ">Add Student Slot</span>
-                    </Link>
-                    </center>
-                </div>
-            </div>
-               
-            </div>
-            <div className="col-12 shadow-sm rounded bg-white mt-3" >
                 <table class="table borderless customtable">
                     <thead>
                         <tr>
@@ -63,21 +45,6 @@ class ManageStudent extends React.Component {
                     </thead>
                     <tbody>
                     {studentList && studentList.map((name, index) => this.renderTable(name, index))}
-                        {/* <tr>
-                            <td>WE001</td>
-                            <td>Y3S2</td>
-                            <td>SE</td>
-                            <td>8.2</td>
-                            <td>Labs, Lecture, Tutorial</td>
-                            <td>
-                            <Link to="/student/editTimeTable" >
-                                <span className="badge badge-info rounded-0 bg-white text-success border border-info click font-weight-bold ">Edit</span>
-                                </Link>
-                                <Link to="/student/delete_student_slot" >
-                                    <span className="badge badge-info rounded-0 bg-white text-danger border border-danger click font-weight-bold ">Delete</span>
-                                </Link>
-                            </td>
-                        </tr> */}
                     </tbody>
                 </table>
             </div>
