@@ -64,12 +64,15 @@ class editStudentGrp extends React.Component {
             subgroup_ID : this.state.academicYear + ".S"+ this.state.semester + "." + this.state.program + "." + this.state.group_mo + "." + this.state.subgroup_mo,
 
         }
+        // console.log(result);
 
         const result = await STD_CONTROLLER.updateStudent(data)
 
-        if(result == 200){
+        if(result == 400){
             CONFIG.setToast("Successfully Updated")
+            //document.getElementById("cancelBtn").click();
             this.props.history.push("/student/manage")
+            //this.clear();
         }
     }
 
@@ -77,7 +80,7 @@ class editStudentGrp extends React.Component {
         const {errors} = this.state;
     return (
         <div className="app" >
-        <Sidebar activemenu={'STUDENT'}   submenu={'MANAGE_STUDENT'} />
+        <Sidebar activemenu={'STUDENT'}   submenu={'STUDENT_TB_LIST'} />
         <main>
             <div className="container-fluid" >
             <div className="row" >
