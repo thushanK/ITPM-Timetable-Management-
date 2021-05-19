@@ -135,8 +135,9 @@ class AddWorkingDays extends React.Component {
                         type = { 'time' }/> </div > 
                         < div className = "col-md-12 mt-1 mb-1" >
 
-     <button type = "submit"
-     className = "btn-outline-info mt-2 btn btn-sm px-2 " ><button class="w3-button w3-aqua">Submit</button>  </button> </div >
+     
+                        <button type="submit" className="btn-outline-info mt-2 btn btn-sm px-2 ">Submit</button>
+     </div >
             </div>
              </form >
              </div>

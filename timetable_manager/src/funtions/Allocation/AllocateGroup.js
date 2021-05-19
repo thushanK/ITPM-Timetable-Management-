@@ -169,8 +169,7 @@ class AllocateGroup extends React.Component {
                     </div>
                    
                     <div className="col-md-12 mt-1 mb-1" >
-                            <button type="submit" className="btn-outline-info mt-2 btn btn-sm px-2 "><button class="w3-button w3-aqua">Add Allocate Group</button> </button>
-                    </div>
+                    <button type="submit" className="btn-outline-info mt-2 btn btn-sm px-2 ">Add Allocate Group </button>                    </div>
                 </div>
                 </form>
                 </div>
@@ -223,7 +222,7 @@ class AllocateGroup extends React.Component {
                 <td>
                     {}
                 {}
-                    <span  onClick={() => this.deleteTagItem(item)} className="badge badge-info rounded-0 bg-white text-danger border border-secondary click font-weight-bold ml-2"><button class="w3-button w3-aqua">Delete</button> </span>
+                    <span  onClick={() => this.deleteTagItem(item)} className="badge badge-info rounded-0 bg-white text-danger border border-secondary click font-weight-bold ml-2">Delete </span>
                     {}
                 </td>
             </tr>

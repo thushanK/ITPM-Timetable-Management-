@@ -177,7 +177,7 @@ class AllocateLec extends React.Component {
                     </div>
                    
                     <div className="col-md-12 mt-1 mb-1" >
-                            <button type="submit" className="btn-outline-info mt-2 btn btn-sm px-2 "><button class="w3-button w3-aqua">Add Allocate Lecture</button> </button>
+                    <button type="submit" className="btn-outline-info mt-2 btn btn-sm px-2 ">Add Allocate Lecture</button>
                     </div>
                 </div>
                 </form>
