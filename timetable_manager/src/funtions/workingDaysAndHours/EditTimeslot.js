@@ -137,7 +137,7 @@ class EditTimeslot extends React.Component {
                     </div>
                     <div className="col-md-12 mb-1" >
                     <hr className="mt-2 mb-1"></hr>
-                            <button type="submit" className="btn-outline-info mt-2 btn btn-sm px-2 "><button class="w3-button w3-aqua">Edit</button> </button>
+                    <button type="submit" className="btn-outline-info mt-2 btn btn-sm px-2 ">Update Timeslot</button>
                     </div>
                 </div>
                 </form>

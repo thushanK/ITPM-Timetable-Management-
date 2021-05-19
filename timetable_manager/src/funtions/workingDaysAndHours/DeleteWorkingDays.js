@@ -126,8 +126,8 @@ class DeleteWorkingDays extends React.Component {
                     </div>
                     <div className="col-md-12 mt-1 mb-1" >
                     <hr className="my-2"></hr>
-                            <button type="button" onClick={this.deleteItem} className="btn-danger mt-2 btn btn-sm px-3 py-1"><button class="w3-button w3-aqua">Delete</button> </button>
-                            <button type="button" onClick={() => this.props.history.push("/workingdays/list")} className="btn-light mt-2 btn btn-sm px-3 py-1 border mx-2"><button class="w3-button w3-aqua">Cancel</button> </button>
+                    <button type="button" onClick={this.deleteItem} className="btn-danger mt-2 btn btn-sm px-3 py-1">Delete</button>
+                    <button type="button" onClick={() => this.props.history.push("/workingdays/list")} className="btn-light mt-2 btn btn-sm px-3 py-1 border mx-2">Cancel</button>
                     </div>
                 </div>
                 </div>
