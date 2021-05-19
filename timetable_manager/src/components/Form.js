@@ -64,16 +64,16 @@ const MultiFormSelect =  props => {
 }
 
 export const lightTheme = {
-    body: '#FFF',
+    body: '#9a8ba5',
     text: '#363537',
     toggleBorder: '#FFF',
-    background: '#363537',
+    background: '#9a8ba5',
 }
 export const darkTheme = {
-    body: '#363537',
+    body: '#9a8ba5',
     text: '#FAFAFA',
     toggleBorder: '#6B8096',
-    background: '#999',
+    background: '#9a8ba5',
 }
 
 export {FormInput , FormSelect , MultiFormSelect, FormInputReadOnly};

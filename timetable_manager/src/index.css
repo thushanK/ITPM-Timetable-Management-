@@ -110,7 +110,7 @@ span.error{
 }
 
 .pro-menu-item {
-  background-color:  #05386B !important;
+  background-color:  #4b025f!important;
   font-size: 14px !important;
   padding-top: 2px ;
   font-weight: 500 !important;
@@ -118,12 +118,12 @@ span.error{
 }
 
 .pro-menu-item.active{
-  background-color:  #18A0FB !important;
+  background-color:  #7d028d !important;
   color : white !important;
 }
 
 .pro-inner-list-item {
-  background-color:  #05386B !important;
+  background-color:  #4b025f !important;
   padding-left: 0px !important ;
 }
 
@@ -255,7 +255,7 @@ span.error{
 #loading-content:before {
   content: "";
   position: absolute;
-  border: 3px solid rgb(63, 63, 238);
+  border: 3px solid rgb(75,2,88);
   left: 5px;
   right: 5px;
   top: 5px;
@@ -264,8 +264,8 @@ span.error{
 
 #loading-content {
   border: 3px solid transparent;
-  border-top-color: #114db6;
-  border-bottom-color: #0853d4;
+  border-top-color: #4b025f;
+  border-bottom-color: #4b025f;
   border-radius: 50%;
   -webkit-animation: loader 2s linear infinite;
   -moz-animation: loader 2s linear infinite;
@@ -276,7 +276,7 @@ span.error{
 #loading-content:before {
   border: 3px solid transparent;
   border-top-color: #65a2c5;
-  border-bottom-color: #3d99d6;
+  border-bottom-color: #4b025f;
   border-radius: 50%;
   -webkit-animation: loader 3s linear infinite;
     -moz-animation: loader 2s linear infinite;
@@ -286,8 +286,8 @@ span.error{
 
 #loading-content:after {
   border: 3px solid transparent;
-  border-top-color: #091077;
-  border-bottom-color: #0d2777;
+  border-top-color: #4b025f;
+  border-bottom-color: #4b025f;
   border-radius: 50%;
   -webkit-animation: loader 1.5s linear infinite;
   animation: loader 1.5s linear infinite;
