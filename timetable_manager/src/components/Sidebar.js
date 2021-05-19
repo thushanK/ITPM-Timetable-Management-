@@ -17,7 +17,7 @@ const Sidebar = ({activemenu, submenu}) => {
       </MenuItem>
 
       {/* Student member 1 */}
-      <SubMenu  defaultOpen={activemenu === 'STUDENT'} title="Student" icon={<FontAwesomeIcon icon={faTable} />}>
+      <SubMenu  defaultOpen={activemenu === 'STUDENT'} title="Student" icon={<FontAwesomeIcon icon={faAddressBook} />}>
         <MenuItem active={submenu === 'ADD_STUDENT'} >
             Add Student<Link to="/student/add" />
         </MenuItem>
@@ -30,7 +30,7 @@ const Sidebar = ({activemenu, submenu}) => {
 
       <MenuItem 
         active={activemenu === 'TAGS'} 
-        icon={<FontAwesomeIcon icon={faAd} />}>
+        icon={<FontAwesomeIcon icon={faAtom} />}>
           Add Tag<Link to="/tag/add" />
       </MenuItem>
 
@@ -45,7 +45,7 @@ const Sidebar = ({activemenu, submenu}) => {
 
 
       {/* Lecturer member 2 */}
-      <SubMenu  defaultOpen={activemenu === 'LECTURER'} title="Lecturer" icon={<FontAwesomeIcon icon={faAd} />}>
+      <SubMenu  defaultOpen={activemenu === 'LECTURER'} title="Lecturer" icon={<FontAwesomeIcon icon={faAddressBook} />}>
         <MenuItem active={submenu === 'ADD_LECTURER'} >
             Add Lecture<Link to="/lecturer/add" />
         </MenuItem>
@@ -55,7 +55,7 @@ const Sidebar = ({activemenu, submenu}) => {
       </SubMenu>
 
       {/* Subject member 02 */}
-      <SubMenu  defaultOpen={activemenu === 'SUBJECT'} title="Subject" icon={<FontAwesomeIcon icon={faAd} />}>
+      <SubMenu  defaultOpen={activemenu === 'SUBJECT'} title="Subject" icon={<FontAwesomeIcon icon={faChalkboard} />}>
         <MenuItem active={submenu === 'ADD_SUBJECT'} >
             Add Subject<Link to="/subject/add" />
         </MenuItem>
@@ -65,7 +65,7 @@ const Sidebar = ({activemenu, submenu}) => {
       </SubMenu>
 
       {/* Working day member 03 */}
-      <SubMenu  defaultOpen={activemenu === 'WORKING_DAY'} title="Working day" icon={<FontAwesomeIcon icon={faAd} />}>
+      <SubMenu  defaultOpen={activemenu === 'WORKING_DAY'} title="Working day" icon={<FontAwesomeIcon icon={faTable} />}>
         <MenuItem active={submenu === 'ADD_WORKING_DAY'} >
             Add Working day<Link to="/workingday/add" />
         </MenuItem>
@@ -79,7 +79,7 @@ const Sidebar = ({activemenu, submenu}) => {
 
 
       {/* Building member 04 */}
-      <SubMenu  defaultOpen={activemenu === 'LOCATION'} title="Location" icon={<FontAwesomeIcon icon={faAd} />}>
+      <SubMenu  defaultOpen={activemenu === 'LOCATION'} title="Location" icon={<FontAwesomeIcon icon={faHome} />}>
       {/* <SubMenu  defaultOpen={activemenu === 'BUILDING'} title="Building" icon={<FontAwesomeIcon icon={faAd} />}> */}
         <MenuItem active={submenu === 'ADD_BUILDING'} >
             Add Building<Link to="/building/add" />
@@ -104,7 +104,7 @@ const Sidebar = ({activemenu, submenu}) => {
 
 
       {/* Statistics member 04 */}
-      <SubMenu  defaultOpen={activemenu === 'STATISTICS'} title="Statistics" icon={<FontAwesomeIcon icon={faAd} />}>
+      <SubMenu  defaultOpen={activemenu === 'STATISTICS'} title="Statistics" icon={<FontAwesomeIcon icon={faChartBar} />}>
         <MenuItem active={submenu === 'STUDENT_STATISTICS'} >
             Student<Link to="/statistics/student" />
         </MenuItem>
@@ -116,7 +116,7 @@ const Sidebar = ({activemenu, submenu}) => {
         </MenuItem>
       </SubMenu>
 
-      <SubMenu  defaultOpen={activemenu === 'ALLOCATIONS'} title="Allocations" icon={<FontAwesomeIcon icon={faAd} />}>
+      <SubMenu  defaultOpen={activemenu === 'ALLOCATIONS'} title="Allocations" icon={<FontAwesomeIcon icon={faAtom} />}>
         <MenuItem active={submenu === 'ALLOCATE_GROUP'} >
             Allocate Group<Link to="/allocation/group" />
         </MenuItem>
@@ -129,7 +129,7 @@ const Sidebar = ({activemenu, submenu}) => {
       </SubMenu>
 
 
-      <SubMenu  defaultOpen={activemenu === 'SESSIONS'} title="Sessions" icon={<FontAwesomeIcon icon={faAd} />}>
+      <SubMenu  defaultOpen={activemenu === 'SESSIONS'} title="Sessions" icon={<FontAwesomeIcon icon={faChalkboard} />}>
         <MenuItem active={submenu === 'ADD_SESSIONS'} >
             Add Sessions<Link to="/sessions/add" />
         </MenuItem>
@@ -191,7 +191,7 @@ const Sidebar = ({activemenu, submenu}) => {
 
     <MenuItem 
         active={activemenu === 'TimeTable'} 
-        icon={<FontAwesomeIcon icon={faAd} />}>
+        icon={<FontAwesomeIcon icon={faTable} />}>
           Time Table<Link to="/timetable" />
       </MenuItem>
     </Menu>
