@@ -45,7 +45,7 @@ class ParellalSession extends React.Component {
                       <div className="col-8">
                           <h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Parallel Sessions<br></br>
                           <span className="text-muted small">Dashboard</span></h6>
-                      </div>
+                      
                       <div className="col-4">
                           <center>
                           <Link to="/parallel/add" >
@@ -70,7 +70,7 @@ class ParellalSession extends React.Component {
 
                           </tbody>
                       </table>
-                  </div>
+                  </div></div>
               </div>
               </div>
           </main>

@@ -45,7 +45,7 @@ class consecutiveSessions extends React.Component {
                       <div class="col-8">
                           <h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Consecutive Sessions<br></br>
                           <span className="text-muted small">Dashboard</span></h6>
-                      </div>
+                      
                       <div class="col-4">
                           <center>
                           <Link to="/consecutive/add" >
@@ -72,7 +72,7 @@ class consecutiveSessions extends React.Component {
                       </table>
                   </div>
               </div>
-              </div>
+              </div></div>
           </main>
         </div>
         );}

@@ -62,7 +62,7 @@ class addparallel extends React.Component {
                 <div className="col-12 shadow-sm rounded bg-white mt-1" >
                     <h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Add Parallel Sessions<br></br>
                         <span className="text-muted small">You can add Parallel Sessions </span></h6>
-                </div>
+                
                 {/* {JSON.stringify(this.state.session_01)} */}
                 <div className="col-12 shadow-sm rounded bg-white mt-3 pb-1" >
                 <form onSubmit={(e) => this.onFormSubmit(e)}>
@@ -95,7 +95,7 @@ class addparallel extends React.Component {
                     </div>
                 </div>
                 </form>
-                </div>
+                </div></div>
                
                 {/* ------------------------------ error message-------------------------- */}
                 {  this.state.error && 

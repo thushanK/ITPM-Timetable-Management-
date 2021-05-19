@@ -65,7 +65,7 @@ class addconsecutiveSessions extends React.Component {
                 <div className="col-12 shadow-sm rounded bg-white mt-1" >
                     <h6 className="text-header py-3 mb-0 font-weight-bold line-hight-1">Add Consecutive Sessions<br></br>
                     <span className="text-muted small">You can add Consecutive Sessions</span></h6>
-                </div>
+                
                 <div className="col-12 shadow-sm rounded bg-white mt-3 pb-1" >
                 <form onSubmit={(e) => this.onFormSubmit(e)}>
                 <div className="row mt-1 pb-3" >
@@ -97,7 +97,7 @@ class addconsecutiveSessions extends React.Component {
                     </div>
                 </div>
                 </form>
-                </div>
+                </div></div>
                  {}
                  {  this.state.error && 
                  <div className="col-12 shadow-sm rounded bg-white mt-2 pt-2 pb-3" >
