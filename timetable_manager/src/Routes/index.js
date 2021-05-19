@@ -7,6 +7,7 @@ import EditBuilding from '../funtions/Building/EditBuilding';
 import AddRoom from '../funtions/Room/AddRoom';
 import ManageRoom from '../funtions/Room/ManageRoom';
 import DeleteRoom from '../funtions/Room/DeleteRoom';
+import EditRoom from '../funtions/Room/EditRoom';
 import NotAvailable from '../funtions/Room/NotAvailable';
 
 import LecturerStatistics from '../funtions/Statistics/LecturerStatistics';
@@ -218,6 +219,12 @@ let routes = [
         path: "/locations/rooms/delete/:id",
         name: "Delete Rooms",
         component: DeleteRoom,
+        exact: true,
+    },
+    {
+        path: "/locations/rooms/edit/:id",
+        name: "Edit Rooms",
+        component: EditRoom,
         exact: true,
     },
     {

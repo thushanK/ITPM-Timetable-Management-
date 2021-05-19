@@ -57,20 +57,20 @@ class ManageRoom extends React.Component {
   );}
 
   renderTable = (room, index) => {
-      console.log(room);
-      return(
-        <tr key={room._id}>
-            <td>{`R${("00" + (index + 1)).slice(-3)}`}</td>
-            <td>{room.name}</td>
-            <td>{room.capacity}</td>
-            <td>{room.type}</td>
-            <td>{room.building}</td>
-            <td><Link to={"/locations/rooms/edit/" + room._id}><span className="badge badge-info rounded-0 bg-white text-success border border-secondary click font-weight-bold ">Edit</span></Link>
-            <Link to={"/locations/rooms/delete/" + room._id}><span className="badge badge-info rounded-0 bg-white text-danger border border-secondary click font-weight-bold ml-2">Delete</span></Link>
-            </td>
-        </tr>
-      )
-  } 
+    console.log(room);
+    return(
+      <tr key={room._id}>
+          <td>{`R${("00" + (index + 1)).slice(-3)}`}</td>
+          <td>{room.name}</td>
+          <td>{room.capacity}</td>
+          <td>{room.type}</td>
+          <td>{room.building}</td>
+          <td><Link to={"/locations/rooms/edit/" + room._id}><span className="badge badge-info rounded-0 bg-white text-success border border-secondary click font-weight-bold ">Edit</span></Link>
+          <Link to={"/locations/rooms/delete/" + room._id}><span className="badge badge-info rounded-0 bg-white text-danger border border-secondary click font-weight-bold ml-2">Delete</span></Link>
+          </td>
+      </tr>
+    )
+} 
 }
 
 export default ManageRoom;
