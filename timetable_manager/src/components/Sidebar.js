@@ -137,41 +137,38 @@ const Sidebar = ({activemenu, submenu}) => {
             Manage Sessions<Link to="/sessions/manage" />
         </MenuItem>
         {/* consecutive */}
-        <SubMenu  defaultOpen={activemenu === 'CONSECUTIVE_SESSIONS'} title="Consecutive Sessions" icon={<FontAwesomeIcon icon={faAd} />}>
+        {/* <SubMenu  defaultOpen={activemenu === 'CONSECUTIVE_SESSIONS'} title="Consecutive Sessions" icon={<FontAwesomeIcon icon={faAd} />}> */}
         <MenuItem active={submenu === 'ADD_CONSECUTIVE'} >
             Add Consecutive<Link to="/consecutive/add" />
         </MenuItem>
         <MenuItem active={submenu === 'MANAGE_CONSECUTIVE'}>
             Manage Consecutive<Link to="/consecutive/manage" />
         </MenuItem>
-        </SubMenu>
+        {/* </SubMenu> */}
         {/* Parallel */}
-        <SubMenu  defaultOpen={activemenu === 'PARALLEL_SESSIONS'} title="Parallel Sessions" icon={<FontAwesomeIcon icon={faAd} />}>
+        {/* <SubMenu  defaultOpen={activemenu === 'PARALLEL_SESSIONS'} title="Parallel Sessions" icon={<FontAwesomeIcon icon={faAd} />}> */}
         <MenuItem 
             active={submenu === 'ADD_PARALLEL'} >Add Parallel<Link to="/parallel/add" />
         </MenuItem>
         <MenuItem active={submenu === 'MANAGE_PARALLEL'}>
             Manage Parallel<Link to="/parallel/manage" />
         </MenuItem>
-        </SubMenu>
+        {/* </SubMenu> */}
         {/* Not Overlap Sessions */}
-        <SubMenu  defaultOpen={activemenu === 'NOT_OVERLAP_SESSIONS'} title="Not Overlap" icon={<FontAwesomeIcon icon={faAd} />}>
+        {/* <SubMenu  defaultOpen={activemenu === 'NOT_OVERLAP_SESSIONS'} title="Not Overlap" icon={<FontAwesomeIcon icon={faAd} />}> */}
         <MenuItem active={submenu === 'ADD_NOT_OVERLAP'} >
             Add Not Overlap<Link to="/notOverlap/add" />
         </MenuItem>
         <MenuItem active={submenu === 'MANAGE_NOT_OVERLAP'}>
             Manage Not Overlap<Link to="/notOverlap/manage" />
         </MenuItem>
-        </SubMenu>
+        {/* </SubMenu> */}
       
       </SubMenu>
 
 
 
       <SubMenu  defaultOpen={activemenu === 'ADD_SUITABLE'} title="Add Suitable" icon={<FontAwesomeIcon icon={faAd} />}>
-        <MenuItem active={submenu === 'CONSECUTIVE'} >
-            Consecutive Session<Link to="/suitable/consecutive" />
-        </MenuItem>
         <MenuItem active={submenu === 'ROOMS_FOR_LECTURER'}>
             Rooms For Lecturer<Link to="/suitable/rooms4lecturer" />
         </MenuItem>
@@ -186,6 +183,9 @@ const Sidebar = ({activemenu, submenu}) => {
         </MenuItem>
         <MenuItem active={submenu === 'ROOM_FOR_TAG'}>
             Rooms For Tag<Link to="/suitable/rooms4tag" />
+        </MenuItem>
+        <MenuItem active={submenu === 'CONSECUTIVE'} >
+            Rooms For Consecutive Session<Link to="/suitable/consecutive" />
         </MenuItem>
       </SubMenu>
 

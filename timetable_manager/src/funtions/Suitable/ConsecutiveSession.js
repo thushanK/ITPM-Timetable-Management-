@@ -127,7 +127,7 @@ class ConsecutiveSession extends React.Component {
                           <div className="row mt-1 pb-3" >
                               <div className="col-md-6 mt-2 mb-1" >
                                   <FormSelect 
-                                      label={'Subject'}
+                                      label={'Consecutive Sessions'}
                                       options={this.renderGroups()}
                                       error={ errors.groups}
                                       selected={this.state.selected_lec}
